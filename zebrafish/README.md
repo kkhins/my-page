@@ -21,7 +21,8 @@
 
 ## 数据
 
-- **430 篇**，全部来自 NCBI E-utilities 的实际返回（esearch → efetch XML），无一条凭记忆书写。抓取脚本 `tools/fetch_pubmed.py`，36 条检索式，候选池 695 篇（`work/pool.json` / `work/candidates.json`）；逐篇读摘要打标后 score≥2 的合格池 595 篇，按方向配额选入 430 篇。
+- **444 篇**：430 篇人工/模型标注 + 14 篇 2026-11-09 首轮每日自动收录。全部来自 NCBI E-utilities 的实际返回（esearch → efetch XML），无一条凭记忆书写。抓取脚本 `tools/fetch_pubmed.py`，36 条检索式，候选池 695 篇（`work/pool.json` / `work/candidates.json`）；逐篇读摘要打标后 score≥2 的合格池 595 篇，按方向配额选入 430 篇。
+- 自动收录的 14 篇来自 `scripts/update_zebrafish.py`（每日 workflow 用同一脚本），带 `auto:true`，`zh` 为「【自动收录·待复核】+ 英文摘要首句」，页面显示橙色虚线徽标；它们不参与上面的人工配额统计。
 - 八方向按**主方向（`dirs[0]`）**分配配额：发育毒性 70、神经行为 65、心血管毒性 42、内分泌干扰 52、生殖与跨代 52、氧化应激与解毒 65、衰老 34、方法与标准 50，合计 430。（2026-11-09 按你的要求从任务书的 200–280 扩到 430，因此超出原配额表。）
 - 每篇至少 1 个方向、最多 3 个；器官最多 3 个、标志物最多 5 个、阶段最多 4 个。导航里的方向/器官计数是"含该标签的篇数"，因此会大于上面的主方向配额（多标签叠加），这是预期行为。
 - `key: true` 16 篇；综述 24 篇；`zh` 空 0 篇（全部依摘要写成 20–60 字发现陈述）。
@@ -73,7 +74,9 @@
 ## 部署与更新
 
 - **已部署**：https://kkhins.github.io/my-page/zebrafish/（仓库 `kkhins/my-page` 的 `zebrafish/` 子目录，GitHub Pages 自动发布）。
-- **不参与每日自动更新**：同仓库的 `scripts/update_biblio.py` + `.github/workflows/update-biblio.yml` 只服务线虫站（每天北京时间约 06:00）。斑马鱼的文献标注是逐篇读摘要完成的（`zh` 是发现陈述，不是标题翻译），规则脚本无法复现，因此本数据是 **2026-11 快照**。更新方式：在本地重跑 `tools/fetch_pubmed.py` → 标注 → `tools/merge_annot.py` → `tools/verify_doi.py`，再把 5 个文件重新上传到 `zebrafish/`。
+- **每日自动更新（2026-11-09 起）**：`.github/workflows/update-zebrafish.yml`，UTC 22:10 = 北京每天 06:10，跑 `scripts/update_zebrafish.py`：检索最近 10 天的斑马鱼毒理文献 → 相关性打分 ≥3 → 规则打标（方向/器官/污染物大类/阶段/代际）→ 追加到 `data_papers.js` → 校验语法 → 有新条目才提交。每次上限 30 篇，只追加不删改。
+- **自动收录与人工标注是分开的两档**：自动条目的 `zh` 写「【自动收录·待复核】+ 英文摘要首句」，并带 `auto:true`，页面卡片显示橙色虚线「自动收录」徽标；430 篇人工/模型标注的条目没有这个字段。人工复核后把 `auto` 和 zh 替换掉即可升级。
+- **全量重建**（需要重标注时）：本地 `tools/fetch_pubmed.py` → 标注 → `tools/merge_annot.py` → `tools/verify_doi.py`，再把 5 个文件上传到 `zebrafish/`。
 - 线虫站的每日更新机制已核实：workflow 处于 active，手动触发端到端成功（抓取 → 写入 `data.js` → 提交）；cron 首次自动执行是 2026-11-10 北京 06:00。
 
 ## 仍然待定
