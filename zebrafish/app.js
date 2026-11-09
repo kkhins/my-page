@@ -183,6 +183,7 @@
         stage: toArr(p.stage).filter(function (id) { return !!stageById[id]; }),
         zh: String(p.zh || '').trim(),
         keyFlag: !!p.key,
+        auto: !!p.auto,
         added: p.added ? String(p.added) : ''
       });
     });
@@ -1373,7 +1374,9 @@
       + '<div class="pmeta"><span>' + esc(p.author1 || '—') + (p.nAuthors > 1 ? ' 等' : '') + '</span>'
       + '<span class="sep">·</span><span>' + esc(p.journal || '—') + '</span>'
       + '<span class="sep">·</span><span>' + esc(p.year || '—') + '</span>'
-      + (p.review ? '<span class="tag rev">综述</span>' : '') + '</div>'
+      + (p.review ? '<span class="tag rev">综述</span>' : '')
+      + (p.auto ? '<span class="tag auto" title="每日由 PubMed 自动抓取，中文要点取摘要首句，尚未人工复核">自动收录</span>' : '')
+      + '</div>'
       + '<div class="tags">' + orgs + pol + gen + st + mk + '</div>'
       + (p.zh ? '<p class="pz">' + esc(p.zh) + '</p>' : '<p class="pz miss">暂无中文要点</p>')
       + '<div class="acts">' + links + '<span class="sp"></span>'

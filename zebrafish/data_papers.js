@@ -12164,5 +12164,394 @@ window.PAPERS = [
   "doi": "10.1007/s10162-002-3022-x",
   "pmc": "PMC3202713",
   "key": true
+ },
+ {
+  "pmid": "42998651",
+  "title": "Physicochemical determinants of zinc oxide nanoparticle developmental toxicity in zebrafish (Danio rerio): A systematic review and structured quantitative synthesis.",
+  "author1": "Boran",
+  "nAuthors": 1,
+  "journal": "Aquat Toxicol",
+  "year": 2026,
+  "review": true,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "np",
+  "polName": "纳米材料",
+  "gen": "",
+  "stage": [
+   "hat",
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】Zinc oxide nanoparticles (ZnO NPs) are widely used, but their developmental toxicity varies substantially across experim…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.aquatox.2026.108078"
+ },
+ {
+  "pmid": "42992772",
+  "title": "EGFP Reporter Assay in Transgenic Zebrafish Embryos for Assessing Formulation-Dependent dsRNA Bioavailability.",
+  "author1": "Dey",
+  "nAuthors": 9,
+  "journal": "J Vis Exp",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "np",
+  "polName": "纳米材料",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】RNA interference (RNAi) is a sequence-specific gene silencing mechanism increasingly exploited for the development of sp…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.3791/74036"
+ },
+ {
+  "pmid": "42989638",
+  "title": "pH/laccase dual-responsive sodium boscalid@lignosulfonate/ε-polylysine/Fe microcapsules for controlled pesticide release with enhanced efficacy and biosafety.",
+  "author1": "Jia",
+  "nAuthors": 6,
+  "journal": "Pest Manag Sci",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Environmentally responsive pesticide delivery systems have gained significant attention for their ability to enhance pes…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1002/ps.71446"
+ },
+ {
+  "pmid": "42982382",
+  "title": "Developmental toxicity induced by waterborne Mancozeb exposure in zebrafish larvae: Morphological, cardiac and oxidative alterations.",
+  "author1": "Dall Agnol",
+  "nAuthors": 7,
+  "journal": "Environ Toxicol Pharmacol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "he",
+   "th"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "cv"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [
+   "zyg",
+   "hat",
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】Mancozeb (MZ) is a widely used dithiocarbamate fungicide associated with environmental and developmental toxicity.",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.etap.2026.105225"
+ },
+ {
+  "pmid": "42981994",
+  "title": "Sweet but toxic? An ecotoxicity assessment of the artificial sweetener sucralose using transcriptomics.",
+  "author1": "Loll",
+  "nAuthors": 6,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh",
+   "ox",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Sucralose is a widely used artificial sweetener that is highly persistent and mobile in aquatic environments.",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.ecoenv.2026.121012"
+ },
+ {
+  "pmid": "42978646",
+  "title": "Sub-chronic toxicity of polystyrene microplastics in Danio rerio: evidence from hematological, biochemical, oxidative stress, and histopathological biomarkers.",
+  "author1": "Devapriya",
+  "nAuthors": 5,
+  "journal": "Front Toxicol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br",
+   "gi",
+   "gu"
+  ],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "plas",
+  "polName": "微塑料",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Polystyrene microplastics (PS-MPs) have emerged as widespread aquatic contaminants with the potential to induce multiple…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.chemosphere.2020.126059",
+  "pmc": "PMC10331820"
+ },
+ {
+  "pmid": "42975506",
+  "title": "Early Life Stage Exposure to Environmentally Relevant Concentrations of TCPP Induces Multigenerational Reproductive Toxicity in Estuarine Fish: A Study Based on Whole-Genome Methylation and Steroidogenesis Pathway.",
+  "author1": "Ren",
+  "nAuthors": 11,
+  "journal": "Environ Sci Technol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "dv",
+   "ed",
+   "rp"
+  ],
+  "marks": [],
+  "polClass": "edc",
+  "polName": "内分泌干扰物",
+  "gen": "F1",
+  "stage": [
+   "hat",
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】Tris (1-chloro-2-propyl) phosphate (TCPP) is ubiquitous in estuarine environments.",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1021/acs.est.6c07960"
+ },
+ {
+  "pmid": "42973610",
+  "title": "The teleost inflammasome as a biosensor in developmental toxicology.",
+  "author1": "Gusso",
+  "nAuthors": 5,
+  "journal": "Front Toxicol",
+  "year": 2026,
+  "review": true,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "ox",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [
+   "cle"
+  ],
+  "zh": "【自动收录·待复核】Standard environmental risk assessment frameworks, such as the OECD 236 Fish Embryo Acute Toxicity (FET) test, rely heav…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.3390/ijms222010940",
+  "pmc": "PMC8536011"
+ },
+ {
+  "pmid": "42971457",
+  "title": "Integrated Assessment of Cyanobacterial Blooms, Pesticides, and Reproductive Toxicity in a Eutrophic Reservoir.",
+  "author1": "Moraes",
+  "nAuthors": 8,
+  "journal": "Environ Pollut",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "dv",
+   "ed",
+   "rp"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】The Barra Bonita Reservoir (São Paulo, Brazil) is a eutrophic system subject to intense anthropogenic pressures, includi…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.envpol.2026.129426"
+ },
+ {
+  "pmid": "42967438",
+  "title": "Whole-effluent toxicity of hospital and pharmaceutical manufacturing discharges: A systematic review.",
+  "author1": "Ramdy",
+  "nAuthors": 5,
+  "journal": "Aquat Toxicol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li",
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Hospital and pharmaceutical manufacturing facilities discharge complex effluents containing active pharmaceutical ingred…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.aquatox.2026.108065"
+ },
+ {
+  "pmid": "42966525",
+  "title": "PPAR/RXR dysregulation involved in hepatic lipid accumulation in HFPO-TeA-exposed zebrafish: Insights from multi-omics and spatial imaging.",
+  "author1": "Shi",
+  "nAuthors": 6,
+  "journal": "Environ Res",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li",
+   "ey"
+  ],
+  "dirs": [
+   "ox",
+   "ag",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [
+   "adu",
+   "old"
+  ],
+  "zh": "【自动收录·待复核】Perfluorooctanoic acid (PFOA) is known to induce hepatotoxicity in wildlife and humans.",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.envres.2026.126059"
+ },
+ {
+  "pmid": "42966290",
+  "title": "Life stage-specific endocrine disruption by Tris(2-ethylhexyl) trimellitate (TOTM) in zebrafish: Thyroid-neurobehavioral effects and metabolic-reproductive alterations.",
+  "author1": "Ihn",
+  "nAuthors": 7,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li",
+   "br",
+   "th"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ed"
+  ],
+  "marks": [],
+  "polClass": "edc",
+  "polName": "内分泌干扰物",
+  "gen": "",
+  "stage": [
+   "zyg",
+   "lar",
+   "adu"
+  ],
+  "zh": "【自动收录·待复核】Tris(2-ethylhexyl) trimellitate (TOTM) is a widely used plasticizer alternative to bis(2-ethylhexyl) phthalate in medica…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.ecoenv.2026.120988"
+ },
+ {
+  "pmid": "42966287",
+  "title": "Co-exposure to octocrylene and polystyrene nanoplastics induces neuro- and reproductive toxicity in zebrafish: Association with circadian rhythm and HPG axis disruption.",
+  "author1": "Zhou",
+  "nAuthors": 4,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br",
+   "go"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ed"
+  ],
+  "marks": [],
+  "polClass": "plas",
+  "polName": "微塑料",
+  "gen": "",
+  "stage": [
+   "adu"
+  ],
+  "zh": "【自动收录·待复核】Octocrylene (OC) is a widely used ultraviolet filter frequently detected in aquatic environments.",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.1016/j.ecoenv.2026.120987"
+ },
+ {
+  "pmid": "42959891",
+  "title": "Transcriptomic data of larval zebrafish exposed to environmentally relevant levels of uranyl nitrate and sodium arsenite.",
+  "author1": "Kalaniopio",
+  "nAuthors": 3,
+  "journal": "Data Brief",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "rp",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】Uranium (U) and arsenic (As) are both ubiquitous contaminants in the American southwest, posing risks to humans, animals…",
+  "auto": true,
+  "added": "2026-11-09",
+  "doi": "10.17226/12910",
+  "pmc": "PMC3703927"
  }
 ];
