@@ -70,8 +70,13 @@
 - `tools/check_delivery.py`：交付前校验（数量、PMID 来源、语法、禁用字符串、DOM 假设）。
 - `work/`：候选池、标注输入输出、DOI 结果等中间数据，可整体删除，不影响页面。
 
-## 二期（待你拍板）
+## 部署与更新
 
-- GitHub Pages 部署（线虫站是 `kkhins/my-page`，斑马鱼可另开仓库或子目录）。
-- 每日自动更新：把 `fetch_pubmed.py` 改成增量抓取 + GitHub Actions（线虫站是每天北京 06:00）。当前版本是 2026-11 的快照，非每日更新。
-- 若要补 `cle`/`gas` 阶段文献、或把 `mu` 提升为第 11 个器官，需要先改任务书第 3 节的结构数据。
+- **已部署**：https://kkhins.github.io/my-page/zebrafish/（仓库 `kkhins/my-page` 的 `zebrafish/` 子目录，GitHub Pages 自动发布）。
+- **不参与每日自动更新**：同仓库的 `scripts/update_biblio.py` + `.github/workflows/update-biblio.yml` 只服务线虫站（每天北京时间约 06:00）。斑马鱼的文献标注是逐篇读摘要完成的（`zh` 是发现陈述，不是标题翻译），规则脚本无法复现，因此本数据是 **2026-11 快照**。更新方式：在本地重跑 `tools/fetch_pubmed.py` → 标注 → `tools/merge_annot.py` → `tools/verify_doi.py`，再把 5 个文件重新上传到 `zebrafish/`。
+- 线虫站的每日更新机制已核实：workflow 处于 active，手动触发端到端成功（抓取 → 写入 `data.js` → 提交）；cron 首次自动执行是 2026-11-10 北京 06:00。
+
+## 仍然待定
+
+- 卵裂期（`cle`）、原肠期（`gas`）目前各 0 篇文献，点进去是空态；要补齐需针对这两个阶段另抓一批。
+- 解剖图仍是示意性绘制（未画鳃耙、胰/脾、内耳半规管、胚胎血管网）。
