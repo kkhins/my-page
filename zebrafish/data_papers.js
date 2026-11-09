@@ -1,5 +1,5 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 250 篇；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 430 篇；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
 window.PAPERS = [
@@ -593,6 +593,30 @@ window.PAPERS = [
   "doi": "10.1016/j.jep.2025.120785"
  },
  {
+  "pmid": "41297726",
+  "title": "Quansanqi (derived from Panax notoginseng (Burk.) F. H. Chen) tablets extend the lifespan and ameliorate cellular inflammaging via regulating CD38 and senescence-associated secretory phenotype.",
+  "author1": "Guo",
+  "nAuthors": 13,
+  "journal": "J Ethnopharmacol",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ag"
+  ],
+  "marks": [
+   "lifespan",
+   "sabg"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "三七全株提取物 PSQ 在酵母、线虫与小鼠延长寿命，并降低 H2O2 衰老斑马鱼 p16、p21、p53 与 β-gal，机制涉及抑制 CD38 与 SASP。",
+  "doi": "10.1016/j.jep.2025.120959"
+ },
+ {
   "pmid": "41371140",
   "title": "Developmental and multi-organ toxicity of fludioxonil in zebrafish through apoptosis, oxidative stress, and mitochondrial dysfunction.",
   "author1": "Kim",
@@ -1015,6 +1039,32 @@ window.PAPERS = [
   "zh": "端粒酶缺失（tert-/-）加速斑马鱼脑衰老，衰老标志与炎症在非增殖区亦累积，伴血脑屏障通透性升高与焦虑样行为增强。",
   "doi": "10.1111/acel.70280",
   "pmc": "PMC12686574"
+ },
+ {
+  "pmid": "39655654",
+  "title": "Rapid determination of chemical losses in a microplate bioassay using fluorescence spectroscopy.",
+  "author1": "Huizenga",
+  "nAuthors": 3,
+  "journal": "Anal Methods",
+  "year": 2025,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [
+   "conc",
+   "morph"
+  ],
+  "polClass": "none",
+  "polName": "2-羟基萘、吖啶",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "荧光光谱可在 96 孔板中快速定量 2-羟基萘与吖啶的水相浓度，测得胚胎摄取分别约占总投加量 50% 与 21%。",
+  "doi": "10.1039/d4ay01980f",
+  "pmc": "PMC11806944"
  },
  {
   "pmid": "39799758",
@@ -2075,6 +2125,32 @@ window.PAPERS = [
   "doi": "10.1007/s11356-025-36791-9"
  },
  {
+  "pmid": "40012510",
+  "title": "Leveraging Zebrafish Embryo Phenotypic Observations to Advance Data-Driven Analyses in Toxicology.",
+  "author1": "Michaelis",
+  "nAuthors": 19,
+  "journal": "Environ Sci Technol",
+  "year": 2025,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [
+   "morph",
+   "conc"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "INTOB 以受控词表标准化 600 余项 ZFET 实验的元数据与表型，显示效应浓度跨越 7 个数量级并支持形态指纹 read-across。",
+  "doi": "10.1021/acs.est.4c11757",
+  "pmc": "PMC11912306"
+ },
+ {
   "pmid": "40358985",
   "title": "Transgenerational Inheritance of Cognitive Deficits Induced by Ancestral Arsenic Exposure in Zebrafish (Danio rerio) via Maternal and Paternal Lineages.",
   "author1": "Rachamalla",
@@ -2197,6 +2273,37 @@ window.PAPERS = [
   "doi": "10.1002/tox.24503"
  },
  {
+  "pmid": "38804632",
+  "title": "Development of a Zebrafish embryo-based test system for thyroid hormone system disruption: 3Rs in ecotoxicological research.",
+  "author1": "Gölz",
+  "nAuthors": 10,
+  "journal": "Environ Toxicol Chem",
+  "year": 2025,
+  "review": false,
+  "organs": [
+   "th",
+   "ey"
+  ],
+  "dirs": [
+   "mt",
+   "ed"
+  ],
+  "marks": [
+   "th",
+   "eyesize",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "丙硫氧嘧啶、高氯酸钾、三碘甲状腺原氨酸",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "基于 OECD FET 扩展甲状腺与眼相关终点，四种作用模式不同的 THSDC 均改变甲状腺滤泡形态并损害眼发育与游泳能力，支持建立符合 3R 的整合测试方案。",
+  "doi": "10.1002/etc.5878"
+ },
+ {
   "pmid": "39887270",
   "title": "Freshwater pollution: cardiotoxicity effect of perfluorooctane sulfonic acid and neonicotinoid imidacloprid mixture.",
   "author1": "Palazzolo",
@@ -2253,6 +2360,33 @@ window.PAPERS = [
   ],
   "zh": "PS 微塑料与 17α-甲基睾酮联合暴露 21 天致肝脂质蓄积与脑氧化应激，经肝脑轴扰乱鞘脂代谢与神经递质稳态。",
   "doi": "10.1016/j.freeradbiomed.2025.07.006"
+ },
+ {
+  "pmid": "40521127",
+  "title": "A systematic review of the effects of nanoplastics on fish.",
+  "author1": "Dasmahapatra",
+  "nAuthors": 3,
+  "journal": "Front Toxicol",
+  "year": 2025,
+  "review": true,
+  "organs": [
+   "gi",
+   "li"
+  ],
+  "dirs": [
+   "mt",
+   "ox"
+  ],
+  "marks": [
+   "ros",
+   "body"
+  ],
+  "polClass": "plas",
+  "polName": "纳米塑料",
+  "stage": [],
+  "zh": "114 篇文献显示纳米塑料研究以斑马鱼与聚苯乙烯为主，可蓄积于鳃、肠、肝、心、性腺与脑，引起氧化应激、运动下降及跨代影响。",
+  "doi": "10.3389/ftox.2025.1530209",
+  "pmc": "PMC12163001"
  },
  {
   "pmid": "39796206",
@@ -2518,6 +2652,32 @@ window.PAPERS = [
   "doi": "10.1016/j.jhazmat.2025.140468"
  },
  {
+  "pmid": "41313855",
+  "title": "Acute toxicity, behaviour, metabolism, and transcriptomic points of departure in embryo-larval zebrafish exposed to nine different PFAS.",
+  "author1": "Lee",
+  "nAuthors": 9,
+  "journal": "J Hazard Mater",
+  "year": 2025,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "全氟化合物",
+  "stage": [
+   "lar"
+  ],
+  "zh": "9 种 PFAS 的效价随碳链延长与磺酸基增强，转录组 POD 通常比整体毒性 POD 低 10 倍以内，为最敏感终点。",
+  "doi": "10.1016/j.jhazmat.2025.140599"
+ },
+ {
   "pmid": "40558862",
   "title": "Ecotoxicity of Fire Retardants to Zebrafish (Danio rerio) in Early Life Stages.",
   "author1": "Brito",
@@ -2622,6 +2782,28 @@ window.PAPERS = [
   "gen": "F1"
  },
  {
+  "pmid": "40024697",
+  "title": "[Assessment of developmental neurotoxicity of pharmaceuticals using zebrafish behavior].",
+  "author1": "Nishimura",
+  "nAuthors": 1,
+  "journal": "Nihon Yakurigaku Zasshi",
+  "year": 2025,
+  "review": true,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "丙戊酸",
+  "stage": [
+   "lar"
+  ],
+  "zh": "综述以丙戊酸为例说明仔鱼神经行为可检出发育神经毒性，结果与啮齿类和人类一致，可支撑替代方法需求。",
+  "doi": "10.1254/fpj.24085"
+ },
+ {
   "pmid": "40500058",
   "title": "Dietary supplementation of Lactobacillus casei alleviates permethrin exposure-induced zebrafish testis damage through modulation of TLR4/NF-κB and AKT/Nrf2 pathways: Oxidative stress, inflammation and ferroptosis.",
   "author1": "Huo",
@@ -2704,6 +2886,32 @@ window.PAPERS = [
   "stage": [],
   "zh": "25–250 µg/L 聚苯乙烯微塑料暴露 40 天诱导抑郁样行为，脑组织空泡化与尼氏体减少，炎性因子与 clock 基因改变，多巴胺、5-羟色胺等递质下降。",
   "doi": "10.1016/j.scitotenv.2024.178085"
+ },
+ {
+  "pmid": "40022978",
+  "title": "Incorporating benchmark dose into sediment toxicity testing using zebrafish (Danio rerio).",
+  "author1": "Nash",
+  "nAuthors": 5,
+  "journal": "Sci Total Environ",
+  "year": 2025,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "conc"
+  ],
+  "polClass": "mix",
+  "polName": "沉积物有机提取物",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "将基准剂量法引入 zFET 评估沉积物提取物，检出 45 种有机污染物，畸形与行为改变在低于化学可生物利用浓度时即出现。",
+  "doi": "10.1016/j.scitotenv.2025.178953"
  },
  {
   "pmid": "40048949",
@@ -3161,6 +3369,48 @@ window.PAPERS = [
   "doi": "10.1016/j.celrep.2024.115035"
  },
  {
+  "pmid": "37918535",
+  "title": "Prediction of acute fish toxicity (AFT) and fish embryo toxicity (FET) tests by cytotoxicity assays using liver and embryo zebrafish cell lines (ZFL and ZEM2S).",
+  "author1": "Rodrigues de Souza",
+  "nAuthors": 9,
+  "journal": "Chemosphere",
+  "year": 2024,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [],
+  "zh": "ZFL 细胞毒性 IC50 与急性鱼毒及胚胎毒性试验高度相关（R² 0.73–0.90），可正确分类 76.9%–90.9% 的化学品，优于 ZEM2S。",
+  "doi": "10.1016/j.chemosphere.2023.140592"
+ },
+ {
+  "pmid": "38048833",
+  "title": "Exploring the impact of antibiotics, microplastics, nanoparticles, and pesticides on zebrafish gut microbiomes: Insights into composition, interactions, and health implications.",
+  "author1": "Pamanji",
+  "nAuthors": 5,
+  "journal": "Chemosphere",
+  "year": 2024,
+  "review": true,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "mix",
+  "polName": "农药、抗生素、纳米颗粒、微塑料",
+  "stage": [],
+  "zh": "综述汇总农药、抗生素、纳米颗粒与微塑料改变斑马鱼肠道菌群组成与代谢通路，指出菌群失调与宿主代谢及免疫损伤相关。",
+  "doi": "10.1016/j.chemosphere.2023.140867"
+ },
+ {
   "pmid": "38340991",
   "title": "Chlorothalonil as a potential endocrine disruptor in male zebrafish (Danio rerio): Impact on the hypothalamus-pituitary-gonad axis and sperm quality.",
   "author1": "Guillante",
@@ -3359,6 +3609,30 @@ window.PAPERS = [
   ],
   "zh": "5–500 µg/L 克百威 96 h 暴露未改变成鱼新缸与社交偏好行为，脑内 AChE、非蛋白巯基与 TBARS 水平亦无显著变化。",
   "doi": "10.1016/j.cbpc.2024.109969"
+ },
+ {
+  "pmid": "38832580",
+  "title": "Zebrafish and nematodes as whole organism models to measure developmental neurotoxicity.",
+  "author1": "Hughes",
+  "nAuthors": 2,
+  "journal": "Crit Rev Toxicol",
+  "year": 2024,
+  "review": true,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "主张在 OECD 443/426 与体外 NAM 之外，用斑马鱼与线虫等全生物体 3R 模型补足发育神经毒性终点，其脑发育通路与人类高度保守。",
+  "doi": "10.1080/10408444.2024.2342448"
  },
  {
   "pmid": "38311823",
@@ -3627,6 +3901,53 @@ window.PAPERS = [
   "doi": "10.1016/j.envpol.2024.124490"
  },
  {
+  "pmid": "39245201",
+  "title": "Toxicological mechanisms and molecular impacts of tire particles and antibiotics on zebrafish.",
+  "author1": "Wen",
+  "nAuthors": 8,
+  "journal": "Environ Pollut",
+  "year": 2024,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "plas",
+  "polName": "轮胎微塑料、抗生素",
+  "stage": [],
+  "zh": "SBR 轮胎微塑料添加剂与抗生素经范德华力作用于细胞色素 P450，64 种组合中低阶组合肝毒性突出，吸附能力与疏水性影响毒性。",
+  "doi": "10.1016/j.envpol.2024.124912"
+ },
+ {
+  "pmid": "37993046",
+  "title": "Tissue-specific toxic effects of nano-copper on zebrafish.",
+  "author1": "Liu",
+  "nAuthors": 5,
+  "journal": "Environ Res",
+  "year": 2024,
+  "review": false,
+  "organs": [
+   "gi",
+   "gu"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "np",
+  "polName": "纳米铜",
+  "stage": [],
+  "zh": "纳米铜毒性具组织特异性：鳃经 CB1 受体影响突触可塑性，肠嘧啶代谢受阻，肌肉 RAD51 异常影响 DNA 修复。",
+  "doi": "10.1016/j.envres.2023.117717"
+ },
+ {
   "pmid": "39233032",
   "title": "Insights into the developmental and cardiovascular toxicity of bixafen using zebrafish embryos and larvae.",
   "author1": "Fang",
@@ -3796,6 +4117,26 @@ window.PAPERS = [
   "doi": "10.1007/s11626-024-00892-5"
  },
  {
+  "pmid": "38396822",
+  "title": "Inflammation in Development and Aging: Insights from the Zebrafish Model.",
+  "author1": "Mastrogiovanni",
+  "nAuthors": 4,
+  "journal": "Int J Mol Sci",
+  "year": 2024,
+  "review": true,
+  "organs": [],
+  "dirs": [
+   "ag"
+  ],
+  "marks": [],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [],
+  "zh": "斑马鱼中同一炎症信号通路在胚胎期常具指导或有益作用，而在成体中与恶性肿瘤相关，体现炎症的双重角色。",
+  "doi": "10.3390/ijms25042145",
+  "pmc": "PMC10889087"
+ },
+ {
   "pmid": "39519279",
   "title": "Honey Enriched with Additives Alleviates Behavioral, Oxidative Stress, and Brain Alterations Induced by Heavy Metals and Imidacloprid in Zebrafish.",
   "author1": "Paduraru",
@@ -3825,6 +4166,37 @@ window.PAPERS = [
   "zh": "21 天亚慢性暴露中吡虫啉与汞、镉降低 AChE、升高 MDA 与 SOD/GPx，损害集群与游动，并在视顶盖与小脑引起星形胶质细胞活化。",
   "doi": "10.3390/ijms252111730",
   "pmc": "PMC11546825"
+ },
+ {
+  "pmid": "37483114",
+  "title": "Development of the integrated fish endocrine disruptor test (iFEDT)-Part A: Merging of existing fish test guidelines.",
+  "author1": "Pannetier",
+  "nAuthors": 13,
+  "journal": "Integr Environ Assess Manag",
+  "year": 2024,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "mt",
+   "ed"
+  ],
+  "marks": [
+   "vtg",
+   "sexratio",
+   "hist",
+   "morph"
+  ],
+  "polClass": "edc",
+  "polName": "炔雌醇、丙基硫氧嘧啶",
+  "stage": [
+   "zyg",
+   "lar",
+   "adu"
+  ],
+  "zh": "合并 OECD TG229 与 TG234 的 iFEDT 方案可行，PTU 与 EE2 均按预期改变生殖、卵黄蛋白原、性比与性腺成熟终点。",
+  "doi": "10.1002/ieam.4819"
  },
  {
   "pmid": "37718569",
@@ -3984,6 +4356,35 @@ window.PAPERS = [
   "gen": "F1"
  },
  {
+  "pmid": "39191009",
+  "title": "Transfer from ciliate to zebrafish: Unveiling mechanisms and combined effects of microplastics and heavy metals.",
+  "author1": "Zhang",
+  "nAuthors": 10,
+  "journal": "J Hazard Mater",
+  "year": 2024,
+  "review": false,
+  "organs": [
+   "li",
+   "gu"
+  ],
+  "dirs": [
+   "ox",
+   "dv"
+  ],
+  "marks": [
+   "body",
+   "hist",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "镉、微塑料",
+  "stage": [
+   "adu"
+  ],
+  "zh": "经草履虫摄食后微塑料可携带低于 0.1 µg/L 的镉进入斑马鱼体内，致代谢指标改变、肝发育延迟、肠道菌群紊乱、DNA 损伤与炎症。",
+  "doi": "10.1016/j.jhazmat.2024.135645"
+ },
+ {
   "pmid": "38459561",
   "title": "Integrated mRNA- and miRNA-sequencing analyses unveil the underlying mechanism of tobacco pollutant-induced developmental toxicity in zebrafish embryos.",
   "author1": "Chen",
@@ -4036,6 +4437,32 @@ window.PAPERS = [
   "zh": "综述汇总纳米与微塑料、氟虫腈、溴氰菊酯及鱼藤酮在斑马鱼中引起行为改变、脑组织损伤与氧化状态失衡，支持其作为神经毒性模型。",
   "doi": "10.3390/life14050640",
   "pmc": "PMC11122474"
+ },
+ {
+  "pmid": "38285358",
+  "title": "Alcian Blue Staining for Chondrocranium Development in Zebrafish.",
+  "author1": "Beler",
+  "nAuthors": 4,
+  "journal": "Methods Mol Biol",
+  "year": 2024,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "dv"
+  ],
+  "marks": [
+   "morph"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "Alcian 蓝染色在 2 dpf 即可显示斑马鱼颅面软骨，72–120 hpf 可测量颅骨长度与角度，用于定量评估化学物暴露后的颅面畸形。",
+  "doi": "10.1007/978-1-0716-3625-1_27"
  },
  {
   "pmid": "38821665",
@@ -4214,6 +4641,33 @@ window.PAPERS = [
   "zh": "DBP 升高胚胎 ROS、降低 SOD/CAT 并经 HIF 通路扰乱血管发育基因，致仔鱼肠下血管萌芽减少，抗氧化剂与 VEGF 抑制剂可逆转。",
   "doi": "10.1038/s41598-024-80088-9",
   "pmc": "PMC11574295"
+ },
+ {
+  "pmid": "38030006",
+  "title": "Studying mixture effects on uptake and tissue distribution of PFAS in zebrafish (Danio rerio) using physiologically based kinetic (PBK) modelling.",
+  "author1": "Golosovskaia",
+  "nAuthors": 5,
+  "journal": "Sci Total Environ",
+  "year": 2024,
+  "review": false,
+  "organs": [
+   "br",
+   "li",
+   "go"
+  ],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [
+   "body"
+  ],
+  "polClass": "emerg",
+  "polName": "全氟化合物",
+  "stage": [
+   "adu"
+  ],
+  "zh": "PBK 模型预测 7 种 PFAS 组织浓度 85% 落在 10 倍误差内，FOSA 脑内 Cmax 超 15 µg/g，且全部可母源传递至卵。",
+  "doi": "10.1016/j.scitotenv.2023.168738"
  },
  {
   "pmid": "38176558",
@@ -4434,6 +4888,34 @@ window.PAPERS = [
   ],
   "zh": "2100 年气候情景与低浓度阿特拉津叠加降低雄鱼性腺指数与精子产量，加重生殖细胞脱落与死亡，11-KT 下降、E2 升高，极端情景下氧化应激与 DNA 损伤更强。",
   "doi": "10.1016/j.scitotenv.2024.174173"
+ },
+ {
+  "pmid": "38997031",
+  "title": "Synergistic risk in the gut and liver: Insights into the toxic mechanisms and molecular interactions of combined exposure to triazophos and fenvalerate in zebrafish.",
+  "author1": "An",
+  "nAuthors": 6,
+  "journal": "Sci Total Environ",
+  "year": 2024,
+  "review": false,
+  "organs": [
+   "gu",
+   "li"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "hist",
+   "gene"
+  ],
+  "polClass": "op",
+  "polName": "三唑磷、氰戊菊酯",
+  "stage": [
+   "adu"
+  ],
+  "zh": "氰戊菊酯 96 h LC50 0.096 mg/L 毒性远高于三唑磷，共暴露加重肠屏障与肝损伤，富集 P53 通路并改变凋亡相关基因表达。",
+  "doi": "10.1016/j.scitotenv.2024.174710"
  },
  {
   "pmid": "39084380",
@@ -4719,6 +5201,31 @@ window.PAPERS = [
   "doi": "10.1002/adhm.202301799"
  },
  {
+  "pmid": "37673133",
+  "title": "Effects of nanomaterial exposure on telomere dysfunction, hallmarks of mammalian and zebrafish cell senescence, and zebrafish mortality.",
+  "author1": "Yin",
+  "nAuthors": 5,
+  "journal": "Ageing Res Rev",
+  "year": 2023,
+  "review": true,
+  "organs": [],
+  "dirs": [
+   "ag",
+   "ox"
+  ],
+  "marks": [
+   "telo",
+   "sabg"
+  ],
+  "polClass": "np",
+  "polName": "纳米材料",
+  "stage": [
+   "lar"
+  ],
+  "zh": "Meta 分析显示纳米材料暴露显著缩短端粒（SMD −1.88）、升高衰老相关 β-半乳糖苷酶并增加斑马鱼死亡率（SMD 3.83）。",
+  "doi": "10.1016/j.arr.2023.102062"
+ },
+ {
   "pmid": "37039087",
   "title": "A p21-GFP zebrafish model of senescence for rapid testing of senolytics in vivo.",
   "author1": "Morsli",
@@ -4744,6 +5251,62 @@ window.PAPERS = [
   "zh": "p21:GFP 转基因斑马鱼可实时追踪衰老细胞，辐照后衰老细胞增多伴肌纤维变薄与活动下降，槲皮素与达沙替尼 5 天内可减少之。",
   "doi": "10.1111/acel.13835",
   "pmc": "PMC10265157"
+ },
+ {
+  "pmid": "37307698",
+  "title": "Developmental and cardiac toxicity assessment of Ethyl 3-(N-butylacetamido) propanoate (EBAAP) in zebrafish embryos.",
+  "author1": "Luo",
+  "nAuthors": 12,
+  "journal": "Aquat Toxicol",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "dv",
+   "cv",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "len",
+   "morph",
+   "hr",
+   "co"
+  ],
+  "polClass": "emerg",
+  "polName": "EBAAP",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "EBAAP 72 hpf LC50 为 140 mg/L，致体长缩短、脊柱弯曲、心包水肿与心率下降，心脏线性延长、泵血能力减弱，并伴 ROS 升高与凋亡基因上调。",
+  "doi": "10.1016/j.aquatox.2023.106572"
+ },
+ {
+  "pmid": "36052857",
+  "title": "Genotoxicity of thiacloprid in zebrafish liver.",
+  "author1": "Yavuz Türel",
+  "nAuthors": 3,
+  "journal": "Arch Environ Occup Health",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "噻虫啉",
+  "stage": [
+   "adu"
+  ],
+  "zh": "21 天 0.82 与 1.64 mg/L 噻虫啉使肝细胞彗星尾 DNA 损伤值由 4.37 升至 8.51 与 9.30，呈剂量依赖。",
+  "doi": "10.1080/19338244.2022.2118212"
  },
  {
   "pmid": "36167911",
@@ -4859,6 +5422,35 @@ window.PAPERS = [
   "doi": "10.1016/j.chemosphere.2022.136941"
  },
  {
+  "pmid": "36849025",
+  "title": "Diafenthiuron causes developmental toxicity in zebrafish (Danio rerio).",
+  "author1": "Su",
+  "nAuthors": 6,
+  "journal": "Chemosphere",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "len",
+   "enz",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "丁醚脲",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "丁醚脲 0.01–1 µM 即缩短仔鱼体长、降低 SOD 活性，并下调垂体标志基因 pomc、prl 与肝标志 fabp10a，抑制肝脏发育。",
+  "doi": "10.1016/j.chemosphere.2023.138253"
+ },
+ {
   "pmid": "36868414",
   "title": "Adverse thyroid hormone and behavioral alterations induced by three frequently used synthetic musk compounds in embryo-larval zebrafish (Danio rerio).",
   "author1": "Chae",
@@ -4945,6 +5537,64 @@ window.PAPERS = [
   ],
   "zh": "RDP 从 0.3 nM 起即降低仔鱼光暗转换与闪光刺激反应，抑制 AChE 活性、改变 GABA 与谷氨酸等递质含量，并下调 α1-tubulin、mbp、syn2a 等 CNS 基因。",
   "doi": "10.1016/j.chemosphere.2023.138944"
+ },
+ {
+  "pmid": "37244557",
+  "title": "Additive effects of microplastics on accumulation and toxicity of cadmium in male zebrafish.",
+  "author1": "Al Marshoudi",
+  "nAuthors": 4,
+  "journal": "Chemosphere",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "gu",
+   "li"
+  ],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "body",
+   "hist",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "镉、聚乙烯",
+  "stage": [
+   "adu"
+  ],
+  "zh": "21 天共暴露下水体镉与微塑料对雄性蓄积呈相加作用，镉蓄积增约 2 倍，并加重肠肝损伤与焦虑样行为。",
+  "doi": "10.1016/j.chemosphere.2023.138969"
+ },
+ {
+  "pmid": "37394195",
+  "title": "Size-specific effects of microplastics and lead on zebrafish.",
+  "author1": "Yu",
+  "nAuthors": 3,
+  "journal": "Chemosphere",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "gu",
+   "li",
+   "br"
+  ],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "gene",
+   "hist"
+  ],
+  "polClass": "metal",
+  "polName": "铅、聚苯乙烯",
+  "stage": [
+   "adu"
+  ],
+  "zh": "0.1 µm 聚苯乙烯微塑料与铅共暴露最大改变肠道菌群多样性，下调 zo-1 与 occludin 并经 TLR4/NF-κB 致肝炎症，同时扰动胆汁酸与神经递质基因。",
+  "doi": "10.1016/j.chemosphere.2023.139383"
  },
  {
   "pmid": "37597622",
@@ -5073,6 +5723,34 @@ window.PAPERS = [
   "pmc": "PMC9867717"
  },
  {
+  "pmid": "36717045",
+  "title": "Evaluation of the oxidative toxicity induced by lead, manganese, and cadmium using genetically modified nrf2a-mutant zebrafish.",
+  "author1": "Xu",
+  "nAuthors": 7,
+  "journal": "Comp Biochem Physiol C Toxicol Pharmacol",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "ox",
+   "mt"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "镉、锰、铅",
+  "stage": [
+   "lar"
+  ],
+  "zh": "nrf2a 缺失使镉暴露仔鱼死亡率与畸形率升高、脑神经元凋亡并出现运动异常，镉毒性最强、铅最弱。",
+  "doi": "10.1016/j.cbpc.2023.109550"
+ },
+ {
   "pmid": "36516622",
   "title": "Thyroid hormone disrupting potentials of benzisothiazolinone in embryo-larval zebrafish and rat pituitary GH3 cell line.",
   "author1": "Lee",
@@ -5131,6 +5809,63 @@ window.PAPERS = [
   "zh": "母体 28 天摄食暴露戊唑醇使 F1 畸形率升高、游泳变慢，R-体比 S-体更强地降低 F1 的 T3/T4 并下调 HPT 轴基因。",
   "doi": "10.1016/j.ecoenv.2023.114540",
   "gen": "F1"
+ },
+ {
+  "pmid": "36805134",
+  "title": "Structure-based developmental toxicity and ASD-phenotypes of bisphenol A analogues in embryonic zebrafish.",
+  "author1": "Bai",
+  "nAuthors": 8,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ed"
+  ],
+  "marks": [
+   "morph",
+   "shoal",
+   "surv"
+  ],
+  "polClass": "edc",
+  "polName": "双酚A、双酚F、双酚S",
+  "stage": [
+   "lar"
+  ],
+  "zh": "多种双酚类似物致畸与致死强于双酚 A，亚致死浓度下仔鱼社交距离增大、活动过多与焦虑增强，伴神经发生加速。",
+  "doi": "10.1016/j.ecoenv.2023.114643"
+ },
+ {
+  "pmid": "37418940",
+  "title": "Additive cardiotoxicity of a bisphenol mixture in zebrafish embryos: The involvement of calcium channel and pump.",
+  "author1": "Arrokhman",
+  "nAuthors": 3,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "ed"
+  ],
+  "marks": [
+   "hr",
+   "surv",
+   "gene"
+  ],
+  "polClass": "edc",
+  "polName": "双酚A、双酚F、双酚AF",
+  "stage": [
+   "lar"
+  ],
+  "zh": "BPA、BPF、BPAF 与 BPB 单用或混合均致胚胎死亡与心动过缓，混合呈加和效应，机制为抑制 SERCA 与 L 型钙通道。",
+  "doi": "10.1016/j.ecoenv.2023.115225"
  },
  {
   "pmid": "37418944",
@@ -5225,6 +5960,66 @@ window.PAPERS = [
   "doi": "10.1016/j.ecoenv.2023.115574"
  },
  {
+  "pmid": "37597064",
+  "title": "Bixafen causes hepatotoxicity and pancreas toxicity in zebrafish (Danio rerio).",
+  "author1": "Wang",
+  "nAuthors": 3,
+  "journal": "Ecotoxicology",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "hr",
+   "edema",
+   "surv",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "联苯吡菌胺",
+  "stage": [
+   "zyg",
+   "lar",
+   "hat"
+  ],
+  "zh": "0.1–0.3 µM 联苯吡菌胺致胚胎脊柱弯曲、心包水肿、心率下降与孵化延迟，显著影响肝与胰腺发育，并下调 fabp10a 表达。",
+  "doi": "10.1007/s10646-023-02687-y"
+ },
+ {
+  "pmid": "37027337",
+  "title": "Assessment of Nonalcoholic Fatty Liver Disease Symptoms and Gut-Liver Axis Status in Zebrafish after Exposure to Polystyrene Microplastics and Oxytetracycline, Alone and in Combination.",
+  "author1": "Zhou",
+  "nAuthors": 16,
+  "journal": "Environ Health Perspect",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "li",
+   "gu"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "hist",
+   "gene",
+   "enz"
+  ],
+  "polClass": "plas",
+  "polName": "聚苯乙烯、土霉素",
+  "stage": [
+   "adu"
+  ],
+  "zh": "PS 微塑料与土霉素共暴露 28 天致肝脂质蓄积、炎症与氧化应激，并破坏肠屏障与肝肠轴，共暴露更严重。",
+  "doi": "10.1289/EHP11600",
+  "pmc": "PMC10081693"
+ },
+ {
   "pmid": "37966802",
   "title": "Evaluation of Neural Regulation and Microglial Responses to Brain Injury in Larval Zebrafish Exposed to Perfluorooctane Sulfonate.",
   "author1": "Paquette",
@@ -5310,6 +6105,61 @@ window.PAPERS = [
   "doi": "10.1016/j.envint.2023.108217"
  },
  {
+  "pmid": "36356886",
+  "title": "Influence of ultraviolet-aging and adsorbed pollutants on toxicological effects of polyvinyl chloride microplastics to zebrafish.",
+  "author1": "Zhong",
+  "nAuthors": 8,
+  "journal": "Environ Pollut",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "ros",
+   "hist",
+   "body"
+  ],
+  "polClass": "op",
+  "polName": "聚氯乙烯、毒死蜱、红霉素",
+  "stage": [
+   "lar",
+   "juv"
+  ],
+  "zh": "紫外老化改变 PVC 微塑料表面自由基与对毒死蜱、红霉素的吸附，老化颗粒致更重肠损伤与氧化应激，载药颗粒更强影响游泳行为。",
+  "doi": "10.1016/j.envpol.2022.120617"
+ },
+ {
+  "pmid": "37442323",
+  "title": "New insights into triazole fungicide-caused hematopoietic abnormality in zebrafish based on GRα screening developmental toxicity.",
+  "author1": "Wang",
+  "nAuthors": 7,
+  "journal": "Environ Pollut",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "ki"
+  ],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "gene",
+   "hist"
+  ],
+  "polClass": "pest",
+  "polName": "氟硅唑",
+  "stage": [
+   "lar"
+  ],
+  "zh": "氟硅唑具最强 GRα 激动活性，下调 gata1、pu.1 与 cmyb，损伤后血岛与定向造血，并致肾组织炎症与肾小管塌陷。",
+  "doi": "10.1016/j.envpol.2023.122182"
+ },
+ {
   "pmid": "37516295",
   "title": "The neurodevelopmental toxicity induced by combined exposure of nanoplastics and penicillin in embryonic zebrafish: The role of aging processes.",
   "author1": "Chen",
@@ -5341,6 +6191,146 @@ window.PAPERS = [
   "doi": "10.1016/j.envpol.2023.122281"
  },
  {
+  "pmid": "36264459",
+  "title": "Leaching behavior and evaluation of zebrafish embryo toxicity of microplastics and phthalates in take-away plastic containers.",
+  "author1": "Xu",
+  "nAuthors": 8,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "avb",
+   "edema",
+   "morph"
+  ],
+  "polClass": "plas",
+  "polName": "聚丙烯、聚苯乙烯、邻苯二甲酸酯",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "PS 容器在脂性食品模拟物中释放微塑料最多，PP 与 PS 醇性、脂性浸出液显著影响胚胎发育，引起心律失常、心包囊肿与脊柱弯曲。",
+  "doi": "10.1007/s11356-022-23675-5"
+ },
+ {
+  "pmid": "37002518",
+  "title": "Toxicity and ecological risk assessment for two AhR agonistic pesticides mepanipyrim and cyprodinil and their metabolites.",
+  "author1": "Shen",
+  "nAuthors": 6,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2023,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "mt"
+  ],
+  "marks": [
+   "gene",
+   "erod"
+  ],
+  "polClass": "pest",
+  "polName": "嘧菌胺、嘧霉胺",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "嘧菌胺与嘧霉胺按发育阶段动态诱导 cyp1a、ahr2 与 EROD，其多种代谢物具强 AhR 激动活性并构成生态风险。",
+  "doi": "10.1007/s11356-023-26735-6"
+ },
+ {
+  "pmid": "37213015",
+  "title": "The sensitivity of the zebrafish embryo coiling assay for the detection of neurotoxicity by compounds with diverse modes of action.",
+  "author1": "von Hellfeld",
+  "nAuthors": 5,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2023,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [
+   "coil"
+  ],
+  "polClass": "pest",
+  "polName": "西维因、鱼藤酮",
+  "stage": [
+   "seg",
+   "pha"
+  ],
+  "zh": "自发尾部卷曲试验对多种作用模式神经毒物敏感：西维因、六氯酚与鱼藤酮在约 30 hpf 即引起严重行为改变，37–38 hpf 暗期变化呈严格浓度依赖。",
+  "doi": "10.1007/s11356-023-27662-2",
+  "pmc": "PMC10293418"
+ },
+ {
+  "pmid": "37222891",
+  "title": "Short-term exposure of Cannabidiol on Zebrafish (Danio Rerio): Reproductive Toxicity.",
+  "author1": "Li",
+  "nAuthors": 8,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "go",
+   "li"
+  ],
+  "dirs": [
+   "rp",
+   "ed"
+  ],
+  "marks": [
+   "fec",
+   "vtg",
+   "steroid",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "大麻二酚",
+  "stage": [
+   "adu"
+  ],
+  "zh": "CBD 使雌鱼产卵减少、卵与精子早熟、卵黄蛋白原下降及 E2/T 失衡，脑、性腺与肝凋亡基因上调。",
+  "doi": "10.1007/s11356-023-27792-7"
+ },
+ {
+  "pmid": "38082038",
+  "title": "Bisphenol B induces developmental toxicity in zebrafish via oxidative stress.",
+  "author1": "Wang",
+  "nAuthors": 7,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "br",
+   "he"
+  ],
+  "dirs": [
+   "dv",
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "morph",
+   "gene"
+  ],
+  "polClass": "edc",
+  "polName": "双酚B",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "10–1000 µg/L 双酚 B 经氧化损伤抑制神经与心血管发育关键基因，致仔鱼早期发育毒性，N-乙酰半胱氨酸可缓解。",
+  "doi": "10.1007/s11356-023-31161-9"
+ },
+ {
   "pmid": "36779393",
   "title": "Multi- and Transgenerational Developmental Impairments Are Induced by Decabromodiphenyl Ethane (DBDPE) in Zebrafish Larvae.",
   "author1": "Sun",
@@ -5369,6 +6359,38 @@ window.PAPERS = [
   "zh": "全生命周期暴露于环境浓度十溴二苯乙烷使未再暴露的 F2 仔鱼畸形率升高、存活率下降，转录组与 DNA 甲基化显示糖脂代谢、能量代谢与神经发育受损。",
   "doi": "10.1021/acs.est.3c00032",
   "gen": "F2"
+ },
+ {
+  "pmid": "37651267",
+  "title": "Chronic Paternal/Maternal Exposure to Environmental Concentrations of Imidacloprid and Thiamethoxam Causes Intergenerational Toxicity in Zebrafish Offspring.",
+  "author1": "Zhang",
+  "nAuthors": 7,
+  "journal": "Environ Sci Technol",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "ed",
+   "dv"
+  ],
+  "marks": [
+   "fec",
+   "steroid",
+   "vtg",
+   "hr"
+  ],
+  "polClass": "pest",
+  "polName": "吡虫啉、噻虫嗪",
+  "stage": [
+   "adu",
+   "lar"
+  ],
+  "zh": "F0 连续 144 天暴露 50–500 ng/L 吡虫啉或噻虫嗪降低产卵量、性激素与 VTG，F1 出现心率与自发运动升高及性腺转录改变。",
+  "doi": "10.1021/acs.est.3c04371",
+  "gen": "F1"
  },
  {
   "pmid": "37847870",
@@ -5581,6 +6603,29 @@ window.PAPERS = [
   "doi": "10.1016/j.etap.2022.104058"
  },
  {
+  "pmid": "37183669",
+  "title": "Optimizing assays of zebrafish larvae swimming performance for drug discovery.",
+  "author1": "Widrick",
+  "nAuthors": 4,
+  "journal": "Expert Opin Drug Discov",
+  "year": 2023,
+  "review": true,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "综述整合仔鱼游泳行为的高通量测定方法，指出饲养、实验设计与数据采集规范可降低个体间变异并提升筛选灵敏度。",
+  "doi": "10.1080/17460441.2023.2211802",
+  "pmc": "PMC10485652"
+ },
+ {
   "pmid": "36470324",
   "title": "Endocrine disruption and reproductive impairment of methylparaben in adult zebrafish.",
   "author1": "Hu",
@@ -5643,6 +6688,30 @@ window.PAPERS = [
   ],
   "zh": "10 与 40 µM 淫羊藿苷降低孵化率与体长、致鳔异常与运动受损，40 µM 改变 T4 并降低 T3/T4 比，dio1 下调。",
   "doi": "10.1016/j.fct.2023.114155"
+ },
+ {
+  "pmid": "36966979",
+  "title": "Comparative analysis of two new zebrafish models: The cyp1a low-expression line and cyp1a knockout line under PAHs exposure.",
+  "author1": "Xie",
+  "nAuthors": 5,
+  "journal": "Gene",
+  "year": 2023,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "ox"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "pah",
+  "polName": "多环芳烃",
+  "stage": [
+   "lar"
+  ],
+  "zh": "cyp1a 低表达荧光品系对 PAHs 更敏感，而 cyp1a 敲除品系通过上调 cyp1b 补偿，敏感性未显著增加。",
+  "doi": "10.1016/j.gene.2023.147391"
  },
  {
   "pmid": "36900939",
@@ -5737,6 +6806,98 @@ window.PAPERS = [
   "pmc": "PMC10531093"
  },
  {
+  "pmid": "36182181",
+  "title": "Mepanipyrim induces visual developmental toxicity and vision-guided behavioral alteration in zebrafish larvae.",
+  "author1": "Shen",
+  "nAuthors": 5,
+  "journal": "J Environ Sci (China)",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "ey"
+  ],
+  "dirs": [
+   "dv",
+   "bh"
+  ],
+  "marks": [
+   "eyesize",
+   "escape",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "嘧菌胺",
+  "stage": [
+   "lar"
+  ],
+  "zh": "嘧菌胺致仔鱼视网膜损伤并改变强光与单色光诱发的逃逸行为，grk1b 受 AhR 调控，中长波长视蛋白受影响是行为改变主因。",
+  "doi": "10.1016/j.jes.2021.11.008"
+ },
+ {
+  "pmid": "36503748",
+  "title": "Joint effects of micro-sized polystyrene and chlorpyrifos on zebrafish based on multiple endpoints and gut microbial effects.",
+  "author1": "Huang",
+  "nAuthors": 6,
+  "journal": "J Environ Sci (China)",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "gu",
+   "li"
+  ],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "ros",
+   "hist",
+   "body"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、聚苯乙烯",
+  "stage": [
+   "adu"
+  ],
+  "zh": "微聚苯乙烯蓄积于肠道与肝并致氧化应激、多动与肠菌紊乱，吸附毒死蜱后个体毒性增强，源于微塑料在鱼体内释放毒死蜱。",
+  "doi": "10.1016/j.jes.2022.06.001"
+ },
+ {
+  "pmid": "36272374",
+  "title": "Developmental toxicity of prometryn induces mitochondrial dysfunction, oxidative stress, and failure of organogenesis in zebrafish (Danio rerio).",
+  "author1": "Min",
+  "nAuthors": 6,
+  "journal": "J Hazard Mater",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he",
+   "li",
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "ox",
+   "cv"
+  ],
+  "marks": [
+   "surv",
+   "len",
+   "edema",
+   "hr",
+   "ros"
+  ],
+  "polClass": "pest",
+  "polName": "扑草净",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "扑草净缩短体长、致卵黄囊与心包水肿、心率异常及存活下降，并抑制线粒体呼吸、升高 ROS 与凋亡，fli1a、olig2、L-fabp 转基因显示器官发育缺陷。",
+  "doi": "10.1016/j.jhazmat.2022.130202"
+ },
+ {
   "pmid": "37084512",
   "title": "Potential effects of natural aging process on the characteristics and toxicity of facial masks: A zebrafish-based study.",
   "author1": "Kim",
@@ -5765,6 +6926,39 @@ window.PAPERS = [
   "doi": "10.1016/j.jhazmat.2023.131425"
  },
  {
+  "pmid": "37156044",
+  "title": "Bensulide-induced oxidative stress causes developmental defects of cardiovascular system and liver in zebrafish (Danio rerio).",
+  "author1": "Kim",
+  "nAuthors": 5,
+  "journal": "J Hazard Mater",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he",
+   "li",
+   "ey"
+  ],
+  "dirs": [
+   "dv",
+   "cv",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "len",
+   "hr",
+   "ros"
+  ],
+  "polClass": "op",
+  "polName": "地散磷",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "3 mg/L 地散磷使 96 hpf 仔鱼心率降至对照的 16.37%、肝面积降至 41.98%，同时 ROS 升高 238% 并抑制抗氧化酶。",
+  "doi": "10.1016/j.jhazmat.2023.131577"
+ },
+ {
   "pmid": "37163897",
   "title": "Transgenerational endocrine disruptor effects of cadmium in zebrafish and contribution of standing epigenetic variation to adaptation.",
   "author1": "Pierron",
@@ -5789,6 +6983,38 @@ window.PAPERS = [
   "zh": "镉诱导的 esr1 DNA 甲基化改变呈性别依赖并遗传至第四代，但由单核苷酸多态性造成的甲基化位点增减驱动，既引起跨代紊乱也促进快速适应。",
   "doi": "10.1016/j.jhazmat.2023.131579",
   "gen": "F3+"
+ },
+ {
+  "pmid": "37185102",
+  "title": "Effects of Chloramine T on zebrafish embryos malformations associated with cardiotoxicity and neurotoxicity.",
+  "author1": "Rivero-Wendt",
+  "nAuthors": 7,
+  "journal": "J Toxicol Environ Health A",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "dv",
+   "cv"
+  ],
+  "marks": [
+   "surv",
+   "hr",
+   "edema",
+   "ache",
+   "morph"
+  ],
+  "polClass": "emerg",
+  "polName": "氯胺T",
+  "stage": [
+   "zyg",
+   "hat",
+   "lar"
+  ],
+  "zh": "氯胺T 24 与 96 h 的 LC50 为 143.05 与 130.97 mg/L，暴露致孵化延迟、心率下降、心包水肿与平衡失调，64–128 mg/L 抑制 AChE 活性。",
+  "doi": "10.1080/15287394.2023.2205271"
  },
  {
   "pmid": "37374200",
@@ -5901,6 +7127,36 @@ window.PAPERS = [
   "key": true
  },
  {
+  "pmid": "36493994",
+  "title": "Glyphosate-based herbicide (GBH) causes damage in embryo-larval stages of zebrafish (Danio rerio).",
+  "author1": "Ames",
+  "nAuthors": 8,
+  "journal": "Neurotoxicol Teratol",
+  "year": 2023,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "surv",
+   "hr",
+   "morph",
+   "ache"
+  ],
+  "polClass": "pest",
+  "polName": "草甘膦",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "饮水浓度 250–1000 µg/L 的草甘膦基除草剂降低存活、加速孵化、致心包与卵黄囊水肿及脊柱弯曲，并抑制 GST 与 AChE 活性，自发运动与触碰反应无变化。",
+  "doi": "10.1016/j.ntt.2022.107147"
+ },
+ {
   "pmid": "37739188",
   "title": "Unveiling the molecular mechanisms and developmental consequences of mercury (Hg) toxicity in zebrafish embryo-larvae: A comprehensive approach.",
   "author1": "Henriques",
@@ -5930,6 +7186,33 @@ window.PAPERS = [
   ],
   "zh": "汞 96 hpf LC50 为 139 µg/L，致心包水肿与脊柱尾部畸形；100 µg/L 时 AChE 活性下降、GST 升高、PP1γ 表达降低，亚致死浓度下运动受损。",
   "doi": "10.1016/j.ntt.2023.107302"
+ },
+ {
+  "pmid": "37244562",
+  "title": "Assessing CaMPARI as new approach methodology for evaluating neurotoxicity.",
+  "author1": "Biechele-Speziale",
+  "nAuthors": 6,
+  "journal": "Neurotoxicology",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [
+   "vmr"
+  ],
+  "polClass": "emerg",
+  "polName": "PCB 95、邻苯二甲酸单乙基己酯、乙醇",
+  "stage": [
+   "lar"
+  ],
+  "zh": "光暗行为与 CaMPARI 脑活动成像结果并不总是一致，仅凭行为表型不足以推断毒物作用的脑区与神经机制。",
+  "doi": "10.1016/j.neuro.2023.05.013",
+  "pmc": "PMC10527633"
  },
  {
   "pmid": "37976248",
@@ -5990,6 +7273,34 @@ window.PAPERS = [
   ],
   "zh": "杀扑磷 96 hpf LC50 约 30.7 mg/L，降低存活、孵化率与体长并诱发心脏发育毒性和运动能力下降，伴 ROS、MDA 升高与心包区凋亡。",
   "doi": "10.1016/j.pestbp.2023.105526"
+ },
+ {
+  "pmid": "36934645",
+  "title": "Genetic hyperactivation of Nrf2 causes larval lethality in Keap1a and Keap1b-double-knockout zebrafish.",
+  "author1": "Bian",
+  "nAuthors": 7,
+  "journal": "Redox Biol",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "ey"
+  ],
+  "dirs": [
+   "ox",
+   "mt"
+  ],
+  "marks": [
+   "surv",
+   "gene"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "keap1a;keap1b 双敲除使 Nrf2 靶基因超表达并致孵化后一周内死亡，Nrf2 突变可挽救，视觉周期基因下调。",
+  "doi": "10.1016/j.redox.2023.102673",
+  "pmc": "PMC10031532"
  },
  {
   "pmid": "36115403",
@@ -6055,6 +7366,65 @@ window.PAPERS = [
   "doi": "10.1016/j.scitotenv.2022.159883"
  },
  {
+  "pmid": "36403845",
+  "title": "Environmental exposure to triazole fungicide causes left-right asymmetry defects and contributes to abnormal heart development in zebrafish embryos by activating PPARγ-coupled Wnt/β-catenin signaling pathway.",
+  "author1": "Wang",
+  "nAuthors": 5,
+  "journal": "Sci Total Environ",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "dv"
+  ],
+  "marks": [
+   "edema",
+   "hr",
+   "vasc",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "苯醚甲环唑",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "苯醚甲环唑激活 PPARγ 抑制 Wnt/β-catenin，改变 Kupffer 囊大小与左右不对称基因，致心包水肿、心率与心功能下降。",
+  "doi": "10.1016/j.scitotenv.2022.160286"
+ },
+ {
+  "pmid": "36473658",
+  "title": "PFAS-induced lipidomic dysregulations and their associations with developmental toxicity in zebrafish embryos.",
+  "author1": "Yang",
+  "nAuthors": 11,
+  "journal": "Sci Total Environ",
+  "year": 2023,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "dv",
+   "ox"
+  ],
+  "marks": [
+   "morph",
+   "hr",
+   "edema"
+  ],
+  "polClass": "emerg",
+  "polName": "全氟辛酸、全氟辛烷磺酸",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "PFOA/PFOS 微注射致 72 hpf 心包水肿、心脏出血、脊柱弯曲与心率升高，含 DHA 链磷脂酰乙醇胺下调提示氧化损伤。",
+  "doi": "10.1016/j.scitotenv.2022.160691"
+ },
+ {
   "pmid": "36566849",
   "title": "Endocrine disrupting effect and reproductive toxicity of the separate exposure and co-exposure of nano-polystyrene and diethylstilbestrol to zebrafish.",
   "author1": "Lin",
@@ -6086,6 +7456,32 @@ window.PAPERS = [
   "zh": "纳米聚苯乙烯与己烯雌酚共暴露加重肝与性腺损伤，性激素及 VTG 抑制呈相加效应，产卵量由 1031 降至 306，胚胎畸形率达 65.0%。",
   "doi": "10.1016/j.scitotenv.2022.161100",
   "gen": "F1"
+ },
+ {
+  "pmid": "36642268",
+  "title": "Combined toxicity of acetamiprid and cadmium to larval zebrafish (Danio rerio) based on metabolomic analysis.",
+  "author1": "Hu",
+  "nAuthors": 7,
+  "journal": "Sci Total Environ",
+  "year": 2023,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "dv"
+  ],
+  "marks": [
+   "len",
+   "morph",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "镉、啶虫脒",
+  "stage": [
+   "lar"
+  ],
+  "zh": "镉与啶虫脒单独或联合均抑制仔鱼生长并致畸形，联合组差异代谢物最多（294 个），扰乱核黄素、糖脂与氨基酸代谢。",
+  "doi": "10.1016/j.scitotenv.2023.161539"
  },
  {
   "pmid": "36702264",
@@ -6256,6 +7652,28 @@ window.PAPERS = [
   "doi": "10.1016/j.scitotenv.2023.166349"
  },
  {
+  "pmid": "38060659",
+  "title": "ROS-induced ribosome impairment underlies ZAKα-mediated metabolic decline in obesity and aging.",
+  "author1": "Snieckute",
+  "nAuthors": 30,
+  "journal": "Science",
+  "year": 2023,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ag",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "斑马鱼仔鱼缺失 ZAKα 可抵抗 ROS 诱导的病理损伤，核糖体停滞经 ZAKα 激活成为肥胖与衰老代谢衰退的共同信号。",
+  "doi": "10.1126/science.adf3208"
+ },
+ {
   "pmid": "36951524",
   "title": "Triazole fungicides induce adipogenesis and repress osteoblastogenesis in zebrafish.",
   "author1": "Thrikawala",
@@ -6283,6 +7701,37 @@ window.PAPERS = [
   "pmc": "PMC10230286"
  },
  {
+  "pmid": "36851053",
+  "title": "Sulfamethoxazole (SMX) Alters Immune and Apoptotic Endpoints in Developing Zebrafish (Danio rerio).",
+  "author1": "Iftikhar",
+  "nAuthors": 7,
+  "journal": "Toxics",
+  "year": 2023,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "edema",
+   "gene",
+   "vmr"
+  ],
+  "polClass": "emerg",
+  "polName": "磺胺甲噁唑",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "磺胺甲噁唑高浓度降低存活、延迟孵化并致卵黄囊与心包水肿及脊柱弯曲，低浓度上调 ifn-γ、il-1β 与 bax，500–2500 µg/L 使仔鱼光暗偏好试验中活动过度。",
+  "doi": "10.3390/toxics11020178",
+  "pmc": "PMC9959310"
+ },
+ {
   "pmid": "37071853",
   "title": "Tetrahydroxystilbene Glucoside Attenuates Oxidative Stress-Induced Aging by Regulating Oxidation Resistance and Inflammation in Larval Zebrafish.",
   "author1": "Xia",
@@ -6307,6 +7756,63 @@ window.PAPERS = [
   ],
   "zh": "H2O2 诱导衰老仔鱼中，TSG 降低 β-半乳糖苷酶阳性率、提高游泳速度，并上调 sirt1 与 tert、抑制 il-1β 等炎症基因。",
   "doi": "10.1089/zeb.2022.0045"
+ },
+ {
+  "pmid": "35507640",
+  "title": "Polystyrene Nanoplastics Toxicity to Zebrafish: Dysregulation of the Brain-Intestine-Microbiota Axis.",
+  "author1": "Teng",
+  "nAuthors": 9,
+  "journal": "ACS Nano",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "gu",
+   "br"
+  ],
+  "dirs": [
+   "bh",
+   "rp"
+  ],
+  "marks": [
+   "ntx",
+   "len",
+   "f1"
+  ],
+  "polClass": "plas",
+  "polName": "聚苯乙烯",
+  "stage": [
+   "lar"
+  ],
+  "zh": "44 nm 聚苯乙烯纳米塑料暴露 30 天抑制生长、增加肠道通透性与炎症，42 种神经递质相关代谢物改变并与菌群相关，子代胚胎自发运动、孵化率与体长下降。",
+  "doi": "10.1021/acsnano.2c01872",
+  "gen": "F1"
+ },
+ {
+  "pmid": "35229877",
+  "title": "Zebrafish embryo neonicotinoid developmental neurotoxicity in the FET test and behavioral assays.",
+  "author1": "Von Hellfeld",
+  "nAuthors": 9,
+  "journal": "ALTEX",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [
+   "coil",
+   "surv",
+   "morph"
+  ],
+  "polClass": "pest",
+  "polName": "噻虫啉、啶虫脒、吡虫啉",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "OECD 236 下新烟碱类亚致死效应在 100 µM 以下不明显，但卷曲试验中 50 µM 噻虫啉与啶虫脒、吡虫啉即改变爆发时长与次数，行为终点更敏感。",
+  "doi": "10.14573/altex.2111021"
  },
  {
   "pmid": "34933138",
@@ -6340,6 +7846,251 @@ window.PAPERS = [
   "doi": "10.1016/j.aquatox.2021.106053"
  },
  {
+  "pmid": "35180455",
+  "title": "Oxidative stress and metal homeostasis alterations in Danio rerio (zebrafish) under single and combined carbamazepine, acetamiprid and cadmium exposures.",
+  "author1": "Araujo",
+  "nAuthors": 9,
+  "journal": "Aquat Toxicol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br",
+   "li"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "enz",
+   "mda",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "卡马西平、啶虫脒、镉",
+  "stage": [
+   "adu"
+  ],
+  "zh": "卡马西平、啶虫脒与镉单暴露均引起脑与肝氧化应激及金属稳态改变，联合暴露脂质过氧化反而降低，提示相互拮抗。",
+  "doi": "10.1016/j.aquatox.2022.106122"
+ },
+ {
+  "pmid": "35561629",
+  "title": "Long-term exposure of zebrafish to bisphenol F: Adverse effects on parental reproduction and offspring neurodevelopment.",
+  "author1": "Gu",
+  "nAuthors": 10,
+  "journal": "Aquat Toxicol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "dv",
+   "bh"
+  ],
+  "marks": [
+   "fec",
+   "f1",
+   "len",
+   "hr",
+   "gene"
+  ],
+  "polClass": "edc",
+  "polName": "双酚F",
+  "stage": [
+   "adu",
+   "lar"
+  ],
+  "zh": "全生命周期环境浓度双酚F 暴露升高氧化应激、增加性腺凋亡并降低 F0 产卵量；经母体传递使 F1 孵化率、心率、体长与运动行为下降。",
+  "doi": "10.1016/j.aquatox.2022.106190",
+  "gen": "F1"
+ },
+ {
+  "pmid": "35623197",
+  "title": "The toxic effects of combined exposure of chlorpyrifos and p, p'-DDE to zebrafish (Danio rerio) and tissue bioaccumulation.",
+  "author1": "Jiang",
+  "nAuthors": 9,
+  "journal": "Aquat Toxicol",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "surv",
+   "enz",
+   "mda",
+   "ache",
+   "body"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、p,p'-DDE",
+  "stage": [
+   "adu"
+  ],
+  "zh": "毒死蜱与 p,p'-DDE 共暴露对成鱼急性毒性呈相加效应（MDR=1.64），CAT/SOD/GST 升高、MDA 增加而 AChE 与 CarE 降低，组织蓄积模式改变。",
+  "doi": "10.1016/j.aquatox.2022.106194"
+ },
+ {
+  "pmid": "35640362",
+  "title": "Enantioselective bioaccumulation, oxidative stress, and thyroid disruption assessment of cis-metconazole enantiomers in zebrafish (Danio rerio).",
+  "author1": "He",
+  "nAuthors": 5,
+  "journal": "Aquat Toxicol",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "ed"
+  ],
+  "marks": [
+   "conc",
+   "enz",
+   "mda",
+   "th"
+  ],
+  "polClass": "pest",
+  "polName": "叶菌唑",
+  "stage": [],
+  "zh": "顺式叶菌唑两对映体毒性不同，(1R,5S) 富集与丙二醛更高，(1S,5R) 抗氧化酶诱导更强，(1R,5S) 甲状腺干扰更显著。",
+  "doi": "10.1016/j.aquatox.2022.106205"
+ },
+ {
+  "pmid": "36279691",
+  "title": "Stereoselective toxicity, bioaccumulation, and metabolic pathways of triazole fungicide cyproconazole in zebrafish.",
+  "author1": "He",
+  "nAuthors": 6,
+  "journal": "Aquat Toxicol",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "enz",
+   "body"
+  ],
+  "polClass": "pest",
+  "polName": "环丙唑醇",
+  "stage": [],
+  "zh": "环丙唑醇四种立体异构体 96 h LC50 为 15.9–27.0 mg/L，SR 体富集最强，POD 升高而 CAT 随浓度下降，鉴定出 7 种 I 相与 25 种 II 相代谢物。",
+  "doi": "10.1016/j.aquatox.2022.106330"
+ },
+ {
+  "pmid": "34403049",
+  "title": "Investigation of the Oxidative Stress Response of a Green Synthesis Nanoparticle (RP-Ag/ACNPs) in Zebrafish.",
+  "author1": "Kokturk",
+  "nAuthors": 8,
+  "journal": "Biol Trace Elem Res",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "edema",
+   "morph"
+  ],
+  "polClass": "np",
+  "polName": "银/活性炭纳米颗粒",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "RP-Ag/AC 纳米颗粒 96 h LC50 为 217.2 mg/L，致剂量依赖死亡与卵黄囊、心包水肿及脊柱尾畸形，并升高脑内 nNOS 与 8-OHdG，提示绿色合成未消除氧化损伤。",
+  "doi": "10.1007/s12011-021-02855-3"
+ },
+ {
+  "pmid": "35158142",
+  "title": "Pharmacological assessment of zebrafish-based cardiotoxicity models.",
+  "author1": "Maciag",
+  "nAuthors": 4,
+  "journal": "Biomed Pharmacother",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "多柔比星、特非那定",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "以统一给药方案建立多柔比星、肾上腺素与特非那定胚胎心脏毒性模型并头对头比较，阻断肾素-血管紧张素系统、其次 β 肾上腺素系统可改善心功能。",
+  "doi": "10.1016/j.biopha.2022.112695"
+ },
+ {
+  "pmid": "36084721",
+  "title": "Mixture toxicity of cadmium and acetamiprid to the early life stages of zebrafish (Danio rerio).",
+  "author1": "Hu",
+  "nAuthors": 8,
+  "journal": "Chem Biol Interact",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "enz",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "镉、啶虫脒",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "镉 96 h LC50 4.77 mg/L 低于啶虫脒 152.6 mg/L，混合呈协同毒性，显著改变 T-SOD、POD、CarE 及 TRα、crh、Tnf 等 5 个基因表达。",
+  "doi": "10.1016/j.cbi.2022.110150"
+ },
+ {
+  "pmid": "34861263",
+  "title": "Heterogeneity effects of nanoplastics and lead on zebrafish intestinal cells identified by single-cell sequencing.",
+  "author1": "Yu",
+  "nAuthors": 5,
+  "journal": "Chemosphere",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "mda",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "铅、聚苯乙烯纳米塑料",
+  "stage": [
+   "adu"
+  ],
+  "zh": "200 µg/L 纳米塑料与铅共暴露致肠 MDA、8-OHdG、TNF-α 最高，单细胞测序显示巨噬细胞与肠上皮细胞为主要靶细胞，仅杯状细胞呈协同。",
+  "doi": "10.1016/j.chemosphere.2021.133133"
+ },
+ {
   "pmid": "34995633",
   "title": "Antagonistic effects and mechanisms of carbendazim and chlorpyrifos on the neurobehavior of larval zebrafish.",
   "author1": "Zhang",
@@ -6362,6 +8113,424 @@ window.PAPERS = [
   ],
   "zh": "多菌灵使光暗转换下角速度与转向增加，毒死蜱降低平均游速，二者对游速与光暗加速度呈强拮抗。",
   "doi": "10.1016/j.chemosphere.2022.133522"
+ },
+ {
+  "pmid": "35304207",
+  "title": "circRNA-based biomarker candidates for acute cypermethrin and chlorpyrifos toxication in the brain of Zebrafish (Danio rerio).",
+  "author1": "Özdemir",
+  "nAuthors": 2,
+  "journal": "Chemosphere",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、氯氰菊酯",
+  "stage": [],
+  "zh": "急性氯氰菊酯与毒死蜱暴露使斑马鱼脑分别有 16 与 60 个 circRNA 差异表达，靶基因富集于 MAPK、内吞、凋亡与 p53 通路，提示 circRNA 可作脑毒性标志物。",
+  "doi": "10.1016/j.chemosphere.2022.134330"
+ },
+ {
+  "pmid": "36075364",
+  "title": "Influence of co-exposure to sulfamethazine on the toxicity and bioaccumulation kinetics of chlorpyrifos in zebrafish (Danio rerio).",
+  "author1": "Jiang",
+  "nAuthors": 6,
+  "journal": "Chemosphere",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "ache",
+   "enz",
+   "body",
+   "ros"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、磺胺二甲嘧啶",
+  "stage": [
+   "adu"
+  ],
+  "zh": "1 mg/L 磺胺二甲嘧啶未显著改变毒死蜱 96 h LC50，但 30 天共暴露加重氧化应激、降低 CarE 与 AChE 活性并延长两者消除时间。",
+  "doi": "10.1016/j.chemosphere.2022.136317"
+ },
+ {
+  "pmid": "36223820",
+  "title": "Histology and metabonomics reveal the toxic effects of kresoxim-methyl on adult zebrafish.",
+  "author1": "Fang",
+  "nAuthors": 7,
+  "journal": "Chemosphere",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "li",
+   "go",
+   "gu"
+  ],
+  "dirs": [
+   "ox",
+   "rp"
+  ],
+  "marks": [
+   "hist",
+   "enz",
+   "mda",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "醚菌酯",
+  "stage": [
+   "adu"
+  ],
+  "zh": "环境浓度醚菌酯暴露 21 天使雌鱼肝细胞空泡化、卵母细胞发育停滞、肠杯状细胞减少，并伴肝脏脂质与氨基酸代谢紊乱。",
+  "doi": "10.1016/j.chemosphere.2022.136739"
+ },
+ {
+  "pmid": "35525464",
+  "title": "Oxidative stress, apoptosis and serotonergic system changes in zebrafish (Danio rerio) gills after long-term exposure to microplastics and copper.",
+  "author1": "Santos",
+  "nAuthors": 5,
+  "journal": "Comp Biochem Physiol C Toxicol Pharmacol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "gi"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "ros",
+   "enz",
+   "mda",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "铜、微塑料",
+  "stage": [
+   "adu"
+  ],
+  "zh": "微塑料与铜联合暴露 30 天使鳃 ROS 升高、CAT 与 GPx 受抑、LPO 增加，tph1a 与 casp3 上调提示血清素与凋亡紊乱。",
+  "doi": "10.1016/j.cbpc.2022.109363"
+ },
+ {
+  "pmid": "36087705",
+  "title": "Persistent and transgenerational effects of pesticide residues in zebrafish.",
+  "author1": "Pompermaier",
+  "nAuthors": 4,
+  "journal": "Comp Biochem Physiol C Toxicol Pharmacol",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh",
+   "rp",
+   "ox"
+  ],
+  "marks": [
+   "dive",
+   "ache",
+   "enz",
+   "f1"
+  ],
+  "polClass": "pest",
+  "polName": "草甘膦、2,4-滴",
+  "stage": [
+   "adu",
+   "lar"
+  ],
+  "zh": "草甘膦暴露成鱼表现多动与反捕食反应受损，F1 出现行为与存活改变及 AChE 与抗氧化酶变化；2,4-D 组虽无持久效应却丧失繁殖能力。",
+  "doi": "10.1016/j.cbpc.2022.109461",
+  "gen": "F1"
+ },
+ {
+  "pmid": "34995954",
+  "title": "Quantitative measurements of zebrafish heartrate and heart rate variability: A survey between 1990-2020.",
+  "author1": "Ling",
+  "nAuthors": 4,
+  "journal": "Comput Biol Med",
+  "year": 2022,
+  "review": true,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "mt",
+   "cv"
+  ],
+  "marks": [
+   "hr",
+   "avb"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [],
+  "zh": "综述比较 1990–2020 年斑马鱼心率与心率变异性检测流程、信号分析算法及 LabVIEW、Rvlpulse、ZebraLab 等软件，指出 HR 与 HRV 负相关并受自主神经调控。",
+  "doi": "10.1016/j.compbiomed.2021.105045"
+ },
+ {
+  "pmid": "35182799",
+  "title": "Carboxin can induce cardiotoxicity in zebrafish embryos.",
+  "author1": "Huang",
+  "nAuthors": 9,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "ros",
+   "gene",
+   "hist"
+  ],
+  "polClass": "pest",
+  "polName": "萎锈灵",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "萎锈灵致胚胎心脏结构改变与心脏发育基因表达紊乱，ROS 蓄积造成线粒体损伤、ATP 酶活性下降，心脏血细胞减少、心肌增殖受抑，最终心力衰竭死亡。",
+  "doi": "10.1016/j.ecoenv.2022.113318"
+ },
+ {
+  "pmid": "35304337",
+  "title": "The developmental toxicity and transcriptome analyses of zebrafish (Danio rerio) embryos exposed to carbon nanoparticles.",
+  "author1": "Shi",
+  "nAuthors": 6,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "surv",
+   "gene"
+  ],
+  "polClass": "np",
+  "polName": "碳纳米颗粒",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "碳纳米颗粒 50–200 µg/mL 致畸形率升高与孵化延迟，转录组检出 236 个差异基因，主要富集于类固醇激素合成与光转导通路。",
+  "doi": "10.1016/j.ecoenv.2022.113417"
+ },
+ {
+  "pmid": "35512469",
+  "title": "Combined effects of S-metolachlor and benoxacor on embryo development in zebrafish (Danio rerio).",
+  "author1": "Liu",
+  "nAuthors": 9,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "enz",
+   "nrf2"
+  ],
+  "polClass": "pest",
+  "polName": "异丙甲草胺、解草酮",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "解草酮单用毒性高于与异丙甲草胺混用，混合暴露呈拮抗，但两者均破坏 ROS 平衡并致胚胎畸形与凋亡异常。",
+  "doi": "10.1016/j.ecoenv.2022.113565"
+ },
+ {
+  "pmid": "35816841",
+  "title": "Isoprocarb causes neurotoxicity of zebrafish embryos through oxidative stress-induced apoptosis.",
+  "author1": "Wang",
+  "nAuthors": 8,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh",
+   "ox",
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "ache",
+   "ros",
+   "enz",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "异丙威",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "异丙威致胚胎后脑发育缺陷与运动能力抑制，降低 AChE 与 SOD 活性、升高 ROS，并经氧化应激诱导凋亡。",
+  "doi": "10.1016/j.ecoenv.2022.113870"
+ },
+ {
+  "pmid": "35930835",
+  "title": "Microplastics and copper induce apoptosis, alter neurocircuits, and cause behavioral changes in zebrafish (Danio rerio) brain.",
+  "author1": "Santos",
+  "nAuthors": 6,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "enz",
+   "ache",
+   "gene",
+   "shoal"
+  ],
+  "polClass": "metal",
+  "polName": "铜、微塑料",
+  "stage": [
+   "adu"
+  ],
+  "zh": "30 天暴露中微塑料与铜改变脑抗氧化系统、升高 AChE 活性、下调 pcna 并上调多巴胺通路基因，伴游动与集群行为改变及凋亡基因上调。",
+  "doi": "10.1016/j.ecoenv.2022.113926"
+ },
+ {
+  "pmid": "36474803",
+  "title": "Genetic and epigenetic interplay allows rapid transgenerational adaptation to metal pollution in zebrafish.",
+  "author1": "Pierron",
+  "nAuthors": 9,
+  "journal": "Environ Epigenet",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "rp"
+  ],
+  "marks": [
+   "meth",
+   "len",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "镉",
+  "stage": [
+   "adu"
+  ],
+  "zh": "仅 F1 暴露环境浓度镉，cep19 外显子3 的甲基化改变可遗传至第四代并伴生长异常，但该表观变化由单核苷酸多态性造成的甲基化位点增减驱动。",
+  "doi": "10.1093/eep/dvac022",
+  "pmc": "PMC9716877",
+  "gen": "F3+"
+ },
+ {
+  "pmid": "36283474",
+  "title": "Chronic toxic effects of isoflucypram on reproduction and intestinal energy metabolism in zebrafish (Danio rerio).",
+  "author1": "Xiao",
+  "nAuthors": 4,
+  "journal": "Environ Pollut",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "rp",
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "hist",
+   "f1"
+  ],
+  "polClass": "pest",
+  "polName": "异氟菌胺",
+  "stage": [
+   "adu",
+   "lar"
+  ],
+  "zh": "0.08 µM 异氟菌胺暴露 120 天致 F1 胚胎死亡、孵化延迟与心包水肿、小眼畸形，F0 肠绒毛肿胀伴线粒体能量代谢基因改变。",
+  "doi": "10.1016/j.envpol.2022.120479",
+  "gen": "F1"
+ },
+ {
+  "pmid": "34643865",
+  "title": "Specificity of time- and dose-dependent morphological endpoints in the fish embryo acute toxicity (FET) test for substances with diverse modes of action: the search for a \"fingerprint\".",
+  "author1": "von Hellfeld",
+  "nAuthors": 3,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [
+   "morph"
+  ],
+  "polClass": "pest",
+  "polName": "多种化学品",
+  "stage": [
+   "lar"
+  ],
+  "zh": "18 种作用模式各异的化合物在 FET 中的形态学观察多不具毒物特异性，仅 ≤EC10 亚致死浓度下才较特异，难以据此建立急性毒性指纹。",
+  "doi": "10.1007/s11356-021-16354-4",
+  "pmc": "PMC8827326"
+ },
+ {
+  "pmid": "35467190",
+  "title": "Polyethylene microplastic exposure and concurrent effect with Aeromonas hydrophila infection on zebrafish.",
+  "author1": "Ding",
+  "nAuthors": 10,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "len",
+   "enz",
+   "hist"
+  ],
+  "polClass": "plas",
+  "polName": "聚乙烯",
+  "stage": [
+   "adu"
+  ],
+  "zh": "35 天聚乙烯微塑料降低成鱼生长，低浓度刺激肠 GSH、GST，10 mg/L 抑制 SOD、CAT，并致肠损伤与菌群改变。",
+  "doi": "10.1007/s11356-022-20308-9"
  },
  {
   "pmid": "36006007",
@@ -6398,6 +8567,244 @@ window.PAPERS = [
   "gen": "F1"
  },
  {
+  "pmid": "35750255",
+  "title": "Cylindrospermopsin induces oocyte maturation and disrupts gene expression in zebrafish ovarian follicles.",
+  "author1": "Moraes",
+  "nAuthors": 4,
+  "journal": "Environ Toxicol Pharmacol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "ed"
+  ],
+  "marks": [
+   "gene",
+   "steroid"
+  ],
+  "polClass": "emerg",
+  "polName": "柱孢藻毒素",
+  "stage": [
+   "adu"
+  ],
+  "zh": "1000 µg/L 柱孢藻毒素使离体卵泡生发泡破裂率与 caspase-3 活性升高，3βhsd 与 fshr 转录下降而 cyp19a1a 升高。",
+  "doi": "10.1016/j.etap.2022.103915"
+ },
+ {
+  "pmid": "35597397",
+  "title": "Toxic effects of polystyrene nanoplastics and polybrominated diphenyl ethers to zebrafish (Danio rerio).",
+  "author1": "Wang",
+  "nAuthors": 10,
+  "journal": "Fish Shellfish Immunol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "ey",
+   "gi",
+   "li"
+  ],
+  "dirs": [
+   "dv",
+   "ed"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "len",
+   "gene",
+   "hist"
+  ],
+  "polClass": "plas",
+  "polName": "聚苯乙烯、BDE-47",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "共暴露使心包与卵黄囊水肿、弯尾加重、存活与体长下降，并更显著上调 TSHβ、TG、Dio2、TRβ，提示甲状腺轴受累。",
+  "doi": "10.1016/j.fsi.2022.05.025"
+ },
+ {
+  "pmid": "35595038",
+  "title": "Transgenerational effects of parental bisphenol S exposure on zebrafish (Danio rerio) reproduction.",
+  "author1": "Hao",
+  "nAuthors": 8,
+  "journal": "Food Chem Toxicol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "ed"
+  ],
+  "marks": [
+   "meth",
+   "steroid",
+   "sexratio",
+   "fec"
+  ],
+  "polClass": "edc",
+  "polName": "双酚S",
+  "stage": [
+   "adu"
+  ],
+  "zh": "100 µg/L 双酚S 使 F1 精巢、1 µg/L 使 F2 卵巢 DNA 甲基化升高，cyp11a、cyp17 与 3βhsd 表达下降，雌二醇升高、睾酮降低，性比偏雌且雄鱼繁殖力受损。",
+  "doi": "10.1016/j.fct.2022.113142",
+  "gen": "F2"
+ },
+ {
+  "pmid": "35055782",
+  "title": "Evaluation of the Toxicity of Bisphenol A in Reproduction and Its Effect on Fertility and Embryonic Development in the Zebrafish (Danio rerio).",
+  "author1": "Reis",
+  "nAuthors": 6,
+  "journal": "Int J Environ Res Public Health",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "dv"
+  ],
+  "marks": [
+   "fec",
+   "f1",
+   "morph",
+   "hist"
+  ],
+  "polClass": "edc",
+  "polName": "双酚A",
+  "stage": [
+   "adu",
+   "lar"
+  ],
+  "zh": "亲代 BPA 暴露 21 天使雌雄配子发生异常、生育力下降，子代死亡与心脏、骨骼畸形随暴露浓度升高。",
+  "doi": "10.3390/ijerph19020962",
+  "pmc": "PMC8775542",
+  "gen": "F1"
+ },
+ {
+  "pmid": "35563633",
+  "title": "Soy-Derived Equol Induces Antioxidant Activity in Zebrafish in an Nrf2-Independent Manner.",
+  "author1": "Watanabe",
+  "nAuthors": 4,
+  "journal": "Int J Mol Sci",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "mt"
+  ],
+  "marks": [
+   "gene",
+   "ros"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "七种异黄酮中雌马酚抗氧化作用最强，且在 Nrf2 敲除斑马鱼中仍有效，提示其不依赖 Keap1-Nrf2 通路。",
+  "doi": "10.3390/ijms23095243",
+  "pmc": "PMC9105299"
+ },
+ {
+  "pmid": "35897817",
+  "title": "Microglia Remodelling and Neuroinflammation Parallel Neuronal Hyperactivation Following Acute Organophosphate Poisoning.",
+  "author1": "Somkhit",
+  "nAuthors": 3,
+  "journal": "Int J Mol Sci",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "ache",
+   "gene"
+  ],
+  "polClass": "op",
+  "polName": "二异丙基氟磷酸酯",
+  "stage": [
+   "lar"
+  ],
+  "zh": "DFP 中毒迅速诱导小胶质细胞变形并大量表达 Il1β、Tnfα 与 Il8，去除小胶质细胞后有机磷引起的神经元过度兴奋明显减轻。",
+  "doi": "10.3390/ijms23158240",
+  "pmc": "PMC9332153"
+ },
+ {
+  "pmid": "35955574",
+  "title": "Cardiotoxicity of Zebrafish Induced by 6-Benzylaminopurine Exposure and Its Mechanism.",
+  "author1": "Yang",
+  "nAuthors": 6,
+  "journal": "Int J Mol Sci",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "bh"
+  ],
+  "marks": [
+   "hr",
+   "cort",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "6-苄氨基嘌呤",
+  "stage": [
+   "lar"
+  ],
+  "zh": "6-BA 致仔鱼 myl7、vmhc、myh6 及 AVC 分化基因 bmp4、tbx2b、notch1b 表达异常，心功能减弱、心肌凋亡增加，皮质醇升高并伴焦虑行为。",
+  "doi": "10.3390/ijms23158438",
+  "pmc": "PMC9369308"
+ },
+ {
+  "pmid": "36233243",
+  "title": "Diflubenzuron Induces Cardiotoxicity in Zebrafish Embryos.",
+  "author1": "Han",
+  "nAuthors": 9,
+  "journal": "Int J Mol Sci",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "hr",
+   "ros",
+   "mda",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "除虫脲",
+  "stage": [
+   "zyg",
+   "lar",
+   "hat"
+  ],
+  "zh": "0.5–4.5 mg/L 除虫脲使胚胎 SV-BA 距离增大、心肌增殖受抑、血管发育受损，ROS 与 MDA 升高、SOD 与 CAT 降低，bax、p53、caspase3/9 上调。",
+  "doi": "10.3390/ijms231911932",
+  "pmc": "PMC9570284"
+ },
+ {
   "pmid": "35470462",
   "title": "Combined effects of chlorpyrifos and cyfluthrin on neurobehavior and neurotransmitter levels in larval zebrafish.",
   "author1": "Zhang",
@@ -6420,6 +8827,32 @@ window.PAPERS = [
   ],
   "zh": "毒死蜱与氟氯氰菊酯单用及混用均降低仔鱼 AChE 活性，混合暴露对游泳距离与速度的抑制呈拮抗，并改变 5-HT 与多巴胺前体等递质水平。",
   "doi": "10.1002/jat.4334"
+ },
+ {
+  "pmid": "36261670",
+  "title": "Prolonged Dexamethasone Exposure Enhances Zebrafish Lateral-Line Regeneration But Disrupts Mitochondrial Homeostasis and Hair Cell Function.",
+  "author1": "Saettele",
+  "nAuthors": 5,
+  "journal": "J Assoc Res Otolaryngol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "ll"
+  ],
+  "dirs": [
+   "bh"
+  ],
+  "marks": [
+   "hair"
+  ],
+  "polClass": "emerg",
+  "polName": "地塞米松",
+  "stage": [
+   "lar"
+  ],
+  "zh": "地塞米松促进硫酸铜损伤后侧线毛细胞及传入神经再生，但使毛细胞线粒体膜电位超极化、钙内流减少并更易受新霉素损伤。",
+  "doi": "10.1007/s10162-022-00875-x",
+  "pmc": "PMC9789251"
  },
  {
   "pmid": "34240810",
@@ -6448,6 +8881,300 @@ window.PAPERS = [
   "zh": "克百威抑制 Nrf2 与 Gstp1 表达、破坏自噬溶酶体生成，缩短野生型斑马鱼寿命并加重 spns1 突变体自噬缺陷与衰老。",
   "doi": "10.1111/jcmm.16774",
   "pmc": "PMC8742233"
+ },
+ {
+  "pmid": "35086039",
+  "title": "Toxicity of 4-(methylnitrosamino)-1-(3-pyridyl)-1-butanone (NNK) in early development: A wide-scope metabolomics assay in zebrafish embryos.",
+  "author1": "Merino",
+  "nAuthors": 5,
+  "journal": "J Hazard Mater",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "morph"
+  ],
+  "polClass": "emerg",
+  "polName": "NNK",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "NNK 暴露致胚胎致死与畸形，体内检出母体及 HPBA、NNAL-N-oxide 两种代谢物，并扰乱嘌呤嘧啶代谢、激活碱基切除修复通路。",
+  "doi": "10.1016/j.jhazmat.2021.127746"
+ },
+ {
+  "pmid": "35997487",
+  "title": "TERT distal promoter GC islands are critical for telomerase and together with DNMT3B silencing may serve as a senescence-inducing agent in gliomas.",
+  "author1": "Şerifoğlu",
+  "nAuthors": 4,
+  "journal": "J Neurogenet",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "ag"
+  ],
+  "marks": [
+   "meth",
+   "telo"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "adu"
+  ],
+  "zh": "斑马鱼脑 tert 远端启动子低甲基化位点随衰老与端粒缩短出现；胶质瘤细胞任一 GC 位点突变即废除启动子活性，DNMT3B 沉默诱导衰老。",
+  "doi": "10.1080/01677063.2022.2106371"
+ },
+ {
+  "pmid": "35123182",
+  "title": "Cylindrospermopsin impairs zebrafish (Danio rerio) embryo development.",
+  "author1": "Moraes",
+  "nAuthors": 4,
+  "journal": "Mar Environ Res",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "th"
+  ],
+  "dirs": [
+   "dv",
+   "ox",
+   "ed"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "edema",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "柱孢藻毒素",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "柱孢藻毒素降低仔鱼生长、致心包与卵黄囊水肿及泳囊缺失，并改变甲状腺与氧化应激相关基因表达，阈值约 10 μg/L。",
+  "doi": "10.1016/j.marenvres.2022.105567"
+ },
+ {
+  "pmid": "35364423",
+  "title": "Effects of microplastics on the accumulation and neurotoxicity of methylmercury in zebrafish larvae.",
+  "author1": "Zhu",
+  "nAuthors": 7,
+  "journal": "Mar Environ Res",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "body",
+   "dive",
+   "gene",
+   "gsh"
+  ],
+  "polClass": "metal",
+  "polName": "甲基汞、微塑料",
+  "stage": [
+   "lar"
+  ],
+  "zh": "微塑料吸附甲基汞形成复合物被仔鱼摄入，提高汞蓄积并加重运动抑制，伴 GSH 代谢紊乱与 sod、gpx4a 上调。",
+  "doi": "10.1016/j.marenvres.2022.105615"
+ },
+ {
+  "pmid": "35559893",
+  "title": "Abiotic factors and aging alter the physicochemical characteristics and toxicity of Phosphorus nanomaterials to zebrafish embryos.",
+  "author1": "Priyam",
+  "nAuthors": 4,
+  "journal": "NanoImpact",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "hr"
+  ],
+  "polClass": "np",
+  "polName": "纳米羟基磷灰石、纳米磷",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "环境老化与腐殖酸、紫外照射改变磷基纳米材料粒径，但在真实环境条件下对斑马鱼胚胎无急性毒性、亚致死效应极小。",
+  "doi": "10.1016/j.impact.2022.100387"
+ },
+ {
+  "pmid": "35142995",
+  "title": "3-Pyridinylboronic Acid Ameliorates Rotenone-Induced Oxidative Stress Through Nrf2 Target Genes in Zebrafish Embryos.",
+  "author1": "Üstündağ",
+  "nAuthors": 10,
+  "journal": "Neurochem Res",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "gene",
+   "mda"
+  ],
+  "polClass": "pest",
+  "polName": "鱼藤酮",
+  "stage": [
+   "lar"
+  ],
+  "zh": "3-吡啶硼酸改善鱼藤酮暴露仔鱼运动、降低 LPO 与 NO，并使 bdnf、dj1、hmox1a 与 nqo1 表达正常化，但对对照组有氧化损伤。",
+  "doi": "10.1007/s11064-022-03548-6"
+ },
+ {
+  "pmid": "36341947",
+  "title": "Propranolol hydrochloride induces neurodevelopmental toxicity and locomotor disorders in zebrafish larvae.",
+  "author1": "Li",
+  "nAuthors": 17,
+  "journal": "Neurotoxicology",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "ache",
+   "ros",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "普萘洛尔",
+  "stage": [
+   "lar"
+  ],
+  "zh": "普萘洛尔致仔鱼头部神经发育异常与运动障碍，氧化应激升高、AChE 与 ATP 酶活性改变，帕金森相关基因表达紊乱，虾青素与 Wnt 激活剂可缓解。",
+  "doi": "10.1016/j.neuro.2022.10.016"
+ },
+ {
+  "pmid": "36103040",
+  "title": "Functional Teas from Penthorum chinense Pursh Alleviates Ethanol-Induced Hepatic Oxidative Stress and Autophagy Impairment in Zebrafish via Modulating the AMPK/p62/Nrf2/mTOR Signaling Axis.",
+  "author1": "Zhao",
+  "nAuthors": 8,
+  "journal": "Plant Foods Hum Nutr",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "hist",
+   "ros",
+   "gene"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "赶黄草经 AMPK/p62/Nrf2/mTOR 轴下调 CYP2E1、降低 ROS 与肝脂蓄积并恢复自噬，减轻乙醇性肝损伤。",
+  "doi": "10.1007/s11130-022-01010-0"
+ },
+ {
+  "pmid": "35247598",
+  "title": "Transgenerational effects of bisphenol A on zebrafish reproductive tissues and sperm motility.",
+  "author1": "Mostari",
+  "nAuthors": 6,
+  "journal": "Reprod Toxicol",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "ed"
+  ],
+  "marks": [
+   "fec",
+   "f1",
+   "sperm",
+   "hist"
+  ],
+  "polClass": "edc",
+  "polName": "双酚A",
+  "stage": [
+   "adu"
+  ],
+  "zh": "饲料中仅 1 µg/g 双酚A 即使 F0 性腺萎缩、子代存活率下降与畸形率升高并延续至 F3，子代精子活力下降持续至 F2。",
+  "doi": "10.1016/j.reprotox.2022.02.005",
+  "gen": "F3+"
+ },
+ {
+  "pmid": "36163367",
+  "title": "Combined toxicities of cadmium and five agrochemicals to the larval zebrafish (Danio rerio).",
+  "author1": "Hu",
+  "nAuthors": 6,
+  "journal": "Sci Rep",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "dv"
+  ],
+  "marks": [
+   "surv"
+  ],
+  "polClass": "mix",
+  "polName": "镉、毒死蜱、联苯菊酯",
+  "stage": [
+   "lar"
+  ],
+  "zh": "联苯菊酯与毒死蜱对仔鱼 LC50 最低（0.15、0.36 mg/L），含毒死蜱的二元混合及镉-啶虫脒、镉-毒死蜱组合均呈协同毒性。",
+  "doi": "10.1038/s41598-022-20364-8",
+  "pmc": "PMC9512934"
+ },
+ {
+  "pmid": "34699814",
+  "title": "A comprehensive review of 1,2,4-triazole fungicide toxicity in zebrafish (Danio rerio): A mitochondrial and metabolic perspective.",
+  "author1": "Huang",
+  "nAuthors": 6,
+  "journal": "Sci Total Environ",
+  "year": 2022,
+  "review": true,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "ox",
+   "ed"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "三唑类杀菌剂",
+  "stage": [],
+  "zh": "综述指出三唑类杀菌剂抑制线粒体氧化磷酸化、诱导氧化应激与脂代谢紊乱，进而致发育延迟、畸形与运动行为异常。",
+  "doi": "10.1016/j.scitotenv.2021.151177"
  },
  {
   "pmid": "35131240",
@@ -6479,6 +9206,260 @@ window.PAPERS = [
   "doi": "10.1016/j.scitotenv.2022.153639"
  },
  {
+  "pmid": "35143790",
+  "title": "Intergenerational toxic effects of parental exposure to bisphenol AF on offspring and epigenetic modulations in zebrafish.",
+  "author1": "Zhang",
+  "nAuthors": 7,
+  "journal": "Sci Total Environ",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "ed"
+  ],
+  "marks": [
+   "f1",
+   "len",
+   "meth",
+   "enz"
+  ],
+  "polClass": "edc",
+  "polName": "双酚AF",
+  "stage": [
+   "adu"
+  ],
+  "zh": "10 µg/L 双酚AF 父系暴露降低 F1 孵化率、增加死亡并缩短体长，改变 F0 精巢与 F1 幼鱼 DNA 及 m6A RNA 甲基化基因表达；母系暴露主要升高 F1 抗氧化酶活性。",
+  "doi": "10.1016/j.scitotenv.2022.153714",
+  "gen": "F1"
+ },
+ {
+  "pmid": "35395305",
+  "title": "Low doses and lifecycle exposure of waterborne antidepressants in zebrafish model: A survey on sperm traits, reproductive behaviours, and transcriptome responses.",
+  "author1": "Hong",
+  "nAuthors": 6,
+  "journal": "Sci Total Environ",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp"
+  ],
+  "marks": [
+   "fec",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "文拉法辛、西酞普兰",
+  "stage": [
+   "adu"
+  ],
+  "zh": "全生命周期 10 µg/L 文拉法辛或 1 µg/L 西酞普兰即降低产卵量，1–10 µg/L 缩短交配持续时间与间隔，精子质量未变，卵巢转录组显示神经递质转运体信号改变。",
+  "doi": "10.1016/j.scitotenv.2022.155017"
+ },
+ {
+  "pmid": "35427626",
+  "title": "Toxic effects and mechanisms of common pesticides (Roundup and chlorpyrifos) and their mixtures in a zebrafish model (Danio rerio).",
+  "author1": "Falfushynska",
+  "nAuthors": 6,
+  "journal": "Sci Total Environ",
+  "year": 2022,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "ox",
+   "bh"
+  ],
+  "marks": [
+   "ros",
+   "enz",
+   "hist",
+   "gene"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、草甘膦",
+  "stage": [
+   "adu"
+  ],
+  "zh": "毒死蜱与农达均耗竭肝抗氧化能力并升高 ROS 与 DNA 损伤，毒死蜱氧化损伤更强并致亚硝化应激，混合毒性主要由毒死蜱驱动。",
+  "doi": "10.1016/j.scitotenv.2022.155236"
+ },
+ {
+  "pmid": "35842152",
+  "title": "Melanin interference toxicity or transgenerational toxicity of organic UV filter ethylhexyl salicylate on zebrafish.",
+  "author1": "Xie",
+  "nAuthors": 5,
+  "journal": "Sci Total Environ",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "rp",
+   "dv"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "水杨酸乙基己酯",
+  "stage": [
+   "adu",
+   "lar"
+  ],
+  "zh": "紫外线吸收剂水杨酸乙基己酯经抑制 mitfa 及其 tyr、dct、tyrp1 级联减少亲代黑色素合成，该效应经母源 mitfa 异常与污染物传递延续至子代。",
+  "doi": "10.1016/j.scitotenv.2022.157365",
+  "gen": "F1"
+ },
+ {
+  "pmid": "36058320",
+  "title": "Polystyrene microplastics mitigate the embryotoxic damage of metformin and guanylurea in Danio rerio.",
+  "author1": "Elizalde-Velázquez",
+  "nAuthors": 9,
+  "journal": "Sci Total Environ",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "mda",
+   "ros"
+  ],
+  "polClass": "plas",
+  "polName": "聚苯乙烯微塑料、二甲双胍",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "微塑料降低二甲双胍与胍基脲的胚胎死亡率与畸形率并减轻其脂质过氧化与蛋白羰基化，机制为微塑料在卵黄囊累积阻断药物进入胚胎。",
+  "doi": "10.1016/j.scitotenv.2022.158503"
+ },
+ {
+  "pmid": "35377459",
+  "title": "The Ahr2-Dependent wfikkn1 Gene Influences Zebrafish Transcriptome, Proteome, and Behavior.",
+  "author1": "Shankar",
+  "nAuthors": 12,
+  "journal": "Toxicol Sci",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "bh",
+   "mt"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "二𫫇英",
+  "stage": [
+   "zyg",
+   "lar",
+   "adu"
+  ],
+  "zh": "wfikkn1 表达依赖 Ahr2，其缺失改变 700 余基因与 325 个蛋白表达并致各阶段行为缺陷，但不改变 TCDD 的明显毒性。",
+  "doi": "10.1093/toxsci/kfac037",
+  "pmc": "PMC9308396"
+ },
+ {
+  "pmid": "35933024",
+  "title": "Effect of monosultap on notochord development in zebrafish (Danio rerio) embryos.",
+  "author1": "Che",
+  "nAuthors": 9,
+  "journal": "Toxicology",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "cv"
+  ],
+  "marks": [
+   "len",
+   "hr",
+   "surv",
+   "morph",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "杀虫单",
+  "stage": [
+   "zyg",
+   "lar",
+   "hat"
+  ],
+  "zh": "0.25–0.75 mg/L 杀虫单致胚胎体长缩短、心率与孵化率下降及脊索畸形，脊索发育基因 shha、col2a、ptch2 随浓度上调，脊索局部凋亡与增殖异常。",
+  "doi": "10.1016/j.tox.2022.153276"
+ },
+ {
+  "pmid": "35736942",
+  "title": "Multi- and Transgenerational Effects of Developmental Exposure to Environmental Levels of PFAS and PFAS Mixture in Zebrafish (Danio rerio).",
+  "author1": "Haimbaugh",
+  "nAuthors": 9,
+  "journal": "Toxics",
+  "year": 2022,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "rp",
+   "bh"
+  ],
+  "marks": [
+   "morph",
+   "fec",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "全氟辛酸、全氟辛烷磺酸",
+  "stage": [
+   "lar",
+   "adu"
+  ],
+  "zh": "环境浓度 PFOA、PFOS 及混合物暴露 0–5 dpf 后 F1、F2 才出现形态异常，行为与基因表达紊乱可遗传并跨代持续。",
+  "doi": "10.3390/toxics10060334",
+  "pmc": "PMC9228135",
+  "gen": "F2"
+ },
+ {
+  "pmid": "33933832",
+  "title": "Microplastics alone or co-exposed with copper induce neurotoxicity and behavioral alterations on zebrafish larvae after a subchronic exposure.",
+  "author1": "Santos",
+  "nAuthors": 6,
+  "journal": "Aquat Toxicol",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "surv",
+   "len",
+   "ache",
+   "shoal"
+  ],
+  "polClass": "metal",
+  "polName": "铜、微塑料",
+  "stage": [
+   "lar"
+  ],
+  "zh": "2 mg/L 微塑料与 60–125 µg/L 铜单用或联用均降低仔鱼存活并抑制 AChE，高铜与混合组显著降低游速与总游程。",
+  "doi": "10.1016/j.aquatox.2021.105814"
+ },
+ {
   "pmid": "34051627",
   "title": "Effects of 2,4-dichlorophenol exposure on zebrafish: Implications for the sex hormone synthesis.",
   "author1": "Hu",
@@ -6508,6 +9489,170 @@ window.PAPERS = [
   ],
   "zh": "80 与 160 µg/L 2,4-二氯酚使性比偏雌、E2 与 VTG 升高、雄激素下降，伴 cyp19a1a 启动子低甲基化，氟佐唑可部分逆转。",
   "doi": "10.1016/j.aquatox.2021.105868"
+ },
+ {
+  "pmid": "34598048",
+  "title": "Dinitramine induces cardiotoxicity and morphological alterations on zebrafish embryo development.",
+  "author1": "Park",
+  "nAuthors": 4,
+  "journal": "Aquat Toxicol",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "dv"
+  ],
+  "marks": [
+   "hr",
+   "vasc",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "敌乐胺",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "1.6–6.4 mg/L 敌乐胺 96 h 暴露致胚胎心室与心房扩大、心率下降、心功能受损，血管生成受抑并激活炎症反应，6.4 mg/L 还诱导凋亡与细胞死亡。",
+  "doi": "10.1016/j.aquatox.2021.105982"
+ },
+ {
+  "pmid": "33111190",
+  "title": "Neurotoxic effects in zebrafish embryos by valproic acid and nine of its analogues: the fish-mouse connection?",
+  "author1": "Brotzmann",
+  "nAuthors": 4,
+  "journal": "Arch Toxicol",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "ey"
+  ],
+  "dirs": [
+   "bh",
+   "mt",
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "eyesize"
+  ],
+  "polClass": "emerg",
+  "polName": "丙戊酸",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "丙戊酸及 9 种类似物在扩展 FET 中仅 4/10 与小鼠一致，改用抖动、小眼与颅面畸形等特异终点后一致性升至 75%，提示按作用模式细化终点可提高预测力。",
+  "doi": "10.1007/s00204-020-02928-7",
+  "pmc": "PMC7870776"
+ },
+ {
+  "pmid": "34339841",
+  "title": "Deficiency of heat shock factor 4 promotes lens epithelial cell senescence through upregulating p21cip1 expression.",
+  "author1": "Cui",
+  "nAuthors": 16,
+  "journal": "Biochim Biophys Acta Mol Basis Dis",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "ey"
+  ],
+  "dirs": [
+   "ag"
+  ],
+  "marks": [
+   "sabg",
+   "gene"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "adu"
+  ],
+  "zh": "HSF4 经招募 EZH2 提高 p21cip1 启动子 H3K27me3 抑制其表达；Hsf4 缺失小鼠与斑马鱼晶状体上皮均现 SA-β-gal 阳性与衰老因子升高。",
+  "doi": "10.1016/j.bbadis.2021.166233"
+ },
+ {
+  "pmid": "33726560",
+  "title": "Short telomeres drive pessimistic judgement bias in zebrafish.",
+  "author1": "Espigares",
+  "nAuthors": 5,
+  "journal": "Biol Lett",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh",
+   "ag"
+  ],
+  "marks": [],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "adu"
+  ],
+  "zh": "建立斑马鱼模糊刺激判断偏倚范式，tert-/- 个体更悲观，首次在脊椎动物中证明短端粒与判断偏倚的遗传因果关系。",
+  "doi": "10.1098/rsbl.2020.0745",
+  "pmc": "PMC8086985"
+ },
+ {
+  "pmid": "34440088",
+  "title": "Standardized Method for the Assessment of Behavioral Responses of Zebrafish Larvae.",
+  "author1": "Maeda",
+  "nAuthors": 3,
+  "journal": "Biomedicines",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [
+   "vmr",
+   "startle"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "6–7 dpf 仔鱼接受 50 次光暗刺激，5 分钟间隔第 5 次重复后游动距离即稳定，15 分钟间隔需第 16 次；建议适应 1 h 后取 5 分钟间隔第 5 次数据。",
+  "doi": "10.3390/biomedicines9080884",
+  "pmc": "PMC8389650"
+ },
+ {
+  "pmid": "33939334",
+  "title": "Embryonic ethanol exposure on zebrafish early development.",
+  "author1": "Pinheiro-da-Silva",
+  "nAuthors": 2,
+  "journal": "Brain Behav",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "dv",
+   "cv"
+  ],
+  "marks": [
+   "len",
+   "hr"
+  ],
+  "polClass": "emerg",
+  "polName": "乙醇",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "0.5% 与 1% 乙醇胚胎暴露使 120 hpf 仔鱼体长缩短、心率下降、凋亡细胞增多并延迟孵化。",
+  "doi": "10.1002/brb3.2062",
+  "pmc": "PMC8213935"
  },
  {
   "pmid": "33710386",
@@ -6544,6 +9689,360 @@ window.PAPERS = [
   "gen": "F1"
  },
  {
+  "pmid": "32651933",
+  "title": "Protective Effects of Spermidine and Melatonin on Deltamethrin-Induced Cardiotoxicity and Neurotoxicity in Zebrafish.",
+  "author1": "Liu",
+  "nAuthors": 7,
+  "journal": "Cardiovasc Toxicol",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "bh"
+  ],
+  "marks": [
+   "gene",
+   "dive"
+  ],
+  "polClass": "pest",
+  "polName": "溴氰菊酯",
+  "stage": [
+   "lar"
+  ],
+  "zh": "0.025 mg/L 溴氰菊酯下调 Scn5lab、gata4、nkx2.5 并扰乱心脏环化，致心形态功能缺陷与仔鱼多动，亚精胺和褪黑素可逆转。",
+  "doi": "10.1007/s12012-020-09591-5"
+ },
+ {
+  "pmid": "33297050",
+  "title": "Effects of pyriproxyfen on zebrafish brain mitochondria and acetylcholinesterase.",
+  "author1": "Azevedo",
+  "nAuthors": 12,
+  "journal": "Chemosphere",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "ache",
+   "ros"
+  ],
+  "polClass": "pest",
+  "polName": "吡丙醚",
+  "stage": [
+   "adu"
+  ],
+  "zh": "吡丙醚对斑马鱼脑 AChE 的体内 IC20 为 0.30 µmol/L，并降低复合体 I/II 呼吸控制、剂量依赖增加 O2- 生成、破坏线粒体钙转运。",
+  "doi": "10.1016/j.chemosphere.2020.128029"
+ },
+ {
+  "pmid": "33773317",
+  "title": "Single and combined acute and subchronic toxic effects of microplastics and copper in zebrafish (Danio rerio) early life stages.",
+  "author1": "Santos",
+  "nAuthors": 6,
+  "journal": "Chemosphere",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "enz",
+   "ache",
+   "ros"
+  ],
+  "polClass": "metal",
+  "polName": "铜、微塑料",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "2 hpf 至 14 dpf 暴露中微塑料与铜单用或联用均致仔鱼高死亡率与氧化应激并抑制 AChE，Cu+MPs 组生物标志物响应更强提示协同。",
+  "doi": "10.1016/j.chemosphere.2021.130262"
+ },
+ {
+  "pmid": "34004283",
+  "title": "Developmental toxicity of procymidone to larval zebrafish based on physiological and transcriptomic analysis.",
+  "author1": "Wu",
+  "nAuthors": 8,
+  "journal": "Comp Biochem Physiol C Toxicol Pharmacol",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh"
+  ],
+  "marks": [
+   "edema",
+   "hr",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "腐霉利",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "腐霉利 100 µg/L 致仔鱼心包水肿与心率升高，并改变糖脂代谢指标及 gabrg2、gabbr1 等 GABA 受体基因表达，游动距离下降。",
+  "doi": "10.1016/j.cbpc.2021.109081"
+ },
+ {
+  "pmid": "30895830",
+  "title": "Cardiotoxicity evaluation and comparison of diterpene alkaloids on zebrafish.",
+  "author1": "Ye",
+  "nAuthors": 10,
+  "journal": "Drug Chem Toxicol",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv"
+  ],
+  "marks": [
+   "hr",
+   "morph"
+  ],
+  "polClass": "emerg",
+  "polName": "乌头碱、新乌头碱、次乌头碱",
+  "stage": [
+   "lar"
+  ],
+  "zh": "双酯型二萜生物碱在 15.6–31.3 µM 降低胚胎心率、高剂量反升，并致严重器质性损伤；单酯型同类物毒性明显较弱，C-8 乙酰基与 A 环质子化氮决定差异。",
+  "doi": "10.1080/01480545.2019.1586916"
+ },
+ {
+  "pmid": "34330038",
+  "title": "Long-term low-dose oxytetracycline potentially leads to neurobehavioural changes.",
+  "author1": "Qiu",
+  "nAuthors": 9,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh",
+   "ed"
+  ],
+  "marks": [
+   "ntx",
+   "th",
+   "dive"
+  ],
+  "polClass": "emerg",
+  "polName": "土霉素",
+  "stage": [
+   "adu"
+  ],
+  "zh": "环境浓度土霉素 30 天暴露经升高 T3 激活单胺氧化酶、降低 5-HT 与多巴胺，使斑马鱼更大胆冲动并延长白区停留时间。",
+  "doi": "10.1016/j.ecoenv.2021.112546"
+ },
+ {
+  "pmid": "34619474",
+  "title": "Effects of low-concentration glyphosate and aminomethyl phosphonic acid on zebrafish embryo development.",
+  "author1": "Zhang",
+  "nAuthors": 10,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "dv"
+  ],
+  "marks": [
+   "hr",
+   "avb",
+   "edema",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "草甘膦、氨甲基膦酸",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "1–700 ng/mL 草甘膦与 AMPA 暴露 72 h 使胚胎与仔鱼心率升高并出现明显心律失常，心包水肿与骨骼变形，伴 TBX5、NKX2.5、BMP4 与 Bcl-2/Bax 改变。",
+  "doi": "10.1016/j.ecoenv.2021.112854"
+ },
+ {
+  "pmid": "34678628",
+  "title": "Imidacloprid and thiamethoxam affect synaptic transmission in zebrafish.",
+  "author1": "Zhang",
+  "nAuthors": 7,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh"
+  ],
+  "marks": [
+   "ache",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "吡虫啉、噻虫嗪",
+  "stage": [
+   "lar",
+   "juv"
+  ],
+  "zh": "50 ng/L–50 mg/L 暴露后 28–35 dpf 仔鱼活动显著改变，噻虫嗪升高 AChE 活性，并扰动 GABA、多巴胺与 5-羟色胺通路关键基因转录。",
+  "doi": "10.1016/j.ecoenv.2021.112917"
+ },
+ {
+  "pmid": "33288291",
+  "title": "Combined toxicity assessment of myclobutanil and thiamethoxam to zebrafish embryos employing multi-endpoints.",
+  "author1": "Shen",
+  "nAuthors": 9,
+  "journal": "Environ Pollut",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox",
+   "ed"
+  ],
+  "marks": [
+   "surv",
+   "enz",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "腈菌唑、噻虫嗪",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "腈菌唑 96 h LC50 5.2–10.3 mg/L 远低于噻虫嗪的 147–246 mg/L，二者联合对胚胎呈协同毒性并改变抗氧化酶与 8 个相关基因表达。",
+  "doi": "10.1016/j.envpol.2020.116116"
+ },
+ {
+  "pmid": "33316505",
+  "title": "Low-dose cadmium stress increases the bioaccumulation and toxicity of dinotefuran enantiomers in zebrafish (Danio rerio)?",
+  "author1": "Di",
+  "nAuthors": 9,
+  "journal": "Environ Pollut",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "body",
+   "mda",
+   "gene"
+  ],
+  "polClass": "metal",
+  "polName": "镉、呋虫胺",
+  "stage": [
+   "adu"
+  ],
+  "zh": "呋虫胺对映体在斑马鱼体内富集具组织特异性，S-体在头与内脏更高；共暴露镉使 R-体蓄积增至 3.4 倍并上调 cz-sod、cas3 与 p53。",
+  "doi": "10.1016/j.envpol.2020.116191"
+ },
+ {
+  "pmid": "33352483",
+  "title": "New insights into cardiotoxicity induced by chiral fluoxetine at environmental-level: Enantioselective arrhythmia in developmental zebrafish (Danio rerio).",
+  "author1": "Chai",
+  "nAuthors": 6,
+  "journal": "Environ Pollut",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv"
+  ],
+  "marks": [
+   "edema",
+   "avb",
+   "hist",
+   "body"
+  ],
+  "polClass": "emerg",
+  "polName": "氟西汀",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "氟西汀在胚胎中代谢为去甲氟西汀，S-型富集更高；暴露致心包水肿、循环异常与血栓，S-氟西汀毒性强于 R-型，心肌纤维化参与对映选择性心律失常。",
+  "doi": "10.1016/j.envpol.2020.116182"
+ },
+ {
+  "pmid": "33549839",
+  "title": "Bifenazate exposure induces cardiotoxicity in zebrafish embryos.",
+  "author1": "Ma",
+  "nAuthors": 10,
+  "journal": "Environ Pollut",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "ox"
+  ],
+  "marks": [
+   "ros",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "联苯肼酯",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "联苯肼酯致胚胎严重心脏毒性伴心脏发育基因紊乱与氧化应激，ATP 酶活性与钙信号通路基因改变使血液淤积于心外而致死，虾青素可部分缓解。",
+  "doi": "10.1016/j.envpol.2021.116539"
+ },
+ {
+  "pmid": "33694115",
+  "title": "Bixafen causes cardiac toxicity in zebrafish (Danio rerio) embryos.",
+  "author1": "Yuan",
+  "nAuthors": 3,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv"
+  ],
+  "marks": [
+   "hr",
+   "edema",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "联苯吡菌胺",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "0.1–0.9 µM 联苯吡菌胺致胚胎心包水肿、心率降低与心脏区红细胞锐减，红细胞生成及 myh6、nkx2.5、myh7 表达下调，并诱导细胞凋亡。",
+  "doi": "10.1007/s11356-021-13238-5"
+ },
+ {
   "pmid": "33270929",
   "title": "Approaches to Test the Neurotoxicity of Environmental Contaminants in the Zebrafish Model: From Behavior to Molecular Mechanisms.",
   "author1": "Fitzgerald",
@@ -6569,6 +10068,228 @@ window.PAPERS = [
   "key": true
  },
  {
+  "pmid": "33672782",
+  "title": "Paternal Inheritance of Bisphenol A Cardiotoxic Effects: The Implications of Sperm Epigenome.",
+  "author1": "Lombó",
+  "nAuthors": 2,
+  "journal": "Int J Mol Sci",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "rp",
+   "cv"
+  ],
+  "marks": [
+   "gene",
+   "f1"
+  ],
+  "polClass": "edc",
+  "polName": "双酚A",
+  "stage": [
+   "adu",
+   "zyg"
+  ],
+  "zh": "父系 BPA 暴露使精子组蛋白 H3K9ac 超乙酰化并传至子代，上调 hand2、esr2b 与 kat6a，EGCG 可逆转心脏发育损伤。",
+  "doi": "10.3390/ijms22042125",
+  "pmc": "PMC7924642",
+  "gen": "F1"
+ },
+ {
+  "pmid": "34830252",
+  "title": "SDHI Fungicide Toxicity and Associated Adverse Outcome Pathways: What Can Zebrafish Tell Us?",
+  "author1": "Yanicostas",
+  "nAuthors": 2,
+  "journal": "Int J Mol Sci",
+  "year": 2021,
+  "review": true,
+  "organs": [
+   "li",
+   "ki"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [
+   "morph",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "联苯吡菌胺、啶酰菌胺、氟唑菌酰胺",
+  "stage": [],
+  "zh": "综述指出 9 种 SDHI 杀菌剂在斑马鱼中致发育毒性、心血管异常、肝肾损伤与氧化应激，糖代谢缺陷、氧化应激与凋亡是核心通路。",
+  "doi": "10.3390/ijms222212362",
+  "pmc": "PMC8618699"
+ },
+ {
+  "pmid": "33111391",
+  "title": "Developmental neurotoxicity and toxic mechanisms induced by olaquindox in zebrafish.",
+  "author1": "Guo",
+  "nAuthors": 7,
+  "journal": "J Appl Toxicol",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "br",
+   "li"
+  ],
+  "dirs": [
+   "bh",
+   "dv"
+  ],
+  "marks": [
+   "coil",
+   "len",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "喹乙醇",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "25–1000 mg/L 喹乙醇增加胚胎自发尾卷曲却降低运动能力，缩短体长并致脑凋亡与轴突损伤，九个神经发育标记基因均显著下调。",
+  "doi": "10.1002/jat.4062"
+ },
+ {
+  "pmid": "33247449",
+  "title": "Changes of embryonic development, locomotor activity, and metabolomics in zebrafish co-exposed to chlorpyrifos and deltamethrin.",
+  "author1": "Hu",
+  "nAuthors": 5,
+  "journal": "J Appl Toxicol",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "vmr"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、溴氰菊酯",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "毒死蜱与溴氰菊酯单用均提高胚胎死亡率与畸形率，仅联合组降低孵化率，高剂量联合组游速下降且对重复光暗刺激失去适应性。",
+  "doi": "10.1002/jat.4124"
+ },
+ {
+  "pmid": "34492931",
+  "title": "Physiological and transcriptomic changes of zebrafish (Danio rerio) embryos-larvae in response to 2-MIB exposure.",
+  "author1": "Zhou",
+  "nAuthors": 10,
+  "journal": "J Hazard Mater",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "len",
+   "ache",
+   "nrf2",
+   "th"
+  ],
+  "polClass": "emerg",
+  "polName": "2-甲基异莰醇",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "2-MIB 在 0.5–42.8 µg/L 不增加死亡与畸形，却剂量依赖地增加仔鱼体长和游泳活动，并提高 AChE 活性、激活 Nrf2 氧化应激通路。",
+  "doi": "10.1016/j.jhazmat.2021.126142"
+ },
+ {
+  "pmid": "34833056",
+  "title": "Evaluating the Death and Recovery of Lateral Line Hair Cells Following Repeated Neomycin Treatments.",
+  "author1": "Venuto",
+  "nAuthors": 2,
+  "journal": "Life (Basel)",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "ll"
+  ],
+  "dirs": [
+   "bh",
+   "mt"
+  ],
+  "marks": [
+   "hair",
+   "surv"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "3–4 dpf 反复新霉素处理可持续消融侧线功能毛细胞，新功能毛细胞出现快于细胞再生，4 dpf 恢复快于 3 dpf。",
+  "doi": "10.3390/life11111180",
+  "pmc": "PMC8625531"
+ },
+ {
+  "pmid": "33423228",
+  "title": "Early Life Stage Assays in Zebrafish.",
+  "author1": "Abe",
+  "nAuthors": 4,
+  "journal": "Methods Mol Biol",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [
+   "morph"
+  ],
+  "polClass": "none",
+  "polName": "3,4-二氯苯胺",
+  "stage": [
+   "lar"
+  ],
+  "zh": "详述斑马鱼 FET 试验全流程，以参考物 3,4-二氯苯胺验证可检出亚致死与致畸效应，支持其作为化学品与污染物风险评估的替代方法。",
+  "doi": "10.1007/978-1-0716-1091-6_7"
+ },
+ {
+  "pmid": "34224825",
+  "title": "The organophosphate insecticide diazinon and aging: Neurobehavioral and mitochondrial effects in zebrafish exposed as embryos or during aging.",
+  "author1": "Boyda",
+  "nAuthors": 6,
+  "journal": "Neurotoxicol Teratol",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "br",
+   "go"
+  ],
+  "dirs": [
+   "bh",
+   "ag"
+  ],
+  "marks": [],
+  "polClass": "op",
+  "polName": "二嗪磷",
+  "stage": [
+   "lar",
+   "juv",
+   "adu",
+   "old"
+  ],
+  "zh": "胚胎期暴露二嗪磷使斑马鱼在仔鱼至衰老各阶段行为持续异常、脑与精巢线粒体呼吸增强，成年急性暴露则无明显影响。",
+  "doi": "10.1016/j.ntt.2021.107011",
+  "pmc": "PMC8440393"
+ },
+ {
   "pmid": "33849304",
   "title": "Ageing genetic signature of hypersomatotropism.",
   "author1": "Elbialy",
@@ -6577,9 +10298,9 @@ window.PAPERS = [
   "year": 2021,
   "review": false,
   "organs": [
+   "mu",
    "li",
-   "br",
-   "mu"
+   "br"
   ],
   "dirs": [
    "ag"
@@ -6595,6 +10316,152 @@ window.PAPERS = [
   "zh": "生长激素过量的斑马鱼肌肉、肝与脑约半数差异表达基因与自然衰老重叠，肌肉衰老基因富集最显著。",
   "doi": "10.1098/rsob.200265",
   "pmc": "PMC8059514"
+ },
+ {
+  "pmid": "32889257",
+  "title": "Developmental toxicity triggered by benzyl alcohol in the early stage of zebrafish embryos: Cardiovascular defects with inhibited liver formation and degenerated neurogenesis.",
+  "author1": "Manjunatha",
+  "nAuthors": 3,
+  "journal": "Sci Total Environ",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "he",
+   "li"
+  ],
+  "dirs": [
+   "cv",
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "edema",
+   "avb",
+   "vasc",
+   "morph"
+  ],
+  "polClass": "emerg",
+  "polName": "苯甲醇",
+  "stage": [
+   "zyg",
+   "lar",
+   "hat"
+  ],
+  "zh": "4 hpf 起 72 h 苯甲醇暴露致死亡率升高、孵化受抑、体节数减少，心包水肿与节律不齐，头躯血管减少，肝脏发育退化，运动神经元轴突完整性受损。",
+  "doi": "10.1016/j.scitotenv.2020.141631"
+ },
+ {
+  "pmid": "33418331",
+  "title": "In vivo evaluation of Nano-palladium toxicity on larval stages and adult of zebrafish (Danio rerio).",
+  "author1": "Anila",
+  "nAuthors": 4,
+  "journal": "Sci Total Environ",
+  "year": 2021,
+  "review": false,
+  "organs": [
+   "gi",
+   "li",
+   "br"
+  ],
+  "dirs": [
+   "ox",
+   "dv",
+   "bh"
+  ],
+  "marks": [
+   "surv",
+   "hr",
+   "morph",
+   "ros",
+   "ache"
+  ],
+  "polClass": "np",
+  "polName": "纳米钯",
+  "stage": [
+   "lar",
+   "adu"
+  ],
+  "zh": "0.4 与 22 ng/L 纳米钯使 96 hpf 仔鱼孵化率与存活下降、心率改变并致畸，ROS 升高、AChE 下降，成鱼游动异常，鳃肝脑出现病理损伤。",
+  "doi": "10.1016/j.scitotenv.2020.144268"
+ },
+ {
+  "pmid": "33582354",
+  "title": "Modeling acetylcholine esterase inhibition resulting from exposure to a mixture of atrazine and chlorpyrifos using a physiologically-based kinetic model in fish.",
+  "author1": "Mit",
+  "nAuthors": 5,
+  "journal": "Sci Total Environ",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [
+   "ache"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、阿特拉津",
+  "stage": [
+   "adu"
+  ],
+  "zh": "PBTK-TD 模型可预测阿特拉津与毒死蜱对鱼 AChE 及羧酸酯酶的联合抑制，但成鱼数据未能证实二者存在协同效应。",
+  "doi": "10.1016/j.scitotenv.2020.144734"
+ },
+ {
+  "pmid": "33524444",
+  "title": "Multistate models of developmental toxicity: Application to valproic acid-induced malformations in the zebrafish embryo.",
+  "author1": "Siméon",
+  "nAuthors": 5,
+  "journal": "Toxicol Appl Pharmacol",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "surv"
+  ],
+  "polClass": "emerg",
+  "polName": "丙戊酸",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "多状态模型联合分析斑马鱼胚胎 5 天内畸形发生与孵化，丙戊酸主要提高孵化与未孵化胚胎的畸形发生率并降低畸形逆转率，较 OECD 分段分析更精细。",
+  "doi": "10.1016/j.taap.2021.115424"
+ },
+ {
+  "pmid": "34941692",
+  "title": "Combined Developmental Toxicity of the Pesticides Difenoconazole and Dimethomorph on Embryonic Zebrafish.",
+  "author1": "Fan",
+  "nAuthors": 9,
+  "journal": "Toxins (Basel)",
+  "year": 2021,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "surv",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "苯醚甲环唑、烯酰吗啉",
+  "stage": [
+   "pha",
+   "hat",
+   "lar"
+  ],
+  "zh": "苯醚甲环唑与烯酰吗啉单独及联合暴露均以 96 hpf 畸形率最敏感（BMDL10 0.30 与 1.10 mg/L），联合呈协同效应，并下调 mcm 家族、cdk1 与 cdc20。",
+  "doi": "10.3390/toxins13120854",
+  "pmc": "PMC8706556"
  },
  {
   "pmid": "33353889",
@@ -6624,6 +10491,167 @@ window.PAPERS = [
   "key": true
  },
  {
+  "pmid": "32343929",
+  "title": "Reprogramming Müller Glia to Regenerate Retinal Neurons.",
+  "author1": "Lahne",
+  "nAuthors": 4,
+  "journal": "Annu Rev Vis Sci",
+  "year": 2020,
+  "review": true,
+  "organs": [
+   "ey"
+  ],
+  "dirs": [
+   "ag"
+  ],
+  "marks": [
+   "regen"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [],
+  "zh": "综述总结斑马鱼 Müller 胶质细胞自发重编程再生视网膜神经元的机制，与哺乳动物比较，指出其治疗视网膜退行病的潜力。",
+  "doi": "10.1146/annurev-vision-121219-081808",
+  "pmc": "PMC8384111"
+ },
+ {
+  "pmid": "31927064",
+  "title": "Refinement of an OECD test guideline for evaluating the effects of endocrine disrupting chemicals on aromatase gene expression and reproduction using novel transgenic cyp19a1a-eGFP zebrafish.",
+  "author1": "De Oliveira",
+  "nAuthors": 11,
+  "journal": "Aquat Toxicol",
+  "year": 2020,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "mt",
+   "ed"
+  ],
+  "marks": [
+   "arom",
+   "vtg",
+   "fec",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "咪鲜胺",
+  "stage": [
+   "adu"
+  ],
+  "zh": "OECD TG229 中用 cyp19a1a-eGFP 转基因斑马鱼，172.6 µg/L 咪鲜胺降低产卵量与卵黄蛋白原，卵巢 GFP 于 21 天升高。",
+  "doi": "10.1016/j.aquatox.2020.105403"
+ },
+ {
+  "pmid": "32638588",
+  "title": "Systems Toxicology Approach for Testing Chemical Cardiotoxicity in Larval Zebrafish.",
+  "author1": "Li",
+  "nAuthors": 11,
+  "journal": "Chem Res Toxicol",
+  "year": 2020,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "mt",
+   "cv"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "构建首个斑马鱼幼虫心脏毒性可计算网络模型，用公开转录组数据在 5 种化学物中检出 4 种的心脏扰动，其中 2 例早于可见表型 3 天。",
+  "doi": "10.1021/acs.chemrestox.0c00095"
+ },
+ {
+  "pmid": "31437630",
+  "title": "Does hepatotoxicity interfere with endocrine activity in zebrafish (Danio rerio)?",
+  "author1": "Baumann",
+  "nAuthors": 9,
+  "journal": "Chemosphere",
+  "year": 2020,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "ed",
+   "mt"
+  ],
+  "marks": [
+   "vtg",
+   "hist",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "对乙酰氨基酚、异烟肼、阿司匹林",
+  "stage": [
+   "adu"
+  ],
+  "zh": "对乙酰氨基酚、异烟肼与阿司匹林均致轻度肝细胞坏死与肝毒性基因改变，却未降低肝脏 VTG 合成，提示按 OECD TG 229/230 肝毒物不易干扰 VTG 判读。",
+  "doi": "10.1016/j.chemosphere.2019.124589"
+ },
+ {
+  "pmid": "31563099",
+  "title": "Dysregulation of endocrine disruption, apoptosis and the transgenerational toxicity induced by spirotetramat.",
+  "author1": "Zhang",
+  "nAuthors": 10,
+  "journal": "Chemosphere",
+  "year": 2020,
+  "review": false,
+  "organs": [
+   "li",
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "steroid",
+   "vtg",
+   "f1"
+  ],
+  "polClass": "pest",
+  "polName": "螺虫乙酯",
+  "stage": [
+   "adu"
+  ],
+  "zh": "螺虫乙酯暴露降低雌雄斑马鱼血浆 E2、T 与 11-KT 及雌鱼 VTG，改变性腺 HPG 轴基因与凋亡通路，并使子代发育延迟。",
+  "doi": "10.1016/j.chemosphere.2019.124900",
+  "gen": "F1"
+ },
+ {
+  "pmid": "31995874",
+  "title": "The pyrethroid esfenvalerate induces hypoactivity and decreases dopamine transporter expression in embryonic/larval zebrafish (Danio rerio).",
+  "author1": "Wang",
+  "nAuthors": 6,
+  "journal": "Chemosphere",
+  "year": 2020,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh"
+  ],
+  "marks": [
+   "vmr",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "氰戊菊酯",
+  "stage": [
+   "lar"
+  ],
+  "zh": "环境浓度氰戊菊酯不致死致畸但使 6 dpf 仔鱼视觉运动反应降低，并下调多巴胺转运体表达，效应具年龄依赖。",
+  "doi": "10.1016/j.chemosphere.2019.125416"
+ },
+ {
   "pmid": "31985398",
   "title": "celsr1a is essential for tissue homeostasis and onset of aging phenotypes in the zebrafish.",
   "author1": "Li",
@@ -6647,6 +10675,34 @@ window.PAPERS = [
   "zh": "celsr1a 缺失突变体在年轻成鱼即现早衰表型，与细胞衰老和端粒长度无关，源于祖细胞库维持失败，热量限制可缓解。",
   "doi": "10.7554/eLife.50523",
   "pmc": "PMC7010407"
+ },
+ {
+  "pmid": "32841905",
+  "title": "Parental exposure to environmental concentrations of tris(1,3-dichloro-2-propyl)phosphate induces abnormal DNA methylation and behavioral changes in F1 zebrafish larvae.",
+  "author1": "Ding",
+  "nAuthors": 9,
+  "journal": "Environ Pollut",
+  "year": 2020,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "rp",
+   "bh"
+  ],
+  "marks": [
+   "len",
+   "meth",
+   "gene"
+  ],
+  "polClass": "emerg",
+  "polName": "磷酸三(1,3-二氯-2-丙基)酯",
+  "stage": [
+   "lar",
+   "adu"
+  ],
+  "zh": "亲代环境浓度 TDCIPP 暴露使 F1 卵残留污染物、仔鱼体长缩短与泳动下降，dnmt3aa 与 dnmt1 下调，slc1a2b 启动子超甲基化致其表达降低。",
+  "doi": "10.1016/j.envpol.2020.115305",
+  "gen": "F1"
  },
  {
   "pmid": "31887561",
@@ -6676,6 +10732,62 @@ window.PAPERS = [
   ],
   "zh": "BPA 可挽救 cyp19a1a 缺失突变体全雄表型并致性腺发育延迟与不育，该雌性化依赖核雌激素受体，尤其 esr2a。",
   "doi": "10.1016/j.jhazmat.2019.121886"
+ },
+ {
+  "pmid": "32854587",
+  "title": "An acetylcholinesterase inhibitor, donepezil, increases anxiety and cortisol levels in adult zebrafish.",
+  "author1": "Giacomini",
+  "nAuthors": 9,
+  "journal": "J Psychopharmacol",
+  "year": 2020,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh"
+  ],
+  "marks": [
+   "dive",
+   "vmr",
+   "shoal",
+   "ache",
+   "cort"
+  ],
+  "polClass": "emerg",
+  "polName": "多奈哌齐",
+  "stage": [
+   "adu"
+  ],
+  "zh": "多奈哌齐 24 h 暴露剂量依赖性降低成鱼运动活性与光照时间，抑制脑 AChE 并升高全身皮质醇，提示胆碱能抑制增强焦虑样行为与内分泌反应。",
+  "doi": "10.1177/0269881120944155"
+ },
+ {
+  "pmid": "31911208",
+  "title": "Adult exposure to insecticides causes persistent behavioral and neurochemical alterations in zebrafish.",
+  "author1": "Hawkey",
+  "nAuthors": 8,
+  "journal": "Neurotoxicol Teratol",
+  "year": 2020,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "bh"
+  ],
+  "marks": [
+   "dive",
+   "shoal",
+   "startle"
+  ],
+  "polClass": "op",
+  "polName": "滴滴涕、毒死蜱",
+  "stage": [
+   "adu",
+   "old"
+  ],
+  "zh": "5 周 DDT 暴露致成鱼低活动与焦虑性趋底增强，14 月龄仍低活动且惊吓反应增强；5 周毒死蜱暴露则致长期多动与捕食回避受损。",
+  "doi": "10.1016/j.ntt.2019.106853",
+  "pmc": "PMC7061078"
  },
  {
   "pmid": "33259761",
@@ -6766,6 +10878,384 @@ window.PAPERS = [
   "doi": "10.1016/j.taap.2020.114957"
  },
  {
+  "pmid": "31384916",
+  "title": "Chlorpyrifos exposure induces lipid metabolism disorder at the physiological and transcriptomic levels in larval zebrafish.",
+  "author1": "Wang",
+  "nAuthors": 6,
+  "journal": "Acta Biochim Biophys Sin (Shanghai)",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱",
+  "stage": [
+   "lar"
+  ],
+  "zh": "30–300 µg/L 毒死蜱暴露 7 天使仔鱼脂滴减少、TG/TC 与丙酮酸下降，心脏组织凋亡增加、心血管基因转录改变，465 个差异基因集中于糖脂代谢。",
+  "doi": "10.1093/abbs/gmz074"
+ },
+ {
+  "pmid": "31077968",
+  "title": "Medroxyprogesterone acetate affects sex differentiation and spermatogenesis in zebrafish.",
+  "author1": "Shi",
+  "nAuthors": 10,
+  "journal": "Aquat Toxicol",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "sexratio",
+   "gene",
+   "hist"
+  ],
+  "polClass": "edc",
+  "polName": "醋酸甲羟孕酮",
+  "stage": [
+   "lar",
+   "juv",
+   "sex",
+   "adu"
+  ],
+  "zh": "42 ng/L 醋酸甲羟孕酮使雄鱼比例达 60%，上调 dmrt1、hsd17b3，睾丸未成熟精母细胞增多，雌鱼 lhb 与 fshb 受抑。",
+  "doi": "10.1016/j.aquatox.2019.04.014"
+ },
+ {
+  "pmid": "31319296",
+  "title": "Male-biased zebrafish sex differentiation and metabolomics profile changes caused by dydrogesterone.",
+  "author1": "Jiang",
+  "nAuthors": 7,
+  "journal": "Aquat Toxicol",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "sexratio",
+   "gene"
+  ],
+  "polClass": "edc",
+  "polName": "地屈孕酮",
+  "stage": [
+   "zyg",
+   "lar",
+   "adu"
+  ],
+  "zh": "4.4–440 ng/L 地屈孕酮剂量依赖性使雄鱼比例达 98%，仔鱼脂肪酸与牛磺酸升高、胆汁酸下降，或经 p53 致卵母细胞凋亡。",
+  "doi": "10.1016/j.aquatox.2019.105242"
+ },
+ {
+  "pmid": "31518776",
+  "title": "Comparative thyroid disruption by o,p'-DDT and p,p'-DDE in zebrafish embryos/larvae.",
+  "author1": "Wu",
+  "nAuthors": 9,
+  "journal": "Aquat Toxicol",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "th"
+  ],
+  "dirs": [
+   "ed",
+   "dv"
+  ],
+  "marks": [
+   "th",
+   "gene",
+   "surv",
+   "len",
+   "morph"
+  ],
+  "polClass": "pest",
+  "polName": "o,p'-滴滴涕、p,p'-滴滴伊",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "o,p'-DDT 使仔鱼 T4、T3 升高、ugt1ab 与 dio3 下调，p,p'-DDE 则使其降低，二者均降低存活与体长、升高畸形率。",
+  "doi": "10.1016/j.aquatox.2019.105280"
+ },
+ {
+  "pmid": "31251046",
+  "title": "Accumulation, Biotransformation, and Endocrine Disruption Effects of Fluorotelomer Surfactant Mixtures on Zebrafish.",
+  "author1": "Shi",
+  "nAuthors": 6,
+  "journal": "Chem Res Toxicol",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "li",
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "body",
+   "vtg",
+   "steroid",
+   "th",
+   "f1"
+  ],
+  "polClass": "emerg",
+  "polName": "6:2 FTAB、6:2 FTAA",
+  "stage": [
+   "adu"
+  ],
+  "zh": "共暴露 180 天后 6:2 FTAA 占组织 PFAS 约 92%，雄鱼肝蓄积更高，50 与 500 µg/L 使产卵减少、子代畸形死亡增加。",
+  "doi": "10.1021/acs.chemrestox.9b00127"
+ },
+ {
+  "pmid": "30537588",
+  "title": "Cardiovascular toxicity and anxiety-like behavior induced by deltamethrin in zebrafish (Danio rerio) larvae.",
+  "author1": "Li",
+  "nAuthors": 3,
+  "journal": "Chemosphere",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "he",
+   "ey"
+  ],
+  "dirs": [
+   "cv",
+   "bh",
+   "dv"
+  ],
+  "marks": [
+   "len",
+   "morph",
+   "vasc",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "溴氰菊酯",
+  "stage": [
+   "lar"
+  ],
+  "zh": "溴氰菊酯致 72 hpf 仔鱼体长与头眼面积减小、心脑血管形态受损并诱导凋亡，同时增加贴壁行为提示焦虑。",
+  "doi": "10.1016/j.chemosphere.2018.12.011"
+ },
+ {
+  "pmid": "31255755",
+  "title": "Cardiotoxicity of forchlorfenuron (CPPU) in zebrafish (Danio rerio) and H9c2 cardiomyocytes.",
+  "author1": "Gong",
+  "nAuthors": 4,
+  "journal": "Chemosphere",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "co",
+   "gene"
+  ],
+  "polClass": "pest",
+  "polName": "氯吡脲",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "2.5–12.5 µg/mL 氯吡脲致斑马鱼心脏形态变形、收缩功能障碍与红细胞减少，myl7、gata4、mef2c、amhc、vmhc、gata1 表达改变，H9c2 细胞骨架破坏。",
+  "doi": "10.1016/j.chemosphere.2019.06.027"
+ },
+ {
+  "pmid": "31195222",
+  "title": "Monitoring estrogenic activities of waste and surface waters using a novel in vivo zebrafish embryonic (EASZY) assay: Comparison with in vitro cell-based assays and determination of effect-based trigger values.",
+  "author1": "Brion",
+  "nAuthors": 14,
+  "journal": "Environ Int",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "mt",
+   "ed"
+  ],
+  "marks": [
+   "arom",
+   "gene"
+  ],
+  "polClass": "mix",
+  "polName": "地表水与废水水样",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "33 份欧洲水样中 18 份浓度依赖性上调胚胎脑 cyp19a1b，活体 EEQ 与体外及化学分析相关，据此推导触发值。",
+  "doi": "10.1016/j.envint.2019.06.006"
+ },
+ {
+  "pmid": "31342352",
+  "title": "Propiconazole induces abnormal behavior and oxidative stress in zebrafish.",
+  "author1": "Valadas",
+  "nAuthors": 8,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh",
+   "ox"
+  ],
+  "marks": [
+   "dive",
+   "enz"
+  ],
+  "polClass": "pest",
+  "polName": "丙环唑",
+  "stage": [
+   "adu"
+  ],
+  "zh": "丙环唑 1700–8500 ng/L 使斑马鱼新缸试验中上层停留减少、底部时间增加，脑 SOD 与 CAT 活性升高。",
+  "doi": "10.1007/s11356-019-05977-3"
+ },
+ {
+  "pmid": "31068624",
+  "title": "Microbiota alter metabolism and mediate neurodevelopmental toxicity of 17β-estradiol.",
+  "author1": "Catron",
+  "nAuthors": 13,
+  "journal": "Sci Rep",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "bh",
+   "ed"
+  ],
+  "marks": [
+   "vmr"
+  ],
+  "polClass": "edc",
+  "polName": "雌二醇",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "雌二醇对光照期运动的抑制依赖肠道菌群，无菌仔鱼体内雌二醇浓度显著更高，提示菌群经代谢改变其毒代动力学。",
+  "doi": "10.1038/s41598-019-43346-9",
+  "pmc": "PMC6506524"
+ },
+ {
+  "pmid": "31272786",
+  "title": "Transgenerational effects of BPA on female reproduction.",
+  "author1": "Santangeli",
+  "nAuthors": 5,
+  "journal": "Sci Total Environ",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "rp",
+   "ed"
+  ],
+  "marks": [
+   "fec",
+   "meth",
+   "gene"
+  ],
+  "polClass": "edc",
+  "polName": "双酚A",
+  "stage": [
+   "adu"
+  ],
+  "zh": "20 µg/L 双酚A 母系暴露使雌鱼生育力下降延续至 F2，amh 启动子超甲基化伴 H3K4me3 与 H3K27me3 改变，其转录下调可持续至 F3。",
+  "doi": "10.1016/j.scitotenv.2019.06.029",
+  "gen": "F3+"
+ },
+ {
+  "pmid": "30521027",
+  "title": "Detection and Prioritization of Developmentally Neurotoxic and/or Neurotoxic Compounds Using Zebrafish.",
+  "author1": "Quevedo",
+  "nAuthors": 7,
+  "journal": "Toxicol Sci",
+  "year": 2019,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "vmr",
+   "body"
+  ],
+  "polClass": "mix",
+  "polName": "90 种化合物库",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "90 化合物库经斑马鱼胚胎毒性、体内浓度测定与光暗运动功能测试，证明该流程可作为可靠高效的神经毒性初筛与优先排序工具。",
+  "doi": "10.1093/toxsci/kfy291",
+  "pmc": "PMC6390653"
+ },
+ {
+  "pmid": "31359052",
+  "title": "Comparison of Zebrafish Larvae and hiPSC Cardiomyocytes for Predicting Drug-Induced Cardiotoxicity in Humans.",
+  "author1": "Dyballa",
+  "nAuthors": 9,
+  "journal": "Toxicol Sci",
+  "year": 2019,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "mt",
+   "cv"
+  ],
+  "marks": [
+   "hr",
+   "avb",
+   "co",
+   "vasc"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "92 种药物筛查显示斑马鱼仔鱼预测人体心脏毒性的准确性优于 hiPSC 心肌细胞，与犬类临床前模型相当。",
+  "doi": "10.1093/toxsci/kfz165",
+  "pmc": "PMC6760275"
+ },
+ {
   "pmid": "29282212",
   "title": "MUSCLEMOTION: A Versatile Open Software Tool to Quantify Cardiomyocyte and Cardiac Muscle Contraction In Vitro and In Vivo.",
   "author1": "Sala",
@@ -6790,6 +11280,37 @@ window.PAPERS = [
   "doi": "10.1161/CIRCRESAHA.117.312067",
   "pmc": "PMC5805275",
   "key": true
+ },
+ {
+  "pmid": "29758382",
+  "title": "Effects of exposure to BPF on development and sexual differentiation during early life stages of zebrafish (Danio rerio).",
+  "author1": "Yang",
+  "nAuthors": 5,
+  "journal": "Comp Biochem Physiol C Toxicol Pharmacol",
+  "year": 2018,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "dv",
+   "rp"
+  ],
+  "marks": [
+   "morph",
+   "sexratio",
+   "steroid"
+  ],
+  "polClass": "edc",
+  "polName": "双酚F",
+  "stage": [
+   "lar",
+   "sex",
+   "juv"
+  ],
+  "zh": "双酚F 在 1–1000 µg/L 下致胚胎畸形并使性比偏雌、出现卵睾，睾酮下降、雌二醇升高，dmrt1、sox9a、amh 受抑而 foxl2 与 cyp19a1a 上调。",
+  "doi": "10.1016/j.cbpc.2018.05.004"
  },
  {
   "pmid": "29022183",
@@ -6822,6 +11343,220 @@ window.PAPERS = [
   "key": true
  },
  {
+  "pmid": "29397701",
+  "title": "Developmental Effects and Estrogenicity of Bisphenol A Alternatives in a Zebrafish Embryo Model.",
+  "author1": "Mu",
+  "nAuthors": 8,
+  "journal": "Environ Sci Technol",
+  "year": 2018,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ed",
+   "dv"
+  ],
+  "marks": [
+   "surv",
+   "hr",
+   "morph",
+   "vtg",
+   "gene"
+  ],
+  "polClass": "edc",
+  "polName": "双酚AF、双酚A、双酚F",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "双酚 AF 致死与雌激素活性最强，其次双酚 A、双酚 F，双酚 S 最弱；BPAF/BPF 降低心率、抑制孵化并上调 esr 与 vtg1。",
+  "doi": "10.1021/acs.est.7b06255"
+ },
+ {
+  "pmid": "29926976",
+  "title": "Is fish embryo test (FET) according to OECD 236 sensible enough for delivering quality data for effluent risk assessment?",
+  "author1": "Stelzer",
+  "nAuthors": 6,
+  "journal": "Environ Toxicol Chem",
+  "year": 2018,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [
+   "surv",
+   "morph",
+   "edema"
+  ],
+  "polClass": "mix",
+  "polName": "医院污水",
+  "stage": [
+   "zyg",
+   "hat",
+   "lar",
+   "juv"
+  ],
+  "zh": "同一医院出水的三种标准试验敏感性为仔鱼>幼鱼≥胚胎，OECD 236 加不孵化与心包水肿等亚致死指标后敏感性提高 30% 以上。",
+  "doi": "10.1002/etc.4215"
+ },
+ {
+  "pmid": "29896702",
+  "title": "Analysis of Lethality and Malformations During Zebrafish (Danio rerio) Development.",
+  "author1": "Raghunath",
+  "nAuthors": 2,
+  "journal": "Methods Mol Biol",
+  "year": 2018,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "surv"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "lar"
+  ],
+  "zh": "提出二项式与相对形态学两套畸形评分系统，据此可在斑马鱼胚胎与仔鱼中判定受试物致畸性并评估其致畸潜力。",
+  "doi": "10.1007/978-1-4939-7883-0_18"
+ },
+ {
+  "pmid": "28963892",
+  "title": "Unsuitable use of DMSO for assessing behavioral endpoints in aquatic model species.",
+  "author1": "Huang",
+  "nAuthors": 6,
+  "journal": "Sci Total Environ",
+  "year": 2018,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "bh"
+  ],
+  "marks": [],
+  "polClass": "none",
+  "polName": "二甲基亚砜",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "DMSO 在 1% 以下不致死亡，却使斑马鱼仔鱼运动距离与爆发运动显著下降，行为学试验须设溶剂对照并谨慎选择载体。",
+  "doi": "10.1016/j.scitotenv.2017.09.260"
+ },
+ {
+  "pmid": "28982082",
+  "title": "Modification and quantification of in vivo EROD live-imaging with zebrafish (Danio rerio) embryos to detect both induction and inhibition of CYP1A.",
+  "author1": "Kais",
+  "nAuthors": 4,
+  "journal": "Sci Total Environ",
+  "year": 2018,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "ox"
+  ],
+  "marks": [
+   "erod"
+  ],
+  "polClass": "op",
+  "polName": "毒死蜱、β-萘黄酮",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "改进的活体 EROD 成像可同时检出 CYP1A 诱导与抑制，毒死蜱在 ≤EC10 即强抑制 CYP1A 并致水肿毒性。",
+  "doi": "10.1016/j.scitotenv.2017.09.257"
+ },
+ {
+  "pmid": "29202294",
+  "title": "Comparative live-imaging of in vivo EROD (ethoxyresorufin-O-deethylase) induction in zebrafish (Danio rerio) and fathead minnow (Pimephales promelas) embryos after exposure to PAHs and river sediment extracts.",
+  "author1": "Boehler",
+  "nAuthors": 4,
+  "journal": "Sci Total Environ",
+  "year": 2018,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "mt",
+   "ox"
+  ],
+  "marks": [
+   "erod"
+  ],
+  "polClass": "pah",
+  "polName": "苯并[a]芘、苯并[k]荧蒽",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "斑马鱼胚胎活体 EROD 信号强于黑头呆鱼，河流沉积物提取物在两物种均诱导更强 EROD，可用于生物监测。",
+  "doi": "10.1016/j.scitotenv.2017.11.101"
+ },
+ {
+  "pmid": "29203887",
+  "title": "Age-dependent increase of oxidative stress regulates microRNA-29 family preserving cardiac health.",
+  "author1": "Heid",
+  "nAuthors": 19,
+  "journal": "Sci Rep",
+  "year": 2017,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "ag",
+   "cv"
+  ],
+  "marks": [
+   "gene"
+  ],
+  "polClass": "none",
+  "polName": "—",
+  "stage": [
+   "adu",
+   "old"
+  ],
+  "zh": "衰老青鳉鱼心脏 miR-29 家族上调伴胶原与 5mC 下降；斑马鱼敲低 miR-29 引起心脏形态功能改变并激活缺氧通路。",
+  "doi": "10.1038/s41598-017-16829-w",
+  "pmc": "PMC5715159"
+ },
+ {
+  "pmid": "27002526",
+  "title": "Development and recovery of histopathological alterations in the gonads of zebrafish (Danio rerio) after single and combined exposure to endocrine disruptors (17α-ethinylestradiol and fadrozole).",
+  "author1": "Luzio",
+  "nAuthors": 5,
+  "journal": "Aquat Toxicol",
+  "year": 2016,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "hist",
+   "sexratio",
+   "len"
+  ],
+  "polClass": "edc",
+  "polName": "炔雌醇、法屈唑",
+  "stage": [
+   "zyg",
+   "lar",
+   "juv",
+   "adu"
+  ],
+  "zh": "法屈唑单用或与 EE2 联合永久扰乱性腺分化，致雄性化、间性与生精管扩张；EE2 单独所致改变在净化期部分可逆。",
+  "doi": "10.1016/j.aquatox.2016.03.014"
+ },
+ {
   "pmid": "27482813",
   "title": "Telomeres in aging and disease: lessons from zebrafish.",
   "author1": "Carneiro",
@@ -6842,6 +11577,36 @@ window.PAPERS = [
   "zh": "斑马鱼端粒长度与人类相近并随龄缩短，是研究端粒损耗驱动细胞衰老、器官功能障碍与疾病的互补模型。",
   "doi": "10.1242/dmm.025130",
   "pmc": "PMC4958310"
+ },
+ {
+  "pmid": "27496563",
+  "title": "Chronic perfluorooctanesulphonic acid (PFOS) exposure produces estrogenic effects in zebrafish.",
+  "author1": "Chen",
+  "nAuthors": 10,
+  "journal": "Environ Pollut",
+  "year": 2016,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "steroid",
+   "gene",
+   "hist"
+  ],
+  "polClass": "emerg",
+  "polName": "全氟辛烷磺酸",
+  "stage": [
+   "lar",
+   "sex",
+   "adu"
+  ],
+  "zh": "250 µg/L 全氟辛烷磺酸暴露 5 个月使性分化期雌二醇升高、睾酮下降，成鱼精巢 esr1 显著上调，性腺组织与超微结构改变，可解释其雌性化与精子质量下降。",
+  "doi": "10.1016/j.envpol.2016.07.064"
  },
  {
   "pmid": "26950772",
@@ -6872,6 +11637,122 @@ window.PAPERS = [
   "zh": "5 µm 聚苯乙烯微塑料 7 天暴露后蓄积于鳃、肝与肠，5 µm 与 70 nm 颗粒均致肝炎症与脂质蓄积，并升高 SOD、CAT 活性。",
   "doi": "10.1021/acs.est.6b00183",
   "key": true
+ },
+ {
+  "pmid": "27525560",
+  "title": "Glyphosate induces cardiovascular toxicity in Danio rerio.",
+  "author1": "Roy",
+  "nAuthors": 4,
+  "journal": "Environ Toxicol Pharmacol",
+  "year": 2016,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "dv"
+  ],
+  "marks": [
+   "hr",
+   "vasc",
+   "morph"
+  ],
+  "polClass": "pest",
+  "polName": "草甘膦",
+  "stage": [
+   "gas",
+   "seg",
+   "lar"
+  ],
+  "zh": "从原肠期起 50 µg/mL 草甘膦浸泡致胚胎心房心室结构异常、心脏环化不规则与内脏反转，48 h 心率下降，体血管受影响，早期 mef2ca 表达改变。",
+  "doi": "10.1016/j.etap.2016.08.010"
+ },
+ {
+  "pmid": "27047331",
+  "title": "Estrogenic Effects of Several BPA Analogs in the Developing Zebrafish Brain.",
+  "author1": "Cano-Nicolau",
+  "nAuthors": 6,
+  "journal": "Front Neurosci",
+  "year": 2016,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "ed",
+   "mt"
+  ],
+  "marks": [
+   "arom",
+   "gene"
+  ],
+  "polClass": "edc",
+  "polName": "双酚S、双酚F、双酚AF",
+  "stage": [
+   "lar"
+  ],
+  "zh": "BPS、BPF 与 BPAF 同 BPA 一样经 zfERα 激活 7 dpf 仔鱼脑 cyp19a1b 表达，双酚AP 则无雌激素活性。",
+  "doi": "10.3389/fnins.2016.00112",
+  "pmc": "PMC4805609"
+ },
+ {
+  "pmid": "26723187",
+  "title": "Thyroid endocrine disruption and external body morphology of Zebrafish.",
+  "author1": "Sharma",
+  "nAuthors": 3,
+  "journal": "Gen Comp Endocrinol",
+  "year": 2016,
+  "review": false,
+  "organs": [
+   "th"
+  ],
+  "dirs": [
+   "ed",
+   "dv"
+  ],
+  "marks": [
+   "morph",
+   "len",
+   "hist"
+  ],
+  "polClass": "edc",
+  "polName": "甲巯咪唑、甲状腺素",
+  "stage": [
+   "lar",
+   "juv"
+  ],
+  "zh": "甲巯咪唑致甲减使 45 dpf 斑马鱼胸鳍与腹鳍后移、胸鳍变短及体重体长下降，补 T4 可挽救鳍位置但不能恢复体长。",
+  "doi": "10.1016/j.ygcen.2015.12.023"
+ },
+ {
+  "pmid": "27255368",
+  "title": "Effects of thyroid endocrine manipulation on sex-related gene expression and population sex ratios in Zebrafish.",
+  "author1": "Sharma",
+  "nAuthors": 4,
+  "journal": "Gen Comp Endocrinol",
+  "year": 2016,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "sexratio",
+   "gene",
+   "hist"
+  ],
+  "polClass": "edc",
+  "polName": "甲状腺素、甲巯咪唑",
+  "stage": [
+   "lar",
+   "juv"
+  ],
+  "zh": "甲状腺素处理使群体偏雄并伴 amh、ar 升高、cyp19a1a 下调，甲巯咪唑增加卵巢个体比例但雌化不持久。",
+  "doi": "10.1016/j.ygcen.2016.05.028"
  },
  {
   "pmid": "26026258",
@@ -6925,6 +11806,123 @@ window.PAPERS = [
   ],
   "zh": "斑马鱼 tert 调控区终生完全甲基化、编码区始终非甲基化，terc 编码区下游甲基化水平随年龄改变且各组织间不一致。",
   "doi": "10.1134/S1607672915050166"
+ },
+ {
+  "pmid": "25163568",
+  "title": "Prochloraz causes irreversible masculinization of zebrafish (Danio rerio).",
+  "author1": "Baumann",
+  "nAuthors": 6,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2015,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "sexratio",
+   "hist"
+  ],
+  "polClass": "pest",
+  "polName": "咪鲜胺",
+  "stage": [
+   "lar",
+   "juv",
+   "adu"
+  ],
+  "zh": "10–300 µg/L 咪鲜胺暴露至 60 dph 使性比偏雄并出现间性，净化 40 天后间性消失但雄性化性比仍存，提示不可逆。",
+  "doi": "10.1007/s11356-014-3486-3"
+ },
+ {
+  "pmid": "25532870",
+  "title": "Zebrafish cardiotoxicity: the effects of CYP1A inhibition and AHR2 knockdown following exposure to weak aryl hydrocarbon receptor agonists.",
+  "author1": "Brown",
+  "nAuthors": 4,
+  "journal": "Environ Sci Pollut Res Int",
+  "year": 2015,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "cv",
+   "ox"
+  ],
+  "marks": [
+   "edema",
+   "erod"
+  ],
+  "polClass": "pah",
+  "polName": "菲、荧蒽、西维因",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "弱 AhR 激动剂单独暴露不致病，与 CYP1A 抑制剂荧蒽共暴露显著增加心包水肿，CYP1A 敲低可复制该效应。",
+  "doi": "10.1007/s11356-014-3969-2",
+  "pmc": "PMC4442063"
+ },
+ {
+  "pmid": "26118430",
+  "title": "Endocrine-disrupting effect of the ultraviolet filter benzophenone-3 in zebrafish, Danio rerio.",
+  "author1": "Kinnberg",
+  "nAuthors": 9,
+  "journal": "Environ Toxicol Chem",
+  "year": 2015,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "sexratio",
+   "vtg"
+  ],
+  "polClass": "edc",
+  "polName": "二苯酮-3",
+  "stage": [
+   "zyg",
+   "lar",
+   "sex",
+   "adu"
+  ],
+  "zh": "191–388 µg/L 二苯酮-3 致斑马鱼性比偏雌、性腺成熟延迟，成鱼 268 µg/L 诱导卵黄蛋白原，符合内分泌干扰物定义。",
+  "doi": "10.1002/etc.3129"
+ },
+ {
+  "pmid": "24832558",
+  "title": "Endocrine disruption effects of p,p'-DDE on juvenile zebrafish.",
+  "author1": "Monteiro",
+  "nAuthors": 10,
+  "journal": "J Appl Toxicol",
+  "year": 2015,
+  "review": false,
+  "organs": [
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp"
+  ],
+  "marks": [
+   "vtg",
+   "hist",
+   "sexratio"
+  ],
+  "polClass": "pest",
+  "polName": "p,p'-DDE",
+  "stage": [
+   "juv",
+   "sex"
+  ],
+  "zh": "性分化期 0.2 与 2.0 µg/L p,p'-DDE 使整体卵黄蛋白原升高、雌鱼成熟卵母细胞减少，性比与性腺指数无变化。",
+  "doi": "10.1002/jat.3014"
  },
  {
   "pmid": "24874798",
