@@ -26,16 +26,8 @@ jobs:
       - name: 从 PubMed 抓取斑马鱼新文献并追加到 data_papers.js
         run: python scripts/update_zebrafish.py --days 10 --data zebrafish/data_papers.js
 
-      - name: 校验 JS 语法
-        run: python - <<'PY'
-import re, json, sys
-s = open("zebrafish/data_papers.js", encoding="utf-8").read()
-m = re.search(r"window\.PAPERS\s*=\s*", s)
-body = s[m.end():].strip().rstrip(";")
-data = json.loads(body)
-assert isinstance(data, list) and len(data) > 0
-print("PAPERS", len(data))
-PY
+      - name: 校验 data_papers.js 语法
+        run: node --check zebrafish/data_papers.js
 
       - name: 提交并推送
         run: |
