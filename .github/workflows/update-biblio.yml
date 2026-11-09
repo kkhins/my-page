@@ -1,0 +1,39 @@
+name: 每日更新文献
+
+on:
+  schedule:
+    # GitHub Actions 的 cron 用 UTC。UTC 22:00 = 北京时间次日 06:00。
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: biblio-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 从 PubMed 抓取新文献并写入 data.js
+        run: python scripts/update_biblio.py --days 8
+
+      - name: 提交并推送
+        run: |
+          git config user.name "biblio-bot"
+          git config user.email "biblio-bot@users.noreply.github.com"
+          if git diff --quiet data.js; then
+            echo "没有新文献，跳过提交"
+          else
+            git add data.js
+            git commit -m "自动更新文献 $(date -u +%F)"
+            git push
+          fi
