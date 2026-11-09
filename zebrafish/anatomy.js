@@ -265,6 +265,20 @@
             '<path d="M 264,258 C 284,252 306,251 326,254" fill="none" stroke="#CFE3CB" stroke-width="1.2" opacity=".3"/>' +
             '<path d="M 300,272 C 380,266 470,264 560,268" fill="none" stroke="#CFE3CB" stroke-width="1" opacity=".2"/>'));
 
+        /* 鳔：鲤科为前后两室——前室卵圆、后室细长，之间以连接管（ductus communicans）相通；
+           位于腹腔背侧中线，肾的腹侧、肠的背侧。含气，画成半透明。
+           画在性腺之前：性腺成对、位于体侧，侧视时比中线的鳔更表浅。
+           非 11 个器官之一，作为结构绘制，不可点击。 */
+        push(o, '<g data-struct="swimbladder" opacity=".72">' +
+            '<ellipse cx="424" cy="270" rx="44" ry="23" fill="#2E6B77" stroke="#7FC4CE" stroke-width="1.5"/>' +
+            '<path d="M 480,270 C 532,263 596,263 650,270 C 676,274 692,279 698,284 ' +
+            'C 692,290 676,295 650,299 C 596,306 532,306 480,299 C 472,294 472,276 480,270 Z" ' +
+            'fill="#2E6B77" stroke="#7FC4CE" stroke-width="1.5"/>' +
+            '<path d="M 468,274 L 480,274 M 468,286 L 480,286" stroke="#7FC4CE" stroke-width="1.5" fill="none"/>' +
+            '<ellipse cx="412" cy="262" rx="17" ry="6" fill="#BFE4EA" opacity=".26"/>' +
+            '<ellipse cx="552" cy="276" rx="46" ry="7" fill="#BFE4EA" opacity=".2"/>' +
+            '</g>');
+
         /* 性腺：沿腹腔背侧纵向延伸，成对 */
         push(o, orgG('go',
             '<path d="M 336,296 C 400,284 470,280 546,282 C 610,284 664,290 692,298 C 694,306 694,312 690,316 ' +
@@ -372,6 +386,8 @@
         push(o, lbl('go', 604, 196, 582, 290));
         push(o, lbl('ll', 726, 224, 692, 318));
         push(o, lbl('mu', 505, 140, 526, 228, '（体节肌）'));
+        push(o, slbl('鳔 前室', 350, 172, 416, 252));
+        push(o, slbl('鳔 后室', 648, 160, 584, 266));
         push(o, '</g>');
 
         push(o, dirMark('头侧', 78, 372));
@@ -405,7 +421,7 @@
         ['li', 'he', 'br', 'gi', 'gu', 'go', 'ki', 'll', 'ey', 'th', 'mu'].forEach(function (k) { c[k] = colorOf(k); });
 
         var o = [];
-        push(o, svgOpen('cross', '斑马鱼躯干中段横截面解剖图'));
+        push(o, svgOpen('cross', '斑马鱼躯干横截面示意图（复合层面：肝实际位于腹腔前部）'));
         push(o, '<defs>');
         push(o, '<radialGradient id="zfa-cross-bg" cx="50%" cy="42%" r="62%">' +
             '<stop offset="0%" stop-color="#16343A"/><stop offset="100%" stop-color="#0A191D"/></radialGradient>');
@@ -463,8 +479,8 @@
 
         /* 鳔（结构，不属 10 器官） */
         push(o, '<g data-struct="swimbladder">' +
-            '<ellipse cx="471" cy="328" rx="29" ry="19" fill="#3B6E78" stroke="#63A0A9" stroke-width="1.1" opacity=".85"/>' +
-            '<ellipse cx="529" cy="328" rx="29" ry="19" fill="#3B6E78" stroke="#63A0A9" stroke-width="1.1" opacity=".85"/>' +
+            '<ellipse cx="500" cy="328" rx="58" ry="21" fill="#3B6E78" stroke="#63A0A9" stroke-width="1.1" opacity=".85"/>' +
+            '<ellipse cx="500" cy="324" rx="30" ry="9" fill="#9FD0D8" opacity=".16"/>' +
             '</g>');
 
         /* 性腺：肠背侧两侧 */
@@ -585,12 +601,23 @@
 
         /* --- 早期（zyg / cle / bla / gas）--- */
         push(o, '<g data-layer="early" style="display:none">');
+        /* 受精卵：动物极单个胚盘（1 细胞），尚未卵裂 */
+        push(o, '<g data-early="zygote">' +
+            '<ellipse cx="500" cy="330" rx="150" ry="146" fill="#B99248" opacity=".42" stroke="#D8B466" stroke-width="1"/>' +
+            '<path d="M 412,210 C 430,182 470,170 500,170 C 530,170 570,182 588,210 C 560,224 530,230 500,230 C 470,230 440,224 412,210 Z" fill="#3C6A72" stroke="#6BA0AA" stroke-width="1.4"/>' +
+            '<circle cx="500" cy="200" r="9" fill="#2F5A62" stroke="#8FBFC7" stroke-width="1"/>' +
+            '</g>');
+        /* 卵裂期：动物极多个卵裂球（示意 8 细胞，两列） */
         push(o, '<g data-early="cells">' +
             '<ellipse cx="500" cy="330" rx="150" ry="146" fill="#B99248" opacity=".42" stroke="#D8B466" stroke-width="1"/>' +
-            '<ellipse cx="500" cy="196" rx="88" ry="34" fill="#3C6A72" stroke="#6BA0AA" stroke-width="1.2"/>' +
-            '<circle cx="470" cy="192" r="15" fill="#2F5A62" stroke="#6BA0AA" stroke-width="1"/>' +
-            '<circle cx="500" cy="186" r="15" fill="#2F5A62" stroke="#6BA0AA" stroke-width="1"/>' +
-            '<circle cx="530" cy="192" r="15" fill="#2F5A62" stroke="#6BA0AA" stroke-width="1"/>' +
+            '<ellipse cx="500" cy="200" rx="92" ry="38" fill="#35636B" stroke="#6BA0AA" stroke-width="1.2"/>' +
+            '<circle cx="455" cy="190" r="16" fill="#2F5A62" stroke="#8FBFC7" stroke-width="1.1"/>' +
+            '<circle cx="485" cy="184" r="16" fill="#2F5A62" stroke="#8FBFC7" stroke-width="1.1"/>' +
+            '<circle cx="515" cy="184" r="16" fill="#2F5A62" stroke="#8FBFC7" stroke-width="1.1"/>' +
+            '<circle cx="545" cy="190" r="16" fill="#2F5A62" stroke="#8FBFC7" stroke-width="1.1"/>' +
+            '<circle cx="470" cy="212" r="15" fill="#29545C" stroke="#8FBFC7" stroke-width="1.1"/>' +
+            '<circle cx="500" cy="216" r="15" fill="#29545C" stroke="#8FBFC7" stroke-width="1.1"/>' +
+            '<circle cx="530" cy="212" r="15" fill="#29545C" stroke="#8FBFC7" stroke-width="1.1"/>' +
             '</g>');
         push(o, '<g data-early="blasto">' +
             '<ellipse cx="500" cy="330" rx="150" ry="146" fill="#B99248" opacity=".42" stroke="#D8B466" stroke-width="1"/>' +
@@ -749,7 +776,7 @@
     /* ============================ 阶段控制 ============================ */
 
     var STAGE_CFG = {
-        zyg: { shell: 1, early: 'cells' },
+        zyg: { shell: 1, early: 'zygote' },
         cle: { shell: 1, early: 'cells' },
         bla: { shell: 1, early: 'blasto' },
         gas: { shell: 1, early: 'gast' },
@@ -819,7 +846,10 @@
         /* 早期 / 幼鱼-成鱼期：隐藏标签，避免指向不存在的结构 */
         var lbls = g.querySelector('.zfa-labels');
         if (lbls) {
-            lbls.style.display = (key === 'juv' || key === 'sex' || key === 'adu' || key === 'old') ? 'none' : '';
+            /* 原条件漏了早期四个阶段：那时 organs 图层已隐藏，标签却还在，
+               指引线落在空白处或卵黄上。按注释的本意补齐。 */
+            var noLbl = ['zyg', 'cle', 'bla', 'gas', 'juv', 'sex', 'adu', 'old'];
+            lbls.style.display = (noLbl.indexOf(key) >= 0) ? 'none' : '';
         }
     }
 
@@ -961,6 +991,23 @@
             if (!stageId) { return; }
             state.stage = stageId;
             applyStage();
+        },
+
+        /* 某个视图里是否真的画了这个器官（横截面只含躯干中段的器官） */
+        hasOrgan: function (view, id) {
+            var svg = svgs[view];
+            if (!svg || !id) { return false; }
+            return !!svg.querySelector('[data-organ="' + id + '"]');
+        },
+
+        /* 含有该器官的视图列表，按 侧视 → 胚胎 → 横截面 的优先顺序 */
+        viewsWithOrgan: function (id) {
+            var out = [];
+            ['side', 'embryo', 'cross'].forEach(function (k) {
+                var svg = svgs[k];
+                if (svg && id && svg.querySelector('[data-organ="' + id + '"]')) { out.push(k); }
+            });
+            return out;
         }
     };
 

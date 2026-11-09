@@ -41,6 +41,8 @@
   var POL_BY_ID = {};
   POL.forEach(function (p) { POL_BY_ID[p.id] = p; });
 
+  var VIEW_NAME = { side: '侧视图', cross: '横截面', embryo: '胚胎视图' };
+
   var DIR_COLORS = ['#0B6E6B', '#4F97AE', '#C0505F', '#C9A21F', '#8A7CD0', '#5E8C5A', '#3FA394', '#D06A9A'];
 
   var ICON = {
@@ -292,6 +294,66 @@
     return { type: 'latest', id: 'latest' };
   }
 
+  /* ── URL 路由：#organ/li、#dir/dv、#paper/29022183 … ──
+     目的是让某个器官 / 方向 / 单篇文献可以被收藏成书签、可以发给别人，
+     并让浏览器的后退键有作用。不引入任何库。 */
+  var HASH_TYPES = ['organ', 'dir', 'mark', 'stage', 'page', 'pollutant', 'paper'];
+
+  function viewToHash(v) {
+    if (!v || !v.type) return '';
+    if (v.type === 'latest' || v.type === 'library') return '#' + v.type;
+    if (HASH_TYPES.indexOf(v.type) >= 0) return '#' + v.type + '/' + encodeURIComponent(String(v.id));
+    return '';
+  }
+
+  function hashToView(h) {
+    var raw = String(h || '').replace(/^#/, '');
+    if (!raw) return null;
+    if (raw === 'latest') return { type: 'latest', id: 'latest' };
+    if (raw === 'library') return { type: 'library', id: 'library' };
+    var i = raw.indexOf('/');
+    if (i < 0) return null;
+    var type = raw.slice(0, i);
+    var id;
+    try { id = decodeURIComponent(raw.slice(i + 1)); } catch (e) { id = raw.slice(i + 1); }
+    if (HASH_TYPES.indexOf(type) < 0 || !id) return null;
+    /* 只接受真实存在的条目，坏链接不要把界面带到空状态 */
+    if (type === 'organ' && !organById[id]) return null;
+    if (type === 'dir' && !dirById[id]) return null;
+    if (type === 'mark' && !markById[id]) return null;
+    if (type === 'stage' && !stageById[id]) return null;
+    if (type === 'page' && !pages[id]) return null;
+    if (type === 'paper' && !findPaper(id)) return null;
+    if (type === 'pollutant') {
+      var hit = papers.some(function (p) { return p.polName === id; });
+      if (!hit) return null;
+    }
+    return { type: type, id: id };
+  }
+
+  function syncHash() {
+    var want = viewToHash(state.view);
+    if (!want) return;
+    if (String(location.hash || '') === want) return;
+    /* 首屏用 replaceState，避免在历史里多出一条「空 hash」记录；
+       之后用 location.hash，这样每次切换都进历史，浏览器后退键才有作用。
+       这里不加「忽略自己写入」的锁——onHashChange 已经用「视图是否已一致」
+       做判断，那是唯一可靠的判据；加锁反而会吞掉紧随其后的真实后退事件。 */
+    try {
+      if (!state.ready && history && history.replaceState) history.replaceState(null, '', want);
+      else location.hash = want;
+    } catch (e) {
+      try { location.hash = want; } catch (e2) {}
+    }
+  }
+
+  function onHashChange() {
+    var v = hashToView(location.hash);
+    if (!v) return;
+    if (state.view && state.view.type === v.type && String(state.view.id) === String(v.id)) return;
+    setView(v);
+  }
+
   function setView(v) {
     var prev = state.view;
     var changed = !prev || prev.type !== v.type || String(prev.id || '') !== String(v.id || '');
@@ -310,6 +372,7 @@
 
     renderAll();
     applyAnatomyState();
+    syncHash();
     var ds = $('#dscroll');
     if (ds) ds.scrollTop = 0;
     if (window.innerWidth < 1100) openAside();
@@ -392,8 +455,19 @@
       if (typeof A.setLabels === 'function') A.setLabels(state.labels);
       if (typeof A.setGhost === 'function') A.setGhost(state.ghost);
       if (state.stageId && typeof A.setStage === 'function') A.setStage(state.stageId);
+      /* 横截面只画躯干中段的器官。若当前视图没有这个器官，自动切到画了它的视图，
+         否则点左栏的「脑」在横截面上毫无反馈，看起来像坏了。 */
+      var want = (state.view && state.view.type === 'organ') ? state.view.id : null;
+      if (want && typeof A.hasOrgan === 'function' && !A.hasOrgan(state.anatomyView, want)) {
+        var alt = (typeof A.viewsWithOrgan === 'function') ? A.viewsWithOrgan(want) : [];
+        if (alt.length && alt.indexOf(state.anatomyView) < 0) {
+          var fromName = VIEW_NAME[state.anatomyView] || state.anatomyView;
+          setAnatomyView(alt[0]);
+          toast((organById[want] ? organById[want].name : '该器官') + '不在' + fromName + '里，已切到' + (VIEW_NAME[alt[0]] || alt[0]));
+        }
+      }
       if (typeof A.selectOrgan === 'function') {
-        A.selectOrgan(state.view && state.view.type === 'organ' ? state.view.id : null);
+        A.selectOrgan(want);
       }
     } catch (err) {
       try { console.warn('[atlas] anatomy 同步失败', err); } catch (e) {}
@@ -971,7 +1045,7 @@
       + '<button class="actbtn' + (hasNote ? ' on' : '') + '" type="button" data-note="' + esc(p.key) + '">笔记'
       + (hasNote ? '<span class="dotn"></span>' : '') + '</button>'
       + '</div>'
-      + '<div class="noteedit on" data-note-editor="' + esc(p.key) + '">'
+      + '<div class="noteedit' + (state.openNote === p.key ? ' on' : '') + '" data-note-editor="' + esc(p.key) + '">'
       + '<textarea data-note-input placeholder="写下要点、方法或可引用的结论…">' + esc(notes[p.key] || '') + '</textarea>'
       + '<div class="nerow"><button class="mini-btn primary" type="button" data-note-save="' + esc(p.key) + '">保存笔记</button>'
       + '<span class="hint">存于本机 · zfatlas-notes</span></div></div>'
@@ -1020,9 +1094,110 @@
     var showFilters = papers.length > 0 && base.length > 0;
     var h = '<div class="secline"><h3>' + esc(title || '文献') + ' <span class="n" id="listN"></span></h3>'
       + (showFilters ? sortSelectHtml() : '') + '</div>';
-    if (showFilters) h += filtersHtml();
+    if (showFilters) h += filtersHtml() + exportHtml();
     h += '<div id="paperList"></div>';
     return h;
+  }
+
+  /* ── 引文导出 ──
+     本库每篇只存了第一作者、期刊、年份、DOI、PMID，没有完整作者表与卷期页码，
+     所以 BibTeX / RIS 是不完整的。要拿到完整记录，用「标识符清单」导入文献管理软件
+     （Zotero 的「通过标识符添加」、EndNote 的 Online Search），由软件去 PubMed 取全套字段。 */
+  function exportHtml() {
+    return '<div class="fchips" style="margin-top:2px">'
+      + '<button class="fchip" type="button" data-export="ids" title="每行一个 DOI 或 PMID，可直接粘进 Zotero 的「通过标识符添加」">导出标识符</button>'
+      + '<button class="fchip" type="button" data-export="bib" title="字段不完整：缺完整作者表与卷期页码">导出 BibTeX</button>'
+      + '<button class="fchip" type="button" data-export="ris" title="字段不完整：缺完整作者表与卷期页码">导出 RIS</button>'
+      + '<span class="fcount">按当前筛选结果</span>'
+      + '</div>';
+  }
+
+  function citeKey(p) {
+    var a = (p.author1 || 'anon').replace(/[^A-Za-z]/g, '') || 'anon';
+    return a.toLowerCase() + (p.year || '') + '_' + (p.pmid || p.key);
+  }
+  function bibEsc(v) { return String(v == null ? '' : v).replace(/[{}\\]/g, ''); }
+
+  function buildExport(list, fmt) {
+    var lines = [];
+    if (fmt === 'ids') {
+      lines.push('# 斑马鱼毒理图谱 · ' + list.length + ' 篇 · 每行一个标识符');
+      lines.push('# Zotero：「通过标识符添加」粘贴全部行，由 Zotero 去 PubMed 取完整元数据');
+      list.forEach(function (p) { lines.push(p.doi || ('PMID:' + p.pmid)); });
+      return { text: lines.join('\n'), name: 'zebrafish-ids.txt', mime: 'text/plain' };
+    }
+    if (fmt === 'bib') {
+      lines.push('% 斑马鱼毒理图谱导出 · ' + list.length + ' 篇');
+      lines.push('% 注意：本库只存第一作者，author 字段为「第一作者 and others」，且无卷期页码。');
+      lines.push('% 需要完整记录请改用「导出标识符」并由文献管理软件补全。');
+      list.forEach(function (p) {
+        lines.push('');
+        lines.push('@' + (p.review ? 'article' : 'article') + '{' + citeKey(p) + ',');
+        lines.push('  title   = {' + bibEsc(p.title) + '},');
+        lines.push('  author  = {' + bibEsc(p.author1 || 'Anonymous') + (p.nAuthors > 1 ? ' and others' : '') + '},');
+        lines.push('  journal = {' + bibEsc(p.journal) + '},');
+        if (p.year) lines.push('  year    = {' + p.year + '},');
+        if (p.doi) lines.push('  doi     = {' + bibEsc(p.doi) + '},');
+        if (p.pmid) lines.push('  pmid    = {' + bibEsc(p.pmid) + '},');
+        lines.push('  note    = {' + bibEsc(p.zh) + '}');
+        lines.push('}');
+      });
+      return { text: lines.join('\n'), name: 'zebrafish.bib', mime: 'text/plain' };
+    }
+    list.forEach(function (p) {
+      lines.push('TY  - JOUR');
+      lines.push('TI  - ' + p.title);
+      if (p.author1) lines.push('AU  - ' + p.author1);
+      if (p.journal) lines.push('JO  - ' + p.journal);
+      if (p.year) lines.push('PY  - ' + p.year);
+      if (p.doi) lines.push('DO  - ' + p.doi);
+      if (p.pmid) lines.push('AN  - ' + p.pmid);
+      if (p.zh) lines.push('N1  - ' + p.zh);
+      lines.push('ER  - ');
+      lines.push('');
+    });
+    return { text: lines.join('\n'), name: 'zebrafish.ris', mime: 'text/plain' };
+  }
+
+  function doExport(fmt) {
+    var list = sortPapers(applyFilters(getBasePapers()));
+    if (!list.length) { toast('当前筛选结果为空，没有可导出的条目'); return; }
+    var out = buildExport(list, fmt);
+    var ok = false;
+    try {
+      var blob = new Blob([out.text], { type: out.mime + ';charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = out.name;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { try { URL.revokeObjectURL(url); } catch (e) {} }, 1000);
+      ok = true;
+    } catch (e) { ok = false; }
+    if (ok) {
+      toast('已导出 ' + list.length + ' 篇 · ' + out.name);
+    } else {
+      /* 浏览器拦了下载（某些 file:// 场景），退回到可全选复制的文本框 */
+      showExportFallback(out, list.length);
+    }
+  }
+
+  function showExportFallback(out, n) {
+    var body = $('#modalBody');
+    if (!body) { toast('导出失败：浏览器拒绝了下载'); return; }
+    body.innerHTML = '<p>浏览器拦下了文件下载，这里直接给出文本（已全选，Ctrl/⌘+C 复制）：'
+      + n + ' 篇 · ' + esc(out.name) + '</p>'
+      + '<textarea id="exportText" readonly style="width:100%;height:46vh;font-family:ui-monospace,monospace;'
+      + 'font-size:12px;line-height:1.5;padding:10px;border:1px solid var(--line2);border-radius:8px"></textarea>';
+    var ta = $('#exportText');
+    if (ta) { ta.value = out.text; }
+    var mt = $('#mTitle');
+    if (mt) mt.textContent = '导出';
+    var modal = $('#modal');
+    if (modal) modal.hidden = false;
+    setTimeout(function () { if (ta) { try { ta.focus(); ta.select(); } catch (e) {} } }, 0);
   }
 
   function sortSelectHtml() {
@@ -1152,15 +1327,15 @@
   function emptyListHtml(baseLen) {
     if (!papers.length) {
       return '<div class="empty"><div class="eic">' + ICON.bookmark + '</div>'
-        + '<b>文献库还是空的</b>'
-        + '<p>data_papers.js 目前没有条目。把文献对象追加进 window.PAPERS 后刷新页面，'
-        + '列表、计数、筛选会自动出现，无需改动代码。</p>'
-        + '<span class="mono">window.PAPERS = [ … ]</span></div>';
+        + '<b>文献库是空的</b>'
+        + '<p>这一版没有载入任何文献数据。</p></div>';
     }
     if (!baseLen) {
       return '<div class="empty"><div class="eic">' + ICON.info + '</div>'
-        + '<b>该条目暂无关联文献</b>'
-        + '<p>当前图谱条目的文献标签还没有对应记录。随着 data_papers.js 补充，这里会自动填充。</p></div>';
+        + '<b>这一项还没有收录文献</b>'
+        + '<p>库里 ' + papers.length + ' 篇文献中，暂时没有标注到这一项的。'
+        + '这通常说明该方向本身的文献很少，而不是漏收——换相邻的条目看看，'
+        + '或用右上角的搜索直接找关键词。</p></div>';
     }
     return '<div class="empty"><div class="eic">' + ICON.search + '</div>'
       + '<b>筛选没有命中</b>'
@@ -1579,6 +1754,9 @@
       return;
     }
 
+    var ex = q('[data-export]');
+    if (ex) { e.preventDefault(); doExport(ex.getAttribute('data-export')); return; }
+
     var act = q('[data-act]');
     if (act) {
       var a = act.getAttribute('data-act');
@@ -1651,6 +1829,8 @@
   function openAbout() {
     var body = $('#modalBody');
     if (!body) return;
+    var mt0 = $('#mTitle');
+    if (mt0) mt0.textContent = '关于本图谱';
     var unread = papers.filter(function (p) { return readStatus[p.key] !== 'read'; }).length;
     var stats = [
       [organs.length, '器官'], [directions.length, '研究方向'], [marks.length, '生物标志物'],
@@ -1819,10 +1999,12 @@
   function boot() {
     initData();
     computeCounts();
-    state.view = defaultView();
+    state.view = hashToView(location.hash) || defaultView();
     if (state.view.type === 'stage') state.stageId = state.view.id;
     bindEvents();
+    window.addEventListener('hashchange', onHashChange);
     renderAll();
+    syncHash();
     state.ready = true;
     initAnatomy();
     syncResponsive();

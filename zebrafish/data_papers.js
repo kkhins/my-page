@@ -3824,7 +3824,8 @@ window.PAPERS = [
   "marks": [
    "surv",
    "morph",
-   "edema"
+   "edema",
+   "swim"
   ],
   "polClass": "emerg",
   "polName": "全氟辛烷磺酸、全氟辛酸、PFHxS",
@@ -5045,7 +5046,8 @@ window.PAPERS = [
   "marks": [
    "surv",
    "hr",
-   "gene"
+   "gene",
+   "swim"
   ],
   "polClass": "pest",
   "polName": "天然除虫菊素",
@@ -6678,7 +6680,8 @@ window.PAPERS = [
    "len",
    "th",
    "gene",
-   "morph"
+   "morph",
+   "swim"
   ],
   "polClass": "emerg",
   "polName": "淫羊藿苷",
@@ -11769,7 +11772,8 @@ window.PAPERS = [
   "marks": [
    "conc",
    "body",
-   "surv"
+   "surv",
+   "swim"
   ],
   "polClass": "pah",
   "polName": "菲",

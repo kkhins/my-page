@@ -62,7 +62,7 @@ organs: [
   { id:"th", name:"甲状腺", en:"Thyroid", color:"#8E8F5C",
     desc:"滤泡散布于咽部腹侧中线附近，不形成哺乳动物式的腺体。甲状腺激素轴（HPT 轴）控制变态发育、鳍形成与生长，是内分泌干扰的第二大靶轴（仅次于性激素轴）。三唑类杀菌剂、PFAS、阻燃剂是典型干扰物。",
     genes:["tg","tshba","dio1","dio2","thraa","slc5a5"],
-    marks:["th","morph","len","gene"],
+    marks:["th","swim","morph","len","gene"],
     note:"胚胎与早期仔鱼体内的甲状腺激素大量来自母源卵黄储备，内源合成受抑的效应会被母源供应掩盖，因此 HPT 轴的终点通常要测到仔鱼期之后才可靠。" },
 
   { id:"mu", name:"肌肉", en:"Muscle (myotome)", color:"#9AB0C0",
@@ -176,6 +176,9 @@ marks: [
   { id:"th", name:"甲状腺激素与 HPT 轴", cat:"内分泌", organ:["th"],
     how:"ELISA 或 LC-MS/MS 测全鱼 T3/T4；配 tg、tshba、dio1、dio2、thraa 的 qPCR；可用 Tg(tg:mCherry) 观察滤泡形态。",
     why:"内分泌干扰的第二主轴；注意早期阶段母源卵黄储备会掩盖内源合成受抑的效应。" },
+  { id:"swim", name:"鳔充气", cat:"内分泌", organ:["th"],
+    how:"显微镜下按固定时间点判读后室是否充气并测其面积（斑马鱼后室约 96–120 hpf 充气，前室约 21 dpf）；须确认该效应出现在明显低于致死的浓度下，否则只是一般毒性的伴随现象。",
+    why:"甲状腺激素轴受扰的功能性下游终点，OECD AOP 体系中已有 DIO1 / DIO2 抑制导致后室充气受损的已背书通路，因此比单测 T3/T4 更接近「有危害」。斑马鱼为开鳔类（保留气道、需浮到水面吞气），实验容器必须留出自由水面，否则会人为造成充气失败。" },
 
   // ── 生殖与跨代 ──
   { id:"fec", name:"产卵量与受精率", cat:"生殖与子代", organ:["go"],
