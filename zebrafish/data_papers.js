@@ -12323,8 +12323,8 @@ window.PAPERS = [
   "zh": "【自动收录·待复核】Polystyrene microplastics (PS-MPs) have emerged as widespread aquatic contaminants with the potential to induce multiple…",
   "auto": true,
   "added": "2026-11-09",
-  "doi": "10.1016/j.chemosphere.2020.126059",
-  "pmc": "PMC10331820"
+  "doi": "10.3389/ftox.2026.1960709",
+  "pmc": "PMC13727540"
  },
  {
   "pmid": "42975506",
@@ -12379,8 +12379,8 @@ window.PAPERS = [
   "zh": "【自动收录·待复核】Standard environmental risk assessment frameworks, such as the OECD 236 Fish Embryo Acute Toxicity (FET) test, rely heav…",
   "auto": true,
   "added": "2026-11-09",
-  "doi": "10.3390/ijms222010940",
-  "pmc": "PMC8536011"
+  "doi": "10.3389/ftox.2026.1952628",
+  "pmc": "PMC13724541"
  },
  {
   "pmid": "42971457",
@@ -12551,7 +12551,7 @@ window.PAPERS = [
   "zh": "【自动收录·待复核】Uranium (U) and arsenic (As) are both ubiquitous contaminants in the American southwest, posing risks to humans, animals…",
   "auto": true,
   "added": "2026-11-09",
-  "doi": "10.17226/12910",
-  "pmc": "PMC3703927"
+  "doi": "10.1016/j.dib.2026.113352",
+  "pmc": "PMC13718654"
  }
 ];

@@ -13,7 +13,7 @@
 - **中栏**：SVG 解剖图三视图（侧视 / 躯干横截面 / 胚胎 48 hpf）+ 12 阶段生命周期时间轴。
 - **右栏**：当前选中节点的详情（描述、统计、关联标志物/基因、文献列表、筛选与排序）。
 
-数据是 **430 篇**真实 PubMed 文献，每篇带依据摘要写成的中文发现陈述（`zh`）、器官/方向/标志物/阶段标签、污染物大类、DOI（逐条验证可解析）。
+数据是 **444 篇**真实 PubMed 文献（其中 14 篇由每日 GitHub Action 自动收录，见 §7.6），每篇带器官/方向/标志物/阶段标签、污染物大类、DOI（逐条验证可解析）。人工标注的 430 篇带依据摘要写成的中文发现陈述（`zh`）；自动收录条目的 `zh` 是英文摘要首句，另有「自动收录」标签。
 
 ## 2. 硬约束（审查时请以此为准）
 
@@ -30,7 +30,7 @@
 | --- | --- | --- | --- | --- |
 | `index.html` | 539 | 37 KB | DOM 骨架 + 全部 CSS（无内联脚本、无外部资源） | `.app` 三栏、`#anatomyHost`、`#detail`、`#nav` |
 | `data_struct.js` | 304 | 36 KB | `window.STRUCT = {organs, directions, marks, stages, pages}` | 11 器官 / 8 方向 / 48 标志物 / 12 阶段 |
-| `data_papers.js` | 12,164 | 249 KB | `window.PAPERS = [...]`，430 条 | 字段见 §4.2 |
+| `data_papers.js` | 12,557 | 297 KB | `window.PAPERS = [...]`，444 条 | 字段见 §4.2 |
 | `anatomy.js` | 969 | 50 KB | 三视图 SVG，`window.Anatomy` | `init/setView/getView/setLabels/setGhost/selectOrgan/setStage` |
 | `app.js` | 1,838 | 83 KB | 导航、路由、筛选、搜索、渲染、localStorage | IIFE，`boot()` |
 | `README.md` | 82 | 4 KB | 面向用户的说明与自检清单 | — |
@@ -143,42 +143,61 @@ tools/build_struct.py     从任务书提取第 3 节结构数据（逐字校验
 
 ### 7.4 解剖图是示意性的
 
-未画鳃耙/鳃血管网、胰/脾、内耳半规管、胚胎血管网与脑室；侧视图未画鳔；侧线神经丘为示意分布。按任务书「不确定宁可不画」处理，比例不作为解剖学依据。
+未画鳃耙/鳃血管网、胰/脾、内耳半规管、胚胎血管网与脑室；鳔按中线单个囊体绘制（侧视补前后两室，横截面保持单腔，避免横断面上出现两个囊）；侧线神经丘为示意分布。按任务书「不确定宁可不画」处理，比例不作为解剖学依据。
 
 ### 7.5 `zh` 是 AI 辅助标注
 
 9 批按 `work/annot/RUBRIC.md` 逐篇读摘要打标，`zh` 只依据摘要、不引入摘要外结论；20–60 字、必须陈述发现。存在个别漏标/过度标注的可能，建议先人工抽检 16 篇 `key`。
 
-### 7.6 其他
+每日自动收录的 14 篇是例外：`zh` 写作「【自动收录·待复核】」+ 英文摘要首句，卡片上有橙色虚线「自动收录」标签，不应被当作正式中文结论引用。
 
-- 2026 年的 33 篇是 online-first 记录，卷期页码可能变化。
+### 7.6 每日自动更新
+
+**触发**：`.github/workflows/update-zebrafish.yml`，`cron: "10 22 * * *"`（UTC，即北京时间每天 06:10），另保留 `workflow_dispatch` 手动触发。
+
+**数据来源**：PubMed E-utilities（`esearch` + `efetch`，标准库 urllib，无第三方依赖）。检索式为斑马鱼/`Danio rerio` + 毒理/污染物词，加 `[EDAT]` 限定近 10 天；`esearch` 取回后先去掉库里已有的 PMID。
+
+**筛选**：`scripts/update_zebrafish.py` 打分（≥3 才收，单次最多 30 篇）：摘要或标题必须出现 zebrafish、必须有污染物词、必须有环境暴露语境（`exposure/dose/water/sediment/…`），排除化疗、化学传感器、配体筛选等非生态毒理语境；标题不含 zebrafish 却写 human/mouse/rat 的直接排除。
+
+**打标**：规则按关键词映射到 `polClass` / `dirs` / `organs` / `stage` / `gen`，不调用模型。`zh` 写「【自动收录·待复核】」+ 摘要首句（英文），**不是中文结论**，需要人工复核后改写。
+
+**DOI 校验（两道）**：
+1. 解析时 DOI/PMC 只读 `PubmedData/ArticleIdList`。早期版本用 `.//ArticleId` 会扫到 `PubmedData/ReferenceList` 里被引文献的 DOI/PMC，而它们在文档顺序上排在后面，循环最后一次赋值就把引文 DOI 当成了本文 DOI——错值格式完美、能打开，只有和 PubMed 记录比对才会露馅。已修复并回扫全库 444 篇（`tools/verify_papers.py`），改正 3 条 DOI + 3 条 PMC。
+2. 写入前逐条用 `https://api.crossref.org/works/<doi>` 反查标题，与本文标题比对（归一化后包含关系或相似度 ≥0.72），不符即清空 DOI 并在 Actions 日志里记一行；Crossref 查不到的保留但标「未确认」。
+
+**写入**：只有 `node --check zebrafish/data_papers.js` 通过且内容有变化才 commit/push；没有新文献时日志输出「没有新文献，跳过提交」，不产生空提交。新条目带 `auto: true`、`added: "YYYY-MM-DD"`，页面 `normalize()` 透传，卡片渲染橙色虚线「自动收录」标签。
+
+**边界**：自动更新只增不改——已入库条目的标签、`zh` 不会被脚本覆盖；人工改写过的条目请保留 `auto` 字段或手动删除，否则下次日志里「未收录」判断可能不一致。
+
+### 7.7 其他
+
+- 2026 年的 47 篇是 online-first 记录，卷期页码可能变化。
 - 「最新发表」按任务书取 `year` 降序前 30，不是滚动 7 天。
 - 未做单元测试与 a11y 完整适配（见 §9）。
-- 斑马鱼站不参与同仓库的每日自动更新（`zh` 是逐篇写的，规则脚本复现不了）。
 
 ## 8. 自检结果
 
 `python3 tools/check_delivery.py` 当前输出：
 
 ```
-PAPERS: 430
-main dirs: dv70 bh65 cv42 ed52 rp52 ox65 ag34 mt50
-key: 16  zhEmpty: 0  review: 24
+PAPERS: 444
+main dirs: dv80 bh68 cv42 ed52 rp52 ox66 ag34 mt50
+key: 16  zhEmpty: 0  review: 26
 noDoi: ['15953964']
-STRUCT: {"o":11,"d":8,"m":47,"s":12,"p":["intro","culture"]}
-PMID 来源校验: OK (430)
+STRUCT: {"o":11,"d":8,"m":48,"s":12,"p":["intro","culture"]}
+PMID 来源校验: OK (430 人工批次；14 篇自动收录由 Actions 校验)
 ERRORS: 0  WARNINGS: 0
 ```
 
-DOI：429/429 返回 2xx/3xx（`work/doi_check.json`）。
+DOI：人工批次 429/429 返回 2xx/3xx（`work/doi_check.json`）；全库 444 篇的 DOI 与 PMC 已用 `tools/verify_papers.py` 逐条与 PubMed 官方记录比对，0 处不一致。
 JS 语法：`node --check` 四个文件全部通过。
-DOM 回归：jsdom 全流程 0 error（8 导航、11 器官、8 方向、47 标志物、12 阶段、筛选、搜索、书单、已读持久化）。
+DOM 回归：jsdom 全流程 0 error（8 导航、11 器官、8 方向、48 标志物、12 阶段、筛选、搜索、书单、已读持久化）。
 
 ## 9. 建议审查的重点（给 Claude）
 
 按优先级：
 
-1. **`app.js` 的正确性**：`renderAll` 全量重渲染在 430 篇、多次筛选切换下是否有状态残留（`state.expanded`、`state.openNote`、`libraryTab`）；`navTo` 与 `applyAnatomyState` 是否存在视图/解剖图不同步的分支。
+1. **`app.js` 的正确性**：`renderAll` 全量重渲染在 444 篇、多次筛选切换下是否有状态残留（`state.expanded`、`state.openNote`、`libraryTab`）；`navTo` 与 `applyAnatomyState` 是否存在视图/解剖图不同步的分支。
 2. **XSS/转义**：所有 `innerHTML` 拼接是否都过了 `esc()`（标题、`zh`、`polName`、笔记内容）。
 3. **筛选与排序语义**：`applyFilters` 的 q 匹配范围、`relevance()` 打分、`sortPapers` 的稳定性（同分时的次序）。
 4. **解剖图**：三视图 id 前缀是否可能冲突；`display:none` 视图里的标签坐标是否影响布局；事件委托在 SVG 上的兼容性。
@@ -195,7 +214,7 @@ DOM 回归：jsdom 全流程 0 error（8 导航、11 器官、8 方向、47 标�
 zebrafish-atlas/
 ├── index.html  data_struct.js  data_papers.js  anatomy.js  app.js
 ├── README.md  DELIVERY.md  CONTRACT.md  anatomy-preview.html
-├── tools/        fetch_pubmed.py build_struct.py split_annot.py merge_annot.py verify_doi.py check_delivery.py
+├── tools/        fetch_pubmed.py build_struct.py split_annot.py merge_annot.py verify_doi.py check_delivery.py verify_papers.py update_zebrafish.py
 ├── work/annot/   RUBRIC.md  input_01..09.json  output_01..09.json
 ├── work/         candidates.json pool.json selected.json doi_check.json selection_meta.json
 └── _review/      01-frontend.md 02-anatomy.md 03-data-tools.md
