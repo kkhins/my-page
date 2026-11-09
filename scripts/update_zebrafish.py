@@ -15,6 +15,7 @@
 import argparse, json, os, re, sys, time
 import urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
+from difflib import SequenceMatcher
 from datetime import date, timedelta
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
@@ -162,31 +163,59 @@ def text_of(node):
 
 
 def parse_articles(xml_bytes):
+    """注意：一律走精确路径。
+
+    这里曾经用 `.//ArticleId` 取 DOI，结果扫到了
+    PubmedData/ReferenceList/Reference/ArticleIdList 里**被引文献**的 DOI/PMC，
+    而它们在文档里排在 PubmedData/ArticleIdList 之后，循环最后一次赋值就把它
+    当成了本文的 DOI——一个格式完美、能打开、却属于别的论文的 DOI。
+    """
     root = ET.fromstring(xml_bytes)
     out = []
     for art in root.findall(".//PubmedArticle"):
+        mc = art.find("MedlineCitation")
+        a = mc.find("Article") if mc is not None else None
         rec = {
-            "pmid": text_of(art.find(".//PMID")),
-            "title": text_of(art.find(".//ArticleTitle")),
-            "abstract": re.sub(r"\s+", " ", " ".join(text_of(t) for t in art.findall(".//AbstractText"))).strip(),
-            "journal": text_of(art.find(".//Journal/ISOAbbreviation")) or text_of(art.find(".//Journal/Title")),
-            "year": text_of(art.find(".//PubDate/Year")) or text_of(art.find(".//ArticleDate/Year")),
+            "pmid": text_of(mc.find("PMID")) if mc is not None else "",
+            "title": text_of(a.find("ArticleTitle")) if a is not None else "",
+            "abstract": "",
+            "journal": "",
+            "year": "",
             "review": False, "doi": "", "pmc": "",
         }
-        authors = art.findall(".//Author")
-        rec["author1"] = text_of(authors[0].find("LastName")) if authors else ""
-        rec["nAuthors"] = len(authors)
-        for aid in art.findall(".//ArticleId"):
-            if aid.get("IdType") == "doi":
-                rec["doi"] = text_of(aid)
-            elif aid.get("IdType") == "pmc":
-                rec["pmc"] = text_of(aid)
-        for eid in art.findall(".//ELocationID"):
-            if eid.get("EIdType") == "doi" and not rec["doi"]:
-                rec["doi"] = text_of(eid)
-        types = [text_of(t) for t in art.findall(".//PublicationType")]
-        rec["review"] = any("Review" in t for t in types)
-        rec["year"] = int(rec["year"]) if rec["year"].isdigit() else 0
+        if a is not None:
+            ab = a.find("Abstract")
+            if ab is not None:
+                rec["abstract"] = re.sub(r"\s+", " ", " ".join(text_of(t) for t in ab.findall("AbstractText"))).strip()
+            j = a.find("Journal")
+            if j is not None:
+                rec["journal"] = text_of(j.find("ISOAbbreviation")) or text_of(j.find("Title"))
+                rec["year"] = text_of(j.find("JournalIssue/PubDate/Year"))
+            if not rec["year"]:
+                rec["year"] = text_of(a.find("ArticleDate/Year"))
+            authors = a.findall("AuthorList/Author")
+            rec["author1"] = text_of(authors[0].find("LastName")) if authors else ""
+            rec["nAuthors"] = len(authors)
+            types = [text_of(t) for t in a.findall("PublicationTypeList/PublicationType")]
+            rec["review"] = any("Review" in t for t in types)
+
+        # 本文自身的标识符：只认 PubmedData/ArticleIdList
+        idlist = art.find("PubmedData/ArticleIdList")
+        if idlist is not None:
+            for aid in idlist.findall("ArticleId"):
+                kind = aid.get("IdType")
+                if kind == "doi":
+                    rec["doi"] = text_of(aid)
+                elif kind == "pmc":
+                    rec["pmc"] = text_of(aid)
+        # 兜底只看 Article 自己的 ELocationID，不看任何引用
+        if not rec["doi"] and a is not None:
+            for eid in a.findall("ELocationID"):
+                if eid.get("EIdType") == "doi":
+                    rec["doi"] = text_of(eid)
+                    break
+
+        rec["year"] = int(rec["year"]) if str(rec["year"]).isdigit() else 0
         out.append(rec)
     return out
 
@@ -277,6 +306,58 @@ def build(rec, added):
     return out
 
 
+def norm_title(s):
+    s = re.sub(r"<[^>]+>", " ", s or "")
+    s = re.sub(r"&[a-zA-Z]+;|&#\d+;", " ", s).lower()
+    s = re.sub(r"[^a-z0-9\u4e00-\u9fff]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def titles_agree(a, b):
+    """两个标题是否指向同一篇文章。返回 None 表示无法判断（标题为空）。"""
+    na, nb = norm_title(a), norm_title(b)
+    if not na or not nb:
+        return None
+    if na in nb or nb in na:
+        return True
+    return SequenceMatcher(None, na, nb).ratio() >= 0.72
+
+
+def crossref_title(doi):
+    """用 Crossref 反查 DOI 对应的标题；查不到返回 None。"""
+    url = "https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="")
+    try:
+        raw = http_get(url, retries=1, timeout=25)
+        j = json.loads(raw.decode("utf-8"))
+        t = j.get("message", {}).get("title") or []
+        return t[0] if t else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def verify_dois(recs):
+    """DOI 是外链，错了比没有更糟：逐条拿 Crossref 的标题比对，不符就清空。"""
+    kept = cleared = unknown = 0
+    for r in recs:
+        doi = r.get("doi") or ""
+        if not doi:
+            continue
+        ct = crossref_title(doi)
+        if ct is None:
+            unknown += 1
+            print("  ? %s Crossref 未确认 %s（保留，人工复核）" % (r["pmid"], doi), file=sys.stderr)
+            continue
+        ok = titles_agree(ct, r["title"])
+        if ok is False:
+            print("  ! %s 的 DOI %s 指向《%s》，与本文标题不符 → 已清空"
+                  % (r["pmid"], doi, ct[:60]), file=sys.stderr)
+            r["doi"] = ""
+            cleared += 1
+        else:
+            kept += 1
+    print("DOI 校验：通过 %d，清空 %d，未确认 %d" % (kept, cleared, unknown), file=sys.stderr)
+
+
 def load(path):
     s = open(path, encoding="utf-8").read()
     m = PREFIX_RE.search(s)
@@ -295,6 +376,7 @@ def main():
     ap.add_argument("--days", type=int, default=LOOKBACK_DAYS)
     ap.add_argument("--data", default="zebrafish/data_papers.js")
     ap.add_argument("--max", type=int, default=MAX_NEW_PER_RUN)
+    ap.add_argument("--no-crossref", action="store_true", help="跳过 Crossref DOI 校验")
     args = ap.parse_args()
 
     header, papers = load(args.data)
@@ -315,6 +397,8 @@ def main():
     picked = [r for r in recs if score(r) >= MIN_SCORE]
     picked.sort(key=lambda r: (r["year"], r["pmid"]), reverse=True)
     picked = picked[:args.max]
+    if not args.no_crossref:
+        verify_dois(picked)
     print("通过相关性阈值 %d 篇，本次写入 %d 篇" % (len(picked), len(picked)), file=sys.stderr)
 
     added = date.today().isoformat()

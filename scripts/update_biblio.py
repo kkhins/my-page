@@ -189,17 +189,24 @@ def parse_articles(xml_bytes):
         authors = art.findall(".//Author")
         rec["author_first"] = text_of(authors[0].find("LastName")) if authors else ""
         rec["author_count"] = len(authors)
+        # 只认本文的 PubmedData/ArticleIdList。早先这里用 .//ArticleId，
+        # 会扫到 PubmedData/ReferenceList 里**被引文献**的 DOI/PMC，而它们在文档
+        # 顺序上排在后面，循环最后一次赋值就把引文 DOI 当成了本文 DOI。
         rec["doi"] = ""
-        for aid in art.findall(".//ArticleId"):
-            if aid.get("IdType") == "doi":
-                rec["doi"] = text_of(aid)
-        for eid in art.findall(".//ELocationID"):
-            if eid.get("EIdType") == "doi" and not rec["doi"]:
-                rec["doi"] = text_of(eid)
         rec["pmc"] = ""
-        for aid in art.findall(".//ArticleId"):
-            if aid.get("IdType") == "pmc":
-                rec["pmc"] = text_of(aid)
+        idlist = art.find("PubmedData/ArticleIdList")
+        if idlist is not None:
+            for aid in idlist.findall("ArticleId"):
+                kind = aid.get("IdType")
+                if kind == "doi":
+                    rec["doi"] = text_of(aid)
+                elif kind == "pmc":
+                    rec["pmc"] = text_of(aid)
+        if not rec["doi"]:
+            for eid in art.findall("MedlineCitation/Article/ELocationID"):
+                if eid.get("EIdType") == "doi":
+                    rec["doi"] = text_of(eid)
+                    break
         types = [text_of(t) for t in art.findall(".//PublicationType")]
         rec["is_review"] = any("review" in t.lower() for t in types)
         out.append(rec)
