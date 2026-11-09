@@ -1,6 +1,7 @@
 # 斑马鱼毒理图谱 · Zebrafish Toxicology Atlas
 
-一个纯静态、可离线双击打开的斑马鱼生态毒理知识图谱。三栏布局：左导航、中 SVG 解剖图 + 生命周期时间轴、右详情与文献列表。参考线虫站（`../web-export/`）的视觉语言，但按任务书改为纯 SVG，不依赖 three.js、不依赖任何 CDN。
+- 在线地址：https://kkhins.github.io/my-page/zebrafish/
+- 一个纯静态、可离线双击打开的斑马鱼生态毒理知识图谱。三栏布局：左导航、中 SVG 解剖图 + 生命周期时间轴、右详情与文献列表。参考线虫站（`../web-export/`）的视觉语言，但按任务书改为纯 SVG，不依赖 three.js、不依赖任何 CDN。
 
 ## 打开方式
 
