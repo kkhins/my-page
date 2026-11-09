@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>链路测试</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #0f1115; color: #e8eaed; padding: 24px;
+  }
+  .card {
+    max-width: 560px; width: 100%; background: #171a21; border: 1px solid #2a2f3a;
+    border-radius: 16px; padding: 28px 26px;
+  }
+  .ok { display: inline-flex; align-items: center; gap: 8px; font-size: 13px;
+        color: #4ade80; background: rgba(74,222,128,.12); border: 1px solid rgba(74,222,128,.3);
+        padding: 4px 12px; border-radius: 999px; margin-bottom: 18px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; }
+  h1 { font-size: 22px; margin: 0 0 8px; letter-spacing: .5px; }
+  p.sub { color: #9aa2b1; font-size: 14px; line-height: 1.7; margin: 0 0 22px; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; margin: 0; font-size: 13.5px; }
+  dt { color: #7c8496; white-space: nowrap; }
+  dd { margin: 0; color: #d6dae2; word-break: break-all; font-variant-numeric: tabular-nums; }
+  .foot { margin-top: 22px; padding-top: 16px; border-top: 1px solid #262b35; font-size: 12px; color: #6b7385; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <span class="ok"><span class="dot"></span>链路已打通</span>
+    <h1>这个页面是你自己的了</h1>
+    <p class="sub">它现在跑在 GitHub Pages 上，不经过 Claude、不需要 VPN、也不需要登录。<br>等你的正式网页做好，把这个文件替换掉就行。</p>
+    <dl>
+      <dt>打开时间</dt><dd id="t">—</dd>
+      <dt>访问地址</dt><dd id="u">—</dd>
+      <dt>你的浏览器</dt><dd id="ua">—</dd>
+      <dt>网络出口</dt><dd id="ip">检测中…</dd>
+    </dl>
+    <div class="foot">如果这行字出现超过 3 秒，说明当前网络到这个节点的速度一般，可以再试一次对比。</div>
+  </main>
+<script>
+  const now = new Date();
+  document.getElementById('t').textContent = now.toLocaleString('zh-CN');
+  document.getElementById('u').textContent = location.origin + location.pathname;
+  const ua = navigator.userAgent;
+  document.getElementById('ua').textContent = /Mobile|Android|iPhone/.test(ua) ? '手机浏览器' : '桌面浏览器';
+  // 用一个轻量接口测出口，失败就算了
+  fetch('https://api.ipify.org?format=json', { cache: 'no-store' })
+    .then(r => r.json())
+    .then(d => { document.getElementById('ip').textContent = d.ip; })
+    .catch(() => { document.getElementById('ip').textContent = '（该接口在当前网络不可达，不影响本站）'; });
+</script>
+</body>
+</html>
