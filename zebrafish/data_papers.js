@@ -1,5 +1,5 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 430 篇；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 444 篇（其中 14 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
 window.PAPERS = [

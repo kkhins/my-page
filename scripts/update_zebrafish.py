@@ -331,6 +331,8 @@ def main():
         return 0
 
     papers.extend(fresh)
+    auto_n = sum(1 for x in papers if x.get("auto"))
+    header = re.sub(r"共 \d+ 篇", "共 %d 篇（其中 %d 篇为每日自动收录，中文要点取摘要首句，待人工复核）" % (len(papers), auto_n), header)
     body = json.dumps(papers, indent=1, ensure_ascii=False)
     tmp = args.data + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
