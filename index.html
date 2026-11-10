@@ -1244,9 +1244,9 @@ E.register('feed', {
     rp.innerHTML = '';
     var h = API.el('div', 'rh');
     h.appendChild(API.el('h2', null, '最新发表'));
-    h.appendChild(API.el('div', 'rsub', items.length
-      ? '最近一次入库：' + items[0].added
-      : '数据里还没有带入库日期的条目'));
+    var upd = (window.ATLAS && window.ATLAS.updated) || '—';
+    h.appendChild(API.el('div', 'rsub', '数据更新至 ' + upd
+      + (items.length ? ' · 最近一次入库：' + items[0].added : '')));
     rp.appendChild(h);
     var art = API.el('article');
     if (!items.length) {
