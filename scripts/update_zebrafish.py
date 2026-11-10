@@ -234,7 +234,13 @@ def score(rec):
         if any(k in title_l for k in ["human", "mouse", "murine", "rat ", "patients"]):
             return 0
     if not any(k in t for k in ENV_REQUIRED):
-        return 0
+        # 标题点名斑马鱼、且能归到具体污染物类别的，本身就是生态毒理研究。
+        # 典型是汞/镉这类金属的组织分布与形态研究：摘要写的是 accumulated /
+        # administration，不会出现 water/exposure 字样，旧规则会把它们整批漏掉。
+        named = "zebrafish" in title_l or "danio rerio" in title_l
+        typed = any(k in t for cls, keys in POLLUTANT_RULES for k in keys)
+        if not (named and typed):
+            return 0
     s = 0
     if any(k in t for k in ["exposure", "dose", "concentration", "toxicity", "toxic",
                             "lethal", "sublethal", "bioaccumul", "accumulat", "pollut"]):
