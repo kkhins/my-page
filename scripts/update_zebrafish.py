@@ -16,7 +16,7 @@ import argparse, json, os, re, sys, time
 import urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 from difflib import SequenceMatcher
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 PREFIX_RE = re.compile(r"window\.PAPERS\s*=\s*")
@@ -370,6 +370,7 @@ def load(path):
     if not m:
         raise SystemExit("%s 里找不到 window.PAPERS =" % path)
     header = s[:m.start()]
+    header = re.sub(r"window\.PAPERS_META\s*=\s*\{[^}]*\};\s*\n?", "", header)
     body = s[m.end():].strip()
     if body.endswith(";"):
         body = body[:-1]
@@ -395,40 +396,39 @@ def main():
     print("PubMed 命中 %d 条" % len(ids), file=sys.stderr)
     new_ids = [i for i in ids if i not in have]
     print("其中未收录 %d 条" % len(new_ids), file=sys.stderr)
-    if not new_ids:
-        print("没有新文献，data_papers.js 不变。", file=sys.stderr)
-        return 0
+    fresh = []
+    if new_ids:
+        recs = parse_articles(efetch(new_ids[:80]))
+        picked = [r for r in recs if score(r) >= MIN_SCORE]
+        picked.sort(key=lambda r: (r["year"], r["pmid"]), reverse=True)
+        picked = picked[:args.max]
+        if not args.no_crossref:
+            verify_dois(picked)
+        print("通过相关性阈值 %d 篇，本次写入 %d 篇" % (len(picked), len(picked)), file=sys.stderr)
 
-    recs = parse_articles(efetch(new_ids[:80]))
-    picked = [r for r in recs if score(r) >= MIN_SCORE]
-    picked.sort(key=lambda r: (r["year"], r["pmid"]), reverse=True)
-    picked = picked[:args.max]
-    if not args.no_crossref:
-        verify_dois(picked)
-    print("通过相关性阈值 %d 篇，本次写入 %d 篇" % (len(picked), len(picked)), file=sys.stderr)
-
-    added = date.today().isoformat()
-    fresh = [build(r, added) for r in picked]
-    for p in fresh:
-        print("  + %s  %s  [%s]  %s" % (p["pmid"], (p["title"][:70] + "…") if len(p["title"]) > 70 else p["title"],
-                                        p["polClass"], ",".join(p["dirs"])), file=sys.stderr)
+        added = date.today().isoformat()
+        fresh = [build(r, added) for r in picked]
+        for p in fresh:
+            print("  + %s  %s  [%s]  %s" % (p["pmid"], (p["title"][:70] + "…") if len(p["title"]) > 70 else p["title"],
+                                            p["polClass"], ",".join(p["dirs"])), file=sys.stderr)
 
     if args.dry_run:
         print("（dry-run，不写文件）", file=sys.stderr)
         return 0
-    if not fresh:
-        print("没有通过筛选的新文献，data_papers.js 不变。", file=sys.stderr)
-        return 0
 
     papers.extend(fresh)
     auto_n = sum(1 for x in papers if x.get("auto"))
+    # 先清掉所有旧的括号说明，避免每跑一次就叠加一层
+    header = re.sub(r"（其中 \d+ 篇为每日自动收录，中文要点取摘要首句，待人工复核）", "", header)
     header = re.sub(r"共 \d+ 篇", "共 %d 篇（其中 %d 篇为每日自动收录，中文要点取摘要首句，待人工复核）" % (len(papers), auto_n), header)
     body = json.dumps(papers, indent=1, ensure_ascii=False)
     tmp = args.data + ".tmp"
+    meta = {"last_run": datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")}
     with open(tmp, "w", encoding="utf-8") as f:
-        f.write(header + "window.PAPERS = " + body + ";\n")
+        f.write(header + "window.PAPERS_META = " + json.dumps(meta, ensure_ascii=False) + ";\n"
+                + "window.PAPERS = " + body + ";\n")
     os.replace(tmp, args.data)
-    print("已写入 %d 篇，总计 %d 篇" % (len(fresh), len(papers)), file=sys.stderr)
+    print("已写入 %d 篇，总计 %d 篇（巡检时间 %s）" % (len(fresh), len(papers), meta["last_run"]), file=sys.stderr)
     return 0
 
 

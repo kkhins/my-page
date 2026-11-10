@@ -222,12 +222,22 @@
   }
 
   function lastUpdateText() {
+    /* 优先用自动巡检时间（data_papers.js 的 window.PAPERS_META.last_run），
+       这样没有新文献的日子也能看出脚本跑过 */
+    if (window.PAPERS_META && window.PAPERS_META.last_run) {
+      return String(window.PAPERS_META.last_run).slice(0, 10);
+    }
     if (!papers.length) return '—';
     var dates = papers.map(function (p) { return p.added; }).filter(Boolean).sort();
     if (dates.length) return dates[dates.length - 1];
     var y = 0;
     papers.forEach(function (p) { if (p.year > y) y = p.year; });
     return y ? (y + ' 年') : '—';
+  }
+
+  function lastAddedText() {
+    var dates = papers.map(function (p) { return p.added; }).filter(Boolean).sort();
+    return dates.length ? dates[dates.length - 1] : '—';
   }
 
   /* ────────────────────────────── 小工具 ────────────────────────────── */
@@ -950,7 +960,7 @@
     var base = getBasePapers();
     return '<div class="card flat"><p class="lead">按发表年份从新到旧展示前 ' + base.length
       + ' 篇（库内共 ' + papers.length + ' 篇）。数据更新至 ' + esc(lastUpdateText())
-      + '；可继续用筛选与排序收窄。</p></div>'
+      + '；最近一次入库 ' + esc(lastAddedText()) + '；可继续用筛选与排序收窄。</p></div>'
       + listBlock(base, '最新发表');
   }
 
