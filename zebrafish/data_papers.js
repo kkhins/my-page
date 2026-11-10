@@ -1,5 +1,5 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 444 篇（其中 14 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 445 篇（其中 15 篇为每日自动收录，中文要点取摘要首句，待人工复核）（其中 14 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
 window.PAPERS = [
@@ -12553,5 +12553,32 @@ window.PAPERS = [
   "added": "2026-11-09",
   "doi": "10.1016/j.dib.2026.113352",
   "pmc": "PMC13718654"
+ },
+ {
+  "pmid": "42965494",
+  "title": "Selenium Alters the Tissue Distribution of Inorganic but Not Methylmercury in Zebrafish Larvae.",
+  "author1": "Dolgova",
+  "nAuthors": 11,
+  "journal": "Metallomics",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "ag"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "",
+  "stage": [
+   "lar",
+   "old"
+  ],
+  "zh": "【自动收录·待复核】Mercury toxicity is strongly influenced by its chemical speciation, with interactions between mercury and selenium speci…",
+  "auto": true,
+  "added": "2026-11-10",
+  "doi": "10.1093/mtomcs/mfag032"
  }
 ];
