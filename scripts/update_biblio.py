@@ -27,7 +27,7 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 DATA_PREFIX = "window.__BIBLIO_DATA__ = "
@@ -364,14 +364,13 @@ def main():
         print("- %s  %s  [%s/%s]" % (p["id"], p["title"][:70], p["pollutant_class"],
                                      ",".join(p["organ"]) or "-"))
 
-    if not new_papers:
-        print("没有新文献，data.js 不变。", file=sys.stderr)
-        return 0
     if args.dry_run:
         print("（dry-run，不写入）", file=sys.stderr)
         return 0
 
     data["papers"].extend(new_papers)
+    # 无论本次有没有新文献，都记录巡检时间，页面据此显示「数据更新至」
+    data.setdefault("meta", {})["last_run"] = datetime.now().strftime("%Y-%m-%d %H:%M")
     body = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     fd, tmp = tempfile.mkstemp(dir=os.path.dirname(os.path.abspath(args.data)) or ".", suffix=".js")
     with os.fdopen(fd, "w", encoding="utf-8") as f:

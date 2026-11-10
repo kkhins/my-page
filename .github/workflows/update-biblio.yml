@@ -31,9 +31,9 @@ jobs:
           git config user.name "biblio-bot"
           git config user.email "biblio-bot@users.noreply.github.com"
           if git diff --quiet data.js; then
-            echo "没有新文献，跳过提交"
+            echo "data.js 无变化，跳过提交"
           else
             git add data.js
-            git commit -m "自动更新文献 $(date -u +%F)"
+            git commit -m "每日巡检 $(date -u +%F)"
             git push
           fi

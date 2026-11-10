@@ -279,10 +279,12 @@ aside.detail.collapsed .dscroll{display:none}
   }
   window.BIBLIO = D;
 
-  // 「最近更新」从数据现算：取 added 最大者，没有则取最大年份
+  // 「最近更新」优先用自动巡检时间（meta.last_run，每次跑脚本都会写），
+  // 没有则退回取 added 最大者，再没有则取最大年份
   var dates = D.papers.map(function (p) { return p.added; }).filter(Boolean).sort();
-  var updated = dates.length ? dates[dates.length - 1]
-    : String(Math.max.apply(null, D.papers.map(function (p) { return p.year || 0; })));
+  var lastRun = D.meta && D.meta.last_run ? String(D.meta.last_run).slice(0, 10) : '';
+  var updated = lastRun || (dates.length ? dates[dates.length - 1]
+    : String(Math.max.apply(null, D.papers.map(function (p) { return p.year || 0; }))));
 
   window.ATLAS = {
     updated: updated,
