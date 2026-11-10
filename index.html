@@ -1229,7 +1229,7 @@ E.register('list', {
 /* ── 最新发表：数据里带 added 的条目 ─────────────────────── */
 function feedItems() {
   var d = new Date();
-  d.setDate(d.getDate() - 7);
+  d.setDate(d.getDate() - 30);
   var cut = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
   return API.papers.filter(function (p) { return p.added && p.added >= cut; })
     .sort(function (a, b) { return (a.added < b.added ? 1 : a.added > b.added ? -1 : 0) || b.y - a.y; });
@@ -1239,7 +1239,7 @@ E.register('feed', {
   center: function (t, s, pa, rp) {
     var items = feedItems();
     t.textContent = '最新发表';
-    s.textContent = '最近 7 天 · 共 ' + items.length + ' 篇';
+    s.textContent = '最近 30 天 · 共 ' + items.length + ' 篇';
     pa.innerHTML = '<b>最新发表</b>';
     rp.innerHTML = '';
     var h = API.el('div', 'rh');
@@ -1252,7 +1252,7 @@ E.register('feed', {
     if (!items.length) {
       var sec0 = API.el('section');
       sec0.appendChild(API.el('p', null,
-        '最近 7 天里没有新入库的文献。数据由外部脚本每天自动更新，有新增时会出现在这里（更早的文献仍在各器官与研究方向里）。'));
+        '最近 30 天里没有新入库的文献。数据由外部脚本每天自动更新，有新增时会出现在这里（更早的文献仍在各器官与研究方向里）。'));
       art.appendChild(sec0);
     } else {
       var byDate = {};
