@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 445 篇（其中 15 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 447 篇（其中 17 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-10 09:45"};
+window.PAPERS_META = {"last_run": "2026-11-11 06:48"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -12581,5 +12581,58 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-10",
   "doi": "10.1093/mtomcs/mfag032"
+ },
+ {
+  "pmid": "43007214",
+  "title": "Novel NIR-II Imaging Reveals Gut-First, Brain-Later Inorganic Mercury Signals with Structural Injury in Zebrafish.",
+  "author1": "Wang",
+  "nAuthors": 4,
+  "journal": "Environ Sci Technol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br",
+   "gu"
+  ],
+  "dirs": [
+   "dv",
+   "ox",
+   "ag"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "",
+  "stage": [
+   "old"
+  ],
+  "zh": "【自动收录·待复核】Mercury (Hg) neurotoxicity has generally been assessed by organic methylmercury, whereas inorganic mercury [Hg(II)] is o…",
+  "auto": true,
+  "added": "2026-11-10",
+  "doi": "10.1021/acs.est.6c10425"
+ },
+ {
+  "pmid": "43003340",
+  "title": "The Microbiota-Short-Chain Fatty Acid Axis Mediates 6PPD-Q-Induced Intestinal Damage in Zebrafish at Environmentally Relevant Concentrations.",
+  "author1": "Mao",
+  "nAuthors": 10,
+  "journal": "Environ Pollut",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】The tire-derived contaminant N-(1,3-dimethylbutyl)-N'-phenyl-p-phenylenediamine quinone (6PPD-Q) is widely present in th…",
+  "auto": true,
+  "added": "2026-11-10",
+  "doi": "10.1016/j.envpol.2026.129525"
  }
 ];
