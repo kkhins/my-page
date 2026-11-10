@@ -27,7 +27,7 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 DATA_PREFIX = "window.__BIBLIO_DATA__ = "
@@ -370,7 +370,7 @@ def main():
 
     data["papers"].extend(new_papers)
     # 无论本次有没有新文献，都记录巡检时间，页面据此显示「数据更新至」
-    data.setdefault("meta", {})["last_run"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+    data.setdefault("meta", {})["last_run"] = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
     body = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     fd, tmp = tempfile.mkstemp(dir=os.path.dirname(os.path.abspath(args.data)) or ".", suffix=".js")
     with os.fdopen(fd, "w", encoding="utf-8") as f:
