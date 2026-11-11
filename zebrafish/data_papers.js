@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 447 篇（其中 17 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 450 篇（其中 20 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-11 06:48"};
+window.PAPERS_META = {"last_run": "2026-11-12 06:55"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -12634,5 +12634,90 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-10",
   "doi": "10.1016/j.envpol.2026.129525"
+ },
+ {
+  "pmid": "43008886",
+  "title": "Developmental, Neurobehavioral, and Oxidative Effects of Organophosphate Flame Retardants in Fish: A Dependence-Aware Meta-Analysis and Dose-Response Assessment.",
+  "author1": "Qian",
+  "nAuthors": 3,
+  "journal": "Environ Toxicol Pharmacol",
+  "year": 2026,
+  "review": true,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "op",
+  "polName": "有机磷农药",
+  "gen": "",
+  "stage": [
+   "hat"
+  ],
+  "zh": "【自动收录·待复核】Organophosphate flame retardants (OPFRs) are widespread aquatic contaminants, but the consistency of their toxic effects…",
+  "auto": true,
+  "added": "2026-11-11",
+  "doi": "10.1016/j.etap.2026.105228"
+ },
+ {
+  "pmid": "43008563",
+  "title": "Immunotoxicity and hepatic transcriptomic responses in zebrafish co-exposed to LDPE microplastics and zinc sulfate.",
+  "author1": "Wu",
+  "nAuthors": 5,
+  "journal": "Environ Int",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li",
+   "gu",
+   "ey"
+  ],
+  "dirs": [
+   "dv",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "plas",
+  "polName": "微塑料",
+  "gen": "",
+  "stage": [
+   "hat",
+   "lar",
+   "adu"
+  ],
+  "zh": "【自动收录·待复核】Microplastics and heavy metals are ubiquitous co-contaminants in aquatic environments, yet their combined immunotoxic ef…",
+  "auto": true,
+  "added": "2026-11-11",
+  "doi": "10.1016/j.envint.2026.110588"
+ },
+ {
+  "pmid": "43007740",
+  "title": "Nanoplastics Mitigate 6PPD-Induced Zebrafish Cardiac Ferroptosis Mediated by the GRK5/p53/SLC7A11 Pathway.",
+  "author1": "Huang",
+  "nAuthors": 7,
+  "journal": "ACS Nano",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "bh",
+   "cv",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "plas",
+  "polName": "微塑料",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】6PPD, as an antioxidant in tire rubber, constitutes an emerging pollutant together with nanoplastics (NPs) widely presen…",
+  "auto": true,
+  "added": "2026-11-11",
+  "doi": "10.1021/acsnano.6c11399"
  }
 ];
