@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 450 篇（其中 20 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 452 篇（其中 22 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-13 06:52"};
+window.PAPERS_META = {"last_run": "2026-11-14 06:48"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -12719,5 +12719,59 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-11",
   "doi": "10.1021/acsnano.6c11399"
+ },
+ {
+  "pmid": "43022860",
+  "title": "Discovery of target-biased natural products for algal control by integrating deep learning and large language models.",
+  "author1": "Zuo",
+  "nAuthors": 18,
+  "journal": "Eco Environ Health",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Harmful algal blooms (HABs) pose an escalating global threat to water security.",
+  "auto": true,
+  "added": "2026-11-13",
+  "doi": "10.1016/j.eehl.2026.100284",
+  "pmc": "PMC13756255"
+ },
+ {
+  "pmid": "43019656",
+  "title": "Mechanisms of developmental lead (Pb)-induced glutamatergic neurotoxicity and behavioral impairment across generations in zebrafish.",
+  "author1": "Tamagno",
+  "nAuthors": 5,
+  "journal": "Ecotoxicol Environ Saf",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br",
+   "go"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "rp"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "F1",
+  "stage": [
+   "zyg"
+  ],
+  "zh": "【自动收录·待复核】Lead (Pb) is one of the oldest recognized environmental neurotoxicants with its toxic potential especially pronounced in…",
+  "auto": true,
+  "added": "2026-11-13",
+  "doi": "10.1016/j.ecoenv.2026.121046"
  }
 ];
