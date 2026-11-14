@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 452 篇（其中 22 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 455 篇（其中 25 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-14 06:48"};
+window.PAPERS_META = {"last_run": "2026-11-15 06:43"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -12773,5 +12773,85 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-13",
   "doi": "10.1016/j.ecoenv.2026.121046"
+ },
+ {
+  "pmid": "43027623",
+  "title": "Comparative Metabolomics Reveals L-Theanine as a Candidate Contributor to Cultivar-Specific Differences in PTZ-Induced Hyperactivity in Zebrafish.",
+  "author1": "Huang",
+  "nAuthors": 11,
+  "journal": "Foods",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "bh"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Hyperactivity and excessive neuronal excitation may lead to sleep disturbances and affect neurological health and overal…",
+  "auto": true,
+  "added": "2026-11-14",
+  "doi": "10.3390/foods15213992"
+ },
+ {
+  "pmid": "43027014",
+  "title": "Discovery of Bioactive N-Substituted-3-methylbut-2-enamides: Synthesis, Crystal Structures, Antifungal Activity, Mechanism of Action, and Zebrafish Toxicity Evaluation.",
+  "author1": "Zhang",
+  "nAuthors": 7,
+  "journal": "Biology (Basel)",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [
+   "hat"
+  ],
+  "zh": "【自动收录·待复核】Plant pathogenic fungi pose a serious threat to agricultural and forestry production.",
+  "auto": true,
+  "added": "2026-11-14",
+  "doi": "10.3390/biology15212003"
+ },
+ {
+  "pmid": "43026937",
+  "title": "The Establishment of a Three-Chamber Social Preference Assay in Larval Zebrafish for Neurotoxicity Assessment and Neurodevelopmental Gene Phenotyping.",
+  "author1": "Shen",
+  "nAuthors": 7,
+  "journal": "Biology (Basel)",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "rp"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】Zebrafish serve as a vertebrate model for assessing environmental neurotoxicity and exploring neurobehavioural phenotype…",
+  "auto": true,
+  "added": "2026-11-14",
+  "doi": "10.3390/biology15211926"
  }
 ];
