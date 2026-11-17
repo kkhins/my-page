@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 455 篇（其中 25 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 458 篇（其中 28 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-16 09:58"};
+window.PAPERS_META = {"last_run": "2026-11-17 12:27"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -12853,5 +12853,91 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-14",
   "doi": "10.3390/biology15211926"
+ },
+ {
+  "pmid": "43036710",
+  "title": "Ovarian function via gut microbiota-driven serotonin dysregulation in zebrafish.",
+  "author1": "Wang",
+  "nAuthors": 9,
+  "journal": "iScience",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br",
+   "gu",
+   "go"
+  ],
+  "dirs": [
+   "ed",
+   "rp",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [
+   "adu"
+  ],
+  "zh": "【自动收录·待复核】Ciprofloxacin (CIP) is frequently detected in aquatic environments, yet its effects on reproduction through gut microbio…",
+  "auto": true,
+  "added": "2026-11-17",
+  "doi": "10.1016/j.isci.2026.117879",
+  "pmc": "PMC13770724"
+ },
+ {
+  "pmid": "43035852",
+  "title": "Melt Electrowriting-Guided Multispheroid Thyroid Culture With Enhanced Functional Stability Through a Precisely Arranged Fibrous Architecture.",
+  "author1": "Jun",
+  "nAuthors": 14,
+  "journal": "Adv Sci (Weinh)",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "th"
+  ],
+  "dirs": [
+   "dv",
+   "ed",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "edc",
+  "polName": "内分泌干扰物",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Endocrine-disrupting chemicals can perturb thyroid hormone homeostasis, yet many in vitro thyroid culture models fail to…",
+  "auto": true,
+  "added": "2026-11-17",
+  "doi": "10.1002/advs.78580"
+ },
+ {
+  "pmid": "43035130",
+  "title": "Transcriptomic and behavioral analyses link perfluorobutanoic acid (PFBA) exposure to circadian and visual pathway disruption in larval zebrafish (Danio rerio).",
+  "author1": "Sultan",
+  "nAuthors": 8,
+  "journal": "Environ Toxicol Pharmacol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "ey"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [
+   "hat",
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】Perfluorobutanoic acid (PFBA) is a short-chain perfluoroalkyl substance (PFAS) detected in fish tissues and environmenta…",
+  "auto": true,
+  "added": "2026-11-17",
+  "doi": "10.1016/j.etap.2026.105233"
  }
 ];
