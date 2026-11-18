@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 458 篇（其中 28 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 461 篇（其中 31 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-17 12:27"};
+window.PAPERS_META = {"last_run": "2026-11-18 11:41"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -12939,5 +12939,82 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-17",
   "doi": "10.1016/j.etap.2026.105233"
+ },
+ {
+  "pmid": "43043660",
+  "title": "Photodegradation of sulfamethoxazole at 300-350 nm: Characterization of transformation products and computational ecotoxicological prioritization.",
+  "author1": "Fojtíková",
+  "nAuthors": 4,
+  "journal": "Environ Toxicol Chem",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [
+   "cle"
+  ],
+  "zh": "【自动收录·待复核】Sulfamethoxazole (SMX) is a ubiquitous pseudo-persistent antibiotic in aquatic environments.",
+  "auto": true,
+  "added": "2026-11-18",
+  "doi": "10.1093/etojnl/vgag270"
+ },
+ {
+  "pmid": "43040859",
+  "title": "Protein coronas and micro/nanoplastic bioeffects: Distinguishing formation, functional change and mechanistic attribution.",
+  "author1": "Mei",
+  "nAuthors": 9,
+  "journal": "Toxicol Mech Methods",
+  "year": 2026,
+  "review": true,
+  "organs": [
+   "li"
+  ],
+  "dirs": [
+   "bh",
+   "ox",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "plas",
+  "polName": "微塑料",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Protein coronas form through protein adsorption and exchange at micro/nanoplastics (MNPs) surfaces in biological fluids,…",
+  "auto": true,
+  "added": "2026-11-18",
+  "doi": "10.1080/15376516.2026.2765336"
+ },
+ {
+  "pmid": "43039329",
+  "title": "Combined effects of zinc oxide nanoparticles (nZnO) and elevated CO2 on ER stress and oxidative stress in zebrafish (Danio rerio).",
+  "author1": "Igci",
+  "nAuthors": 4,
+  "journal": "Comp Biochem Physiol C Toxicol Pharmacol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li",
+   "gi"
+  ],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "np",
+  "polName": "纳米材料",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】This study investigated the effects of nano‑zinc oxide (nZnO) and high CO2 conditions (pH 7.7)-both individually and in…",
+  "auto": true,
+  "added": "2026-11-18",
+  "doi": "10.1016/j.cbpc.2026.110747"
  }
 ];
