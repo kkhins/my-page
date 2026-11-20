@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 461 篇（其中 31 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 462 篇（其中 32 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-19 11:20"};
+window.PAPERS_META = {"last_run": "2026-11-20 11:06"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13016,5 +13016,35 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-18",
   "doi": "10.1016/j.cbpc.2026.110747"
+ },
+ {
+  "pmid": "43051440",
+  "title": "Integrated Multi-omics Reveals Neuroimmune-Microbiota Perturbations Underlying Synergistic Neurodevelopmental Toxicity of Environmentally Relevant Co-exposure to Aged Microplastics and Hexavalent Chromium.",
+  "author1": "Luo",
+  "nAuthors": 8,
+  "journal": "Environ Pollut",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "rp"
+  ],
+  "marks": [],
+  "polClass": "plas",
+  "polName": "微塑料",
+  "gen": "",
+  "stage": [
+   "zyg",
+   "hat",
+   "old"
+  ],
+  "zh": "【自动收录·待复核】Microplastics and hexavalent chromium [Cr(VI)] coexist in the environment and both exhibit pronounced neurotoxicity.",
+  "auto": true,
+  "added": "2026-11-20",
+  "doi": "10.1016/j.envpol.2026.129478"
  }
 ];
