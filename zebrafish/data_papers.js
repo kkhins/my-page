@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 462 篇（其中 32 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 465 篇（其中 35 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-20 11:06"};
+window.PAPERS_META = {"last_run": "2026-11-21 11:10"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13046,5 +13046,89 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-20",
   "doi": "10.1016/j.envpol.2026.129478"
+ },
+ {
+  "pmid": "43061617",
+  "title": "Fish gut microbiota mediate pollutant-induced lipid toxicity via bidirectional biotransformation and dysbiosis.",
+  "author1": "Zhang",
+  "nAuthors": 6,
+  "journal": "PNAS Nexus",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "op",
+  "polName": "有机磷农药",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】The gut microbiota acts simultaneously as a target of environmental pollutants and as a driver of their biotransformatio…",
+  "auto": true,
+  "added": "2026-11-21",
+  "doi": "10.1093/pnasnexus/pgag388",
+  "pmc": "PMC13784371"
+ },
+ {
+  "pmid": "43057361",
+  "title": "Long-term neurotoxic effects of early-life cobalt exposure on the zebrafish CNS: from larvae to adulthood.",
+  "author1": "Tang",
+  "nAuthors": 10,
+  "journal": "Environ Res",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "he",
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "cv"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [
+   "hat",
+   "lar",
+   "adu"
+  ],
+  "zh": "【自动收录·待复核】The neurotoxicity of cobalt has been increasingly recognized; however, the association between early-life cobalt exposur…",
+  "auto": true,
+  "added": "2026-11-21",
+  "doi": "10.1016/j.envres.2026.126233"
+ },
+ {
+  "pmid": "43057022",
+  "title": "Aging-dependent pathogen loading and intestinal toxicity discrepancies between petroleum-based and biodegradable microplastics in zebrafish.",
+  "author1": "Dou",
+  "nAuthors": 6,
+  "journal": "J Hazard Mater",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "gu"
+  ],
+  "dirs": [
+   "dv",
+   "ox",
+   "ag"
+  ],
+  "marks": [],
+  "polClass": "plas",
+  "polName": "微塑料",
+  "gen": "",
+  "stage": [
+   "old"
+  ],
+  "zh": "【自动收录·待复核】Although biodegradable plastics are widely promoted as eco-friendly alternatives to conventional petroleum-based plastic…",
+  "auto": true,
+  "added": "2026-11-21",
+  "doi": "10.1016/j.jhazmat.2026.144276"
  }
 ];
