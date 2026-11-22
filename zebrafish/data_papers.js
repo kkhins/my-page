@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 465 篇（其中 35 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 466 篇（其中 36 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-21 11:10"};
+window.PAPERS_META = {"last_run": "2026-11-22 10:10"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13130,5 +13130,34 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-21",
   "doi": "10.1016/j.jhazmat.2026.144276"
+ },
+ {
+  "pmid": "43064527",
+  "title": "Ecotoxicological Effects and Acetylcholinesterase Inhibition of Piper sarmentosum Hexane Extract in Danio rerio Larvae.",
+  "author1": "Othman",
+  "nAuthors": 3,
+  "journal": "J Appl Toxicol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "he"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "cv"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [
+   "zyg",
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】Botanical larvicides are increasingly investigated as alternatives to synthetic insecticides; however, their effects on…",
+  "auto": true,
+  "added": "2026-11-22",
+  "doi": "10.1002/jat.70517"
  }
 ];
