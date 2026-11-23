@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 466 篇（其中 36 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 467 篇（其中 37 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-22 10:10"};
+window.PAPERS_META = {"last_run": "2026-11-23 10:42"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13159,5 +13159,32 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-22",
   "doi": "10.1002/jat.70517"
+ },
+ {
+  "pmid": "43067178",
+  "title": "Sterically hindered disulfide design enables GSH concentration-dependent FRET probes for in vivo imaging.",
+  "author1": "Xu",
+  "nAuthors": 8,
+  "journal": "Bioorg Chem",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "",
+  "stage": [
+   "cle",
+   "old"
+  ],
+  "zh": "【自动收录·待复核】Glutathione (GSH) is the most abundant intracellular thiol, playing critical roles in antioxidant defense, detoxificatio…",
+  "auto": true,
+  "added": "2026-11-23",
+  "doi": "10.1016/j.bioorg.2026.110795"
  }
 ];
