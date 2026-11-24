@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 467 篇（其中 37 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 468 篇（其中 38 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-23 10:42"};
+window.PAPERS_META = {"last_run": "2026-11-24 13:57"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13186,5 +13186,32 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-23",
   "doi": "10.1016/j.bioorg.2026.110795"
+ },
+ {
+  "pmid": "43068844",
+  "title": "Mapping Toxicological Trends: A Bibliometric Analysis of Organophosphate and Flavonoid Research in Animal Models.",
+  "author1": "Chandra",
+  "nAuthors": 6,
+  "journal": "Environ Anal Health Toxicol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br",
+   "ey"
+  ],
+  "dirs": [
+   "dv",
+   "ox",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "op",
+  "polName": "有机磷农药",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Organophosphates (OPs) remain persistent environmental contaminants, while flavonoids are increasingly recognized for th…",
+  "auto": true,
+  "added": "2026-11-24",
+  "doi": "10.5620/eaht.2026018"
  }
 ];
