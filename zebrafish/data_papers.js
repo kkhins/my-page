@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 468 篇（其中 38 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 470 篇（其中 40 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-24 13:57"};
+window.PAPERS_META = {"last_run": "2026-11-25 12:52"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13213,5 +13213,57 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-24",
   "doi": "10.5620/eaht.2026018"
+ },
+ {
+  "pmid": "43075791",
+  "title": "Rational design of novel benzisothiazolinone derivatives as antivirulence candidate for management of plant bacterial diseases.",
+  "author1": "Rao",
+  "nAuthors": 11,
+  "journal": "Pest Manag Sci",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "li",
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "metal",
+  "polName": "重金属",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】Chemical bactericides remain a major tool for the control of plant-pathogenic bacterial diseases.",
+  "auto": true,
+  "added": "2026-11-25",
+  "doi": "10.1002/ps.71491"
+ },
+ {
+  "pmid": "43074636",
+  "title": "A Double-Excitation Intrinsically Dual Emissive Carbon Dot Platform Enables Multi-Channel Sensitive Detection and Imaging of Common Pesticides in Live Models.",
+  "author1": "Liu",
+  "nAuthors": 10,
+  "journal": "Anal Chem",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ag",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [
+   "old"
+  ],
+  "zh": "【自动收录·待复核】Carbon dot sensors often couple one excitation condition to one analyte and one output, limiting information from a sing…",
+  "auto": true,
+  "added": "2026-11-25",
+  "doi": "10.1021/acs.analchem.6c06007"
  }
 ];
