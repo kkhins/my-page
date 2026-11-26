@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 470 篇（其中 40 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 473 篇（其中 43 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-25 12:52"};
+window.PAPERS_META = {"last_run": "2026-11-26 12:07"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13265,5 +13265,83 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-25",
   "doi": "10.1021/acs.analchem.6c06007"
+ },
+ {
+  "pmid": "43083634",
+  "title": "Effects of Pesticides and Metals on Embryo Development and Larval Locomotor Activity in the Zebrafish.",
+  "author1": "Ahmad",
+  "nAuthors": 3,
+  "journal": "Toxics",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "dv",
+   "bh",
+   "rp"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [
+   "zyg",
+   "hat",
+   "lar"
+  ],
+  "zh": "【自动收录·待复核】The zebrafish has been widely used as a predictive model in safety and toxicology.",
+  "auto": true,
+  "added": "2026-11-26",
+  "doi": "10.3390/toxics14111024"
+ },
+ {
+  "pmid": "43083594",
+  "title": "A Multi-Life-Stage Zebrafish Study on Neurobehavioral Effects of Captan and Its Metabolite at Environmentally Relevant Concentrations.",
+  "author1": "Zhang",
+  "nAuthors": 8,
+  "journal": "Toxics",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br"
+  ],
+  "dirs": [
+   "dv",
+   "bh",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "pest",
+  "polName": "农药",
+  "gen": "",
+  "stage": [],
+  "zh": "【自动收录·待复核】The widely used phthalimide fungicide captan and its major metabolite tetrahydrop- hthalimide (THPI) are frequently dete…",
+  "auto": true,
+  "added": "2026-11-26",
+  "doi": "10.3390/toxics14110984"
+ },
+ {
+  "pmid": "43083553",
+  "title": "Rifampicin Co-Exposure Increases the Acute Toxicity of Chlorantraniliprole to Zebrafish (Danio rerio).",
+  "author1": "Wu",
+  "nAuthors": 10,
+  "journal": "Toxics",
+  "year": 2026,
+  "review": false,
+  "organs": [],
+  "dirs": [
+   "ox"
+  ],
+  "marks": [],
+  "polClass": "op",
+  "polName": "有机磷农药",
+  "gen": "",
+  "stage": [
+   "juv"
+  ],
+  "zh": "【自动收录·待复核】Pesticides and antibiotics frequently co-occur in aquatic environments, yet their combined effects on aquatic life remai…",
+  "auto": true,
+  "added": "2026-11-26",
+  "doi": "10.3390/toxics14110943"
  }
 ];
