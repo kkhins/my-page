@@ -1,8 +1,8 @@
 /* 文献数据：全部来自 PubMed（NCBI E-utilities），字段由 tools/merge_annot.py 生成。
- * 共 473 篇（其中 43 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
+ * 共 474 篇（其中 44 篇为每日自动收录，中文要点取摘要首句，待人工复核）；zh 依据摘要人工/模型标注，摘要无结果时为空字符串。
  * DOI 均经 https://doi.org/ 逐条解析验证（见 work/doi_check.json）。
  */
-window.PAPERS_META = {"last_run": "2026-11-26 12:07"};
+window.PAPERS_META = {"last_run": "2026-11-27 12:12"};
 window.PAPERS = [
  {
   "pmid": "41780485",
@@ -13343,5 +13343,33 @@ window.PAPERS = [
   "auto": true,
   "added": "2026-11-26",
   "doi": "10.3390/toxics14110943"
+ },
+ {
+  "pmid": "43084962",
+  "title": "Endpoint-dependent behavioral toxicity of ciprofloxacin in adult zebrafish revealed by dose-response modeling.",
+  "author1": "Fan",
+  "nAuthors": 7,
+  "journal": "Aquat Toxicol",
+  "year": 2026,
+  "review": false,
+  "organs": [
+   "br",
+   "gu"
+  ],
+  "dirs": [
+   "bh",
+   "mt"
+  ],
+  "marks": [],
+  "polClass": "emerg",
+  "polName": "新污染物",
+  "gen": "",
+  "stage": [
+   "adu"
+  ],
+  "zh": "【自动收录·待复核】Ciprofloxacin (CIP), a widely detected fluoroquinolone antibiotic in aquatic environments, may pose sublethal risks to n…",
+  "auto": true,
+  "added": "2026-11-27",
+  "doi": "10.1016/j.aquatox.2026.108087"
  }
 ];
